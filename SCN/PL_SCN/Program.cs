@@ -16,7 +16,7 @@ namespace PL_SCN
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmSCN());
+            Application.Run(new frmIniciarSesion());
         }
     }
 }

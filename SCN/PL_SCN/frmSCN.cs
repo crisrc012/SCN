@@ -20,7 +20,7 @@ namespace PL_SCN
             InitializeComponent();
         }
 
-        #region AcercaDe
+        #region frmAcercaDe
         private void mniAcercaDe_Click(object sender, EventArgs e)
         {
             // Abre el formulario, si está establecido en null
@@ -29,7 +29,8 @@ namespace PL_SCN
             {
                 frmAcercaDeInstancia = new frmAcercaDe();
                 frmAcercaDeInstancia.MdiParent = this;
-                frmAcercaDeInstancia.FormClosed += new FormClosedEventHandler(frmAcercaDeInstancia_FormClosed);
+                frmAcercaDeInstancia.FormClosed += 
+                    new FormClosedEventHandler(frmAcercaDeInstancia_FormClosed);
                 frmAcercaDeInstancia.Show();
             }
             else
@@ -38,7 +39,8 @@ namespace PL_SCN
                 frmAcercaDeInstancia.Activate();
             }
         }
-        private void frmAcercaDeInstancia_FormClosed(object sender, FormClosedEventArgs e)
+        private void frmAcercaDeInstancia_FormClosed(object sender,
+            FormClosedEventArgs e)
         {
             // Cuando se cierre el formulario se establece en null
             // para que pueda volver a ser abierto al preionar el

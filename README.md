@@ -6,6 +6,9 @@ Sistema de Control de Negocio
 Estándar para nombres de controles
 https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-basic-6/aa263493(v=vs.60)
 
+Para los que no aparezcan. Utilizar:
+GroupBox = gbx
+
 # Variables
 
 Estándar para nombres de variables y objetos
@@ -33,3 +36,8 @@ if (true)
 }
 
 Cada línea debe de tener entre 60 y 80 caracteres como máximo.
+
+# Fuente
+
+Menus y botones
+Segoe UI Semibold; 9,75pt; style=Bold
