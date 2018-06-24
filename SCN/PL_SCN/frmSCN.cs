@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace PL_SCN
+{
+    public partial class frmSCN : Form
+    {
+        #region frmObjetos
+        frmAcercaDe frmAcercaDeInstancia;
+        #endregion
+        public frmSCN()
+        {
+            InitializeComponent();
+        }
+
+        #region AcercaDe
+        private void mniAcercaDe_Click(object sender, EventArgs e)
+        {
+            // Abre el formulario, si está establecido en null
+            // Esto para evitar que se ejecute más de una instancia
+            if (frmAcercaDeInstancia == null)
+            {
+                frmAcercaDeInstancia = new frmAcercaDe();
+                frmAcercaDeInstancia.MdiParent = this;
+                frmAcercaDeInstancia.FormClosed += new FormClosedEventHandler(frmAcercaDeInstancia_FormClosed);
+                frmAcercaDeInstancia.Show();
+            }
+            else
+            {
+                // Si ya está abierto el formulario se activa
+                frmAcercaDeInstancia.Activate();
+            }
+        }
+        private void frmAcercaDeInstancia_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Cuando se cierre el formulario se establece en null
+            // para que pueda volver a ser abierto al preionar el
+            // menuitem
+            frmAcercaDeInstancia = null;
+        }
+        #endregion
+    }
+}
