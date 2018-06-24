@@ -38,3 +38,8 @@ if (true)
 }
 
 Cada línea debe de tener entre 60 y 80 caracteres como máximo.
+
+# Fuente
+
+Menus y botones
+Segoe UI Semibold; 9,75pt; style=Bold
