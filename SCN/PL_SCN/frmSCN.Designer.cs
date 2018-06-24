@@ -128,6 +128,7 @@
             this.Name = "frmSCN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SCN - Sistema de Control de Negocio";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSCN_FormClosed);
             this.mnuModulos.ResumeLayout(false);
             this.mnuModulos.PerformLayout();
             this.ResumeLayout(false);

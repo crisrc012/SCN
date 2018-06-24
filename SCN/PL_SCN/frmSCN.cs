@@ -48,5 +48,10 @@ namespace PL_SCN
             frmAcercaDeInstancia = null;
         }
         #endregion
+
+        private void frmSCN_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
