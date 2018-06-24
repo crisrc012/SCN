@@ -13,12 +13,13 @@ Si es privada empieza con _
 
 El nombre de una variable privada tipo byte, sería un _ seguida
 de la primera letra del tipo de dato, luego un nombre que sea
-descriptivo y utilizar camelCase. Ejempo:
+descriptivo y utilizar camelCase. Ejemplo:
 
 private byte _bContador;
 
 Es posible utilizar variables simples en ciclos, como en el caso del for.
 Ejemplo:
+
 for (int i = 0; i<length; i++)
 {
 
@@ -27,6 +28,7 @@ for (int i = 0; i<length; i++)
 # Estructura
 
 Los corchetes van en línea independientes. Ejemplo:
+
 if (true)
 {
 
