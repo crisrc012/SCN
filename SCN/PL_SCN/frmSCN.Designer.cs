@@ -43,7 +43,6 @@
             // 
             // mnuModulos
             // 
-            this.mnuModulos.BackColor = System.Drawing.Color.Transparent;
             this.mnuModulos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mnuModulos.BackgroundImage")));
             this.mnuModulos.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuModulos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -55,10 +54,8 @@
             this.mniSoporte,
             this.mniSuscripciones,
             this.mniAcercaDe});
-            this.mnuModulos.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.mnuModulos.Location = new System.Drawing.Point(0, 0);
             this.mnuModulos.Name = "mnuModulos";
-            this.mnuModulos.ShowItemToolTips = true;
             this.mnuModulos.Size = new System.Drawing.Size(1004, 25);
             this.mnuModulos.TabIndex = 1;
             this.mnuModulos.Text = "Módulos";
