@@ -53,5 +53,10 @@ namespace PL_SCN
         {
             Application.Exit();
         }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
