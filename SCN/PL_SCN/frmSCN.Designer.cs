@@ -39,6 +39,10 @@
             this.mniSuscripciones = new System.Windows.Forms.ToolStripMenuItem();
             this.mniAcercaDe = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.perfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.departamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.suscripcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuModulos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +68,11 @@
             // 
             // mniCatalogos
             // 
+            this.mniCatalogos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usuarioToolStripMenuItem,
+            this.perfilToolStripMenuItem,
+            this.departamentoToolStripMenuItem,
+            this.suscripcionesToolStripMenuItem});
             this.mniCatalogos.Name = "mniCatalogos";
             this.mniCatalogos.Size = new System.Drawing.Size(194, 21);
             this.mniCatalogos.Text = "Catálogos y Mantenimientos";
@@ -118,6 +127,32 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // usuarioToolStripMenuItem
+            // 
+            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.usuarioToolStripMenuItem.Text = "Usuario";
+            this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
+            // 
+            // perfilToolStripMenuItem
+            // 
+            this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
+            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.perfilToolStripMenuItem.Text = "Perfil";
+            this.perfilToolStripMenuItem.Click += new System.EventHandler(this.perfilToolStripMenuItem_Click);
+            // 
+            // departamentoToolStripMenuItem
+            // 
+            this.departamentoToolStripMenuItem.Name = "departamentoToolStripMenuItem";
+            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.departamentoToolStripMenuItem.Text = "Departamento";
+            // 
+            // suscripcionesToolStripMenuItem
+            // 
+            this.suscripcionesToolStripMenuItem.Name = "suscripcionesToolStripMenuItem";
+            this.suscripcionesToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.suscripcionesToolStripMenuItem.Text = "Suscripciones";
+            // 
             // frmSCN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,6 +190,10 @@
         private System.Windows.Forms.ToolStripMenuItem mniSuscripciones;
         private System.Windows.Forms.ToolStripMenuItem mniAcercaDe;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem perfilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem departamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem suscripcionesToolStripMenuItem;
     }
 }
 

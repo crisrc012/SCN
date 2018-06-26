@@ -58,5 +58,17 @@ namespace PL_SCN
         {
             Application.Exit();
         }
+
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PL_SCN.CatyMan.frm_usuario frmUsr = new CatyMan.frm_usuario();
+            frmUsr.ShowDialog();
+        }
+
+        private void perfilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PL_SCN.CatyMan.frm_perfiles frmPer = new CatyMan.frm_perfiles();
+            frmPer.ShowDialog();
+        }
     }
 }
