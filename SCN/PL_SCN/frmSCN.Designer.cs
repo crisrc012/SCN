@@ -35,7 +35,9 @@
             this.perfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.departamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.suscripcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mniEstadisticas = new System.Windows.Forms.ToolStripMenuItem();
             this.mniInventarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.mniOrdenesDeTrabajo = new System.Windows.Forms.ToolStripMenuItem();
             this.mniSeguridad = new System.Windows.Forms.ToolStripMenuItem();
             this.mniSoporte = new System.Windows.Forms.ToolStripMenuItem();
             this.mniSuscripciones = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,11 +51,13 @@
             this.mnuModulos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mnuModulos.BackgroundImage")));
             this.mnuModulos.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuModulos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mniSeguridad,
             this.mniCatalogos,
-            this.mniSuscripciones,
-            this.mniSoporte,
+            this.mniEstadisticas,
             this.mniInventarios,
+            this.mniOrdenesDeTrabajo,
+            this.mniSeguridad,
+            this.mniSoporte,
+            this.mniSuscripciones,
             this.mniAcercaDe,
             this.salirToolStripMenuItem});
             this.mnuModulos.Location = new System.Drawing.Point(0, 0);
@@ -70,40 +74,54 @@
             this.departamentoToolStripMenuItem,
             this.suscripcionesToolStripMenuItem});
             this.mniCatalogos.Name = "mniCatalogos";
-            this.mniCatalogos.Size = new System.Drawing.Size(113, 21);
-            this.mniCatalogos.Text = "Mantenimiento";
+            this.mniCatalogos.Size = new System.Drawing.Size(194, 21);
+            this.mniCatalogos.Text = "Catálogos y Mantenimientos";
             // 
             // usuarioToolStripMenuItem
             // 
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.usuarioToolStripMenuItem.Text = "Usuario";
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.usuarioToolStripMenuItem.Text = "Usuarios";
             this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
             // 
             // perfilToolStripMenuItem
             // 
             this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
-            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.perfilToolStripMenuItem.Text = "Perfil";
+            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.perfilToolStripMenuItem.Text = "Perfiles";
             this.perfilToolStripMenuItem.Click += new System.EventHandler(this.perfilToolStripMenuItem_Click);
             // 
             // departamentoToolStripMenuItem
             // 
             this.departamentoToolStripMenuItem.Name = "departamentoToolStripMenuItem";
-            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.departamentoToolStripMenuItem.Text = "Departamento";
+            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.departamentoToolStripMenuItem.Text = "Departamentos";
+            this.departamentoToolStripMenuItem.Click += new System.EventHandler(this.departamentoToolStripMenuItem_Click);
             // 
             // suscripcionesToolStripMenuItem
             // 
             this.suscripcionesToolStripMenuItem.Name = "suscripcionesToolStripMenuItem";
-            this.suscripcionesToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.suscripcionesToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.suscripcionesToolStripMenuItem.Text = "Suscripciones";
+            this.suscripcionesToolStripMenuItem.Click += new System.EventHandler(this.suscripcionesToolStripMenuItem_Click);
+            // 
+            // mniEstadisticas
+            // 
+            this.mniEstadisticas.Name = "mniEstadisticas";
+            this.mniEstadisticas.Size = new System.Drawing.Size(92, 21);
+            this.mniEstadisticas.Text = "Estadísiticas";
             // 
             // mniInventarios
             // 
             this.mniInventarios.Name = "mniInventarios";
             this.mniInventarios.Size = new System.Drawing.Size(88, 21);
             this.mniInventarios.Text = "Inventarios";
+            // 
+            // mniOrdenesDeTrabajo
+            // 
+            this.mniOrdenesDeTrabajo.Name = "mniOrdenesDeTrabajo";
+            this.mniOrdenesDeTrabajo.Size = new System.Drawing.Size(138, 21);
+            this.mniOrdenesDeTrabajo.Text = "Ordenes de Trabajo";
             // 
             // mniSeguridad
             // 
@@ -120,8 +138,8 @@
             // mniSuscripciones
             // 
             this.mniSuscripciones.Name = "mniSuscripciones";
-            this.mniSuscripciones.Size = new System.Drawing.Size(94, 21);
-            this.mniSuscripciones.Text = "Suscriptores";
+            this.mniSuscripciones.Size = new System.Drawing.Size(101, 21);
+            this.mniSuscripciones.Text = "Suscripciones";
             // 
             // mniAcercaDe
             // 
@@ -166,7 +184,9 @@
 
         private System.Windows.Forms.MenuStrip mnuModulos;
         private System.Windows.Forms.ToolStripMenuItem mniCatalogos;
+        private System.Windows.Forms.ToolStripMenuItem mniEstadisticas;
         private System.Windows.Forms.ToolStripMenuItem mniInventarios;
+        private System.Windows.Forms.ToolStripMenuItem mniOrdenesDeTrabajo;
         private System.Windows.Forms.ToolStripMenuItem mniSeguridad;
         private System.Windows.Forms.ToolStripMenuItem mniSoporte;
         private System.Windows.Forms.ToolStripMenuItem mniSuscripciones;

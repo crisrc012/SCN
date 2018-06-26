@@ -71,5 +71,17 @@ namespace PL_SCN
             PL_SCN.CatyMan.frm_perfiles frmPer = new CatyMan.frm_perfiles();
             frmPer.ShowDialog();
         }
+
+        private void departamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PL_SCN.CatyMan.frm_depa frmDepa = new CatyMan.frm_depa();
+            frmDepa.ShowDialog();
+        }
+
+        private void suscripcionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PL_SCN.CatyMan.frm_suscrip frmSusc = new CatyMan.frm_suscrip();
+            frmSusc.ShowDialog();
+        }
     }
 }
