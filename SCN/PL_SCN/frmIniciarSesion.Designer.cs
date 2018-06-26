@@ -46,7 +46,7 @@
             this.btnEntrar.ForeColor = System.Drawing.Color.Green;
             this.btnEntrar.Image = ((System.Drawing.Image)(resources.GetObject("btnEntrar.Image")));
             this.btnEntrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEntrar.Location = new System.Drawing.Point(0, 184);
+            this.btnEntrar.Location = new System.Drawing.Point(68, 247);
             this.btnEntrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(132, 33);
@@ -63,7 +63,7 @@
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.Location = new System.Drawing.Point(16, 248);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(132, 33);
             this.btnSalir.TabIndex = 1;
@@ -75,7 +75,7 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblUsuario.Location = new System.Drawing.Point(24, 47);
+            this.lblUsuario.Location = new System.Drawing.Point(23, 48);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(133, 17);
@@ -86,7 +86,7 @@
             // 
             this.lblContraseña.AutoSize = true;
             this.lblContraseña.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblContraseña.Location = new System.Drawing.Point(73, 110);
+            this.lblContraseña.Location = new System.Drawing.Point(72, 111);
             this.lblContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(84, 17);
@@ -95,42 +95,31 @@
             // 
             // gbxCredenciales
             // 
+            this.gbxCredenciales.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gbxCredenciales.BackgroundImage")));
+            this.gbxCredenciales.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.gbxCredenciales.Controls.Add(this.txtContrasena);
             this.gbxCredenciales.Controls.Add(this.txtUsuario);
-            this.gbxCredenciales.Controls.Add(this.btnEntrar);
             this.gbxCredenciales.Controls.Add(this.lblUsuario);
             this.gbxCredenciales.Controls.Add(this.lblContraseña);
             this.gbxCredenciales.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.gbxCredenciales.Location = new System.Drawing.Point(16, 16);
-            this.gbxCredenciales.Margin = new System.Windows.Forms.Padding(4);
+            this.gbxCredenciales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxCredenciales.Name = "gbxCredenciales";
-            this.gbxCredenciales.Padding = new System.Windows.Forms.Padding(4);
+            this.gbxCredenciales.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxCredenciales.Size = new System.Drawing.Size(496, 225);
             this.gbxCredenciales.TabIndex = 4;
             this.gbxCredenciales.TabStop = false;
             this.gbxCredenciales.Text = "Credenciales";
-            // 
-            // txtContrasena
-            // 
-            this.txtContrasena.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txtContrasena.Location = new System.Drawing.Point(193, 107);
-            this.txtContrasena.Margin = new System.Windows.Forms.Padding(4);
-            this.txtContrasena.MaxLength = 26;
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.PasswordChar = '*';
-            this.txtContrasena.Size = new System.Drawing.Size(268, 25);
-            this.txtContrasena.TabIndex = 5;
-            this.txtContrasena.Validating += new System.ComponentModel.CancelEventHandler(this.txtContrasena_Validating);
             // 
             // txtUsuario
             // 
             this.txtUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtUsuario.Location = new System.Drawing.Point(193, 44);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsuario.MaxLength = 32;
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(268, 25);
+            this.txtUsuario.Size = new System.Drawing.Size(160, 25);
             this.txtUsuario.TabIndex = 4;
             this.txtUsuario.Validating += new System.ComponentModel.CancelEventHandler(this.txtUsuario_Validating);
             // 
@@ -138,9 +127,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 293);
+            this.BackColor = System.Drawing.Color.Turquoise;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(405, 301);
             this.Controls.Add(this.gbxCredenciales);
             this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnEntrar);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

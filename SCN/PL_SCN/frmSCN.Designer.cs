@@ -38,6 +38,11 @@
             this.mniSoporte = new System.Windows.Forms.ToolStripMenuItem();
             this.mniSuscripciones = new System.Windows.Forms.ToolStripMenuItem();
             this.mniAcercaDe = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.perfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.departamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.suscripcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuModulos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +58,8 @@
             this.mniSeguridad,
             this.mniSoporte,
             this.mniSuscripciones,
-            this.mniAcercaDe});
+            this.mniAcercaDe,
+            this.salirToolStripMenuItem});
             this.mnuModulos.Location = new System.Drawing.Point(0, 0);
             this.mnuModulos.Name = "mnuModulos";
             this.mnuModulos.Size = new System.Drawing.Size(1004, 25);
@@ -62,6 +68,11 @@
             // 
             // mniCatalogos
             // 
+            this.mniCatalogos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usuarioToolStripMenuItem,
+            this.perfilToolStripMenuItem,
+            this.departamentoToolStripMenuItem,
+            this.suscripcionesToolStripMenuItem});
             this.mniCatalogos.Name = "mniCatalogos";
             this.mniCatalogos.Size = new System.Drawing.Size(194, 21);
             this.mniCatalogos.Text = "Catálogos y Mantenimientos";
@@ -109,11 +120,45 @@
             this.mniAcercaDe.Text = "Acerca de";
             this.mniAcercaDe.Click += new System.EventHandler(this.mniAcercaDe_Click);
             // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(45, 21);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // usuarioToolStripMenuItem
+            // 
+            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.usuarioToolStripMenuItem.Text = "Usuario";
+            this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
+            // 
+            // perfilToolStripMenuItem
+            // 
+            this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
+            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.perfilToolStripMenuItem.Text = "Perfil";
+            this.perfilToolStripMenuItem.Click += new System.EventHandler(this.perfilToolStripMenuItem_Click);
+            // 
+            // departamentoToolStripMenuItem
+            // 
+            this.departamentoToolStripMenuItem.Name = "departamentoToolStripMenuItem";
+            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.departamentoToolStripMenuItem.Text = "Departamento";
+            // 
+            // suscripcionesToolStripMenuItem
+            // 
+            this.suscripcionesToolStripMenuItem.Name = "suscripcionesToolStripMenuItem";
+            this.suscripcionesToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.suscripcionesToolStripMenuItem.Text = "Suscripciones";
+            // 
             // frmSCN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1004, 557);
             this.Controls.Add(this.mnuModulos);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -144,6 +189,11 @@
         private System.Windows.Forms.ToolStripMenuItem mniSoporte;
         private System.Windows.Forms.ToolStripMenuItem mniSuscripciones;
         private System.Windows.Forms.ToolStripMenuItem mniAcercaDe;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem perfilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem departamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem suscripcionesToolStripMenuItem;
     }
 }
 
