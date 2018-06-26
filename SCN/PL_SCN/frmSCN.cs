@@ -80,7 +80,8 @@ namespace PL_SCN
 
         private void suscripcionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            PL_SCN.CatyMan.frm_suscrip frmSusc = new CatyMan.frm_suscrip();
+            frmSusc.ShowDialog();
         }
     }
 }
