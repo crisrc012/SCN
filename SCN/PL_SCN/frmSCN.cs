@@ -18,6 +18,7 @@ namespace PL_SCN
         public frmSCN()
         {
             InitializeComponent();
+            //hola
         }
 
         #region frmAcercaDe
