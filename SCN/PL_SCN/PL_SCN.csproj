@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CatyMan\frm_depa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatyMan\frm_depa.Designer.cs">
+      <DependentUpon>frm_depa.cs</DependentUpon>
+    </Compile>
     <Compile Include="CatyMan\frm_perfiles.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CatyMan\frm_perfiles.Designer.cs">
       <DependentUpon>frm_perfiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatyMan\frm_suscrip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatyMan\frm_suscrip.Designer.cs">
+      <DependentUpon>frm_suscrip.cs</DependentUpon>
     </Compile>
     <Compile Include="CatyMan\frm_usuario.cs">
       <SubType>Form</SubType>
@@ -78,8 +90,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CatyMan\frm_depa.resx">
+      <DependentUpon>frm_depa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CatyMan\frm_perfiles.resx">
       <DependentUpon>frm_perfiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatyMan\frm_suscrip.resx">
+      <DependentUpon>frm_suscrip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CatyMan\frm_usuario.resx">
       <DependentUpon>frm_usuario.cs</DependentUpon>
