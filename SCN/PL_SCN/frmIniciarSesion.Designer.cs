@@ -128,6 +128,7 @@
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.MaxLength = 32;
             this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.PasswordChar = '*';
             this.txtUsuario.Size = new System.Drawing.Size(108, 25);
             this.txtUsuario.TabIndex = 4;
             this.txtUsuario.Validating += new System.ComponentModel.CancelEventHandler(this.txtUsuario_Validating);

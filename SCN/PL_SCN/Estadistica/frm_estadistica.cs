@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PL_SCN.CatyMan
+namespace PL_SCN.Estadistica
 {
-    public partial class frm_usuario : Form
+    public partial class frm_estadistica : Form
     {
-        public frm_usuario()
+        public frm_estadistica()
         {
             InitializeComponent();
-            toolStrip1.AutoSize = false;
         }
     }
 }
