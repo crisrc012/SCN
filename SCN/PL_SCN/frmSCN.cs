@@ -83,5 +83,11 @@ namespace PL_SCN
             PL_SCN.CatyMan.frm_suscrip frmSusc = new CatyMan.frm_suscrip();
             frmSusc.ShowDialog();
         }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PL_SCN.Estadistica.frm_estadistica frmEst = new Estadistica.frm_estadistica();
+            frmEst.ShowDialog();
+        }
     }
 }
