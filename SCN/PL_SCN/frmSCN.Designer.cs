@@ -182,13 +182,13 @@
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             // 
             // stockToolStripMenuItem
             // 
             this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
-            this.stockToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.stockToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.stockToolStripMenuItem.Text = "Stock";
             // 
             // mniSoporte
