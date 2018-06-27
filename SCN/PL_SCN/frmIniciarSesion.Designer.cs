@@ -87,8 +87,8 @@
             // 
             this.gbxCredenciales.BackColor = System.Drawing.Color.Transparent;
             this.gbxCredenciales.Controls.Add(this.pnlLogo);
-            this.gbxCredenciales.Controls.Add(this.txtContrasena);
             this.gbxCredenciales.Controls.Add(this.txtUsuario);
+            this.gbxCredenciales.Controls.Add(this.txtContrasena);
             this.gbxCredenciales.Controls.Add(this.btnEntrar);
             this.gbxCredenciales.Controls.Add(this.lblUsuario);
             this.gbxCredenciales.Controls.Add(this.lblContrasena);
@@ -160,6 +160,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(500, 225);
