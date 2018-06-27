@@ -89,5 +89,16 @@ namespace PL_SCN
             PL_SCN.Estadistica.frm_estadistica frmEst = new Estadistica.frm_estadistica();
             frmEst.ShowDialog();
         }
+
+        private void frmSCN_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ordenDeTrabajoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PL_SCN.Soporte.frm_ordenTrabajo frmOrdenTrabajo = new Soporte.frm_ordenTrabajo();
+            frmOrdenTrabajo.ShowDialog();
+        }
     }
 }
