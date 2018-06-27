@@ -55,8 +55,8 @@
             // 
             // mnuModulos
             // 
-            this.mnuModulos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mnuModulos.BackgroundImage")));
-            this.mnuModulos.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuModulos.BackColor = System.Drawing.Color.DarkCyan;
+            this.mnuModulos.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.mnuModulos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mniCatalogos,
             this.mniSeguridad,
@@ -78,6 +78,7 @@
             this.perfilToolStripMenuItem,
             this.departamentoToolStripMenuItem,
             this.contraseñasToolStripMenuItem1});
+            this.mniCatalogos.ForeColor = System.Drawing.Color.White;
             this.mniCatalogos.Name = "mniCatalogos";
             this.mniCatalogos.Size = new System.Drawing.Size(81, 21);
             this.mniCatalogos.Text = "Seguridad";
@@ -115,6 +116,7 @@
             this.clientesToolStripMenuItem,
             this.cambiosDeCedulaToolStripMenuItem,
             this.parametrosToolStripMenuItem});
+            this.mniSeguridad.ForeColor = System.Drawing.Color.White;
             this.mniSeguridad.Name = "mniSeguridad";
             this.mniSeguridad.Size = new System.Drawing.Size(113, 21);
             this.mniSeguridad.Text = "Mantenimiento";
@@ -143,6 +145,7 @@
             this.contratosToolStripMenuItem,
             this.cobroToolStripMenuItem,
             this.pagoComisionesToolStripMenuItem});
+            this.mniSuscripciones.ForeColor = System.Drawing.Color.White;
             this.mniSuscripciones.Name = "mniSuscripciones";
             this.mniSuscripciones.Size = new System.Drawing.Size(101, 21);
             this.mniSuscripciones.Text = "Suscripciones";
@@ -170,6 +173,7 @@
             this.mniInventarios.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.productosToolStripMenuItem,
             this.stockToolStripMenuItem});
+            this.mniInventarios.ForeColor = System.Drawing.Color.White;
             this.mniInventarios.Name = "mniInventarios";
             this.mniInventarios.Size = new System.Drawing.Size(88, 21);
             this.mniInventarios.Text = "Inventarios";
@@ -177,19 +181,20 @@
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             // 
             // stockToolStripMenuItem
             // 
             this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
-            this.stockToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.stockToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.stockToolStripMenuItem.Text = "Stock";
             // 
             // mniSoporte
             // 
             this.mniSoporte.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ordenDeTrabajoToolStripMenuItem});
+            this.mniSoporte.ForeColor = System.Drawing.Color.White;
             this.mniSoporte.Name = "mniSoporte";
             this.mniSoporte.Size = new System.Drawing.Size(68, 21);
             this.mniSoporte.Text = "Soporte";
@@ -203,6 +208,7 @@
             // 
             // mniAcercaDe
             // 
+            this.mniAcercaDe.ForeColor = System.Drawing.Color.White;
             this.mniAcercaDe.Name = "mniAcercaDe";
             this.mniAcercaDe.Size = new System.Drawing.Size(79, 21);
             this.mniAcercaDe.Text = "Acerca de";
@@ -210,6 +216,7 @@
             // 
             // salirToolStripMenuItem
             // 
+            this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(45, 21);
             this.salirToolStripMenuItem.Text = "Salir";
@@ -219,22 +226,21 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1004, 557);
             this.Controls.Add(this.mnuModulos);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.Transparent;
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mnuModulos;
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1024, 600);
             this.MinimumSize = new System.Drawing.Size(1024, 600);
             this.Name = "frmSCN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SCN - Sistema de Control de Negocio";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSCN_FormClosed);
             this.Load += new System.EventHandler(this.frmSCN_Load);
             this.mnuModulos.ResumeLayout(false);
