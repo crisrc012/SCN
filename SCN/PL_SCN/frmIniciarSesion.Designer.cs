@@ -142,7 +142,7 @@
             this.pnlTitulo.Controls.Add(this.label1);
             this.pnlTitulo.Location = new System.Drawing.Point(-1, -1);
             this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(502, 41);
+            this.pnlTitulo.Size = new System.Drawing.Size(500, 44);
             this.pnlTitulo.TabIndex = 5;
             // 
             // label1
@@ -163,7 +163,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(500, 225);
+            this.ClientSize = new System.Drawing.Size(498, 225);
             this.Controls.Add(this.pnlTitulo);
             this.Controls.Add(this.gbxCredenciales);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
