@@ -41,6 +41,9 @@ Cada línea debe de tener entre 60 y 80 caracteres como máximo.
 
 # Fuente
 
+Títulos
+Segoe UI; 12pt; style=Bold
+
 Menus y botones
 Segoe UI Semibold; 9,75pt; style=Bold
 
