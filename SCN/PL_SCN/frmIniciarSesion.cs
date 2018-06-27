@@ -27,6 +27,31 @@ namespace PL_SCN
                 errorProvider.SetError(txtUsuario, null);
             }
         }
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            if (ValidateChildren(ValidationConstraints.Enabled))
+            {
+                if (true)
+                {
+                    // Si autentica
+                    Visible = false;
+                    frmSCNInstancia = new frmSCN();
+                    frmSCNInstancia.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña inválido",
+                        "Error de inicio de sesión", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         private void txtContrasena_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrEmpty(txtContrasena.Text.Trim()))
@@ -52,30 +77,6 @@ namespace PL_SCN
                 e.Cancel = false;
                 errorProvider.SetError(txtContrasena, null);
             }
-        }
-        private void btnEntrar_Click(object sender, EventArgs e)
-        {
-            if (ValidateChildren(ValidationConstraints.Enabled))
-            {
-                if (true)
-                {
-                    // Si autentica
-                    Visible = false;
-                    frmSCNInstancia = new frmSCN();
-                    frmSCNInstancia.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Usuario o contraseña inválido",
-                        "Error de inicio de sesión", MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
-                }
-            }
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }
