@@ -43,3 +43,8 @@ Cada línea debe de tener entre 60 y 80 caracteres como máximo.
 
 Menus y botones
 Segoe UI Semibold; 9,75pt; style=Bold
+
+# Colores
+
+Para los colores utilizar como color principal "DarkCyan" y como secundario 
+"LightSeaGreen", ya que son colores pasteles y no cansan tanto la vista utilizarlos.
