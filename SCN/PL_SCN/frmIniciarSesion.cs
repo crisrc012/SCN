@@ -13,7 +13,6 @@ namespace PL_SCN
             InitializeComponent();
             errorProvider = new ErrorProvider();
         }
-
         private void txtUsuario_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrEmpty(txtUsuario.Text.Trim()))
@@ -47,7 +46,6 @@ namespace PL_SCN
                 }
             }
         }
-
         private void txtContrasena_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrEmpty(txtContrasena.Text.Trim()))
@@ -56,40 +54,60 @@ namespace PL_SCN
                 errorProvider.SetError(txtContrasena,
                     "Por favor digite su contraseña.");
             }
-            else if (txtContrasena.Text.Trim().Length < 6)
-            {
-                e.Cancel = true;
-                errorProvider.SetError(txtContrasena,
-                    "La contraseña debe de tener al menos 6 caracteres.");
-            }
-            else if (txtContrasena.Text.Trim().Length > 25)
-            {
-                e.Cancel = true;
-                errorProvider.SetError(txtContrasena,
-                    "La contraseña no puede más de 25 caracteres.");
-            }
             else
             {
                 e.Cancel = false;
                 errorProvider.SetError(txtContrasena, null);
             }
         }
-
         private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Si se presiona la tecla Enter, se da click a btnEntrar
-            if (e.KeyChar == (char)Keys.Enter)
+            if (e.KeyChar == (char)Keys.Space)
             {
+                // Valida que el nombre de usuario no tenga espacios en blanco
+                errorProvider.SetError(txtContrasena,
+                    "La contraseña no puede contener espacios en blanco.");
+                e.Handled = true;
+            }
+            else if (txtContrasena.Text.Trim().Length < 6)
+            {
+                errorProvider.SetError(txtContrasena,
+                    "La contraseña debe de tener al menos 6 caracteres.");
+            }
+            else if (txtContrasena.Text.Trim().Length > 25)
+            {
+                errorProvider.SetError(txtContrasena,
+                    "La contraseña no puede más de 25 caracteres.");
+            }
+            else if (e.KeyChar == (char)Keys.Enter)
+            {
+                errorProvider.SetError(txtContrasena, null);
+                // Si se presiona la tecla Enter, se da click a btnEntrar
                 btnEntrar_Click(null, null);
             }
+            else
+            {
+                errorProvider.SetError(txtContrasena, null);
+            }
         }
-
         private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Si se presiona la tecla Enter, se mueve al campo de contraseña
-            if (e.KeyChar == (char)Keys.Enter)
+            if (e.KeyChar == (char)Keys.Space)
             {
+                // Valida que el nombre de usuario no tenga espacios en blanco
+                errorProvider.SetError(txtUsuario, 
+                    "El nombre de usuario no puede contener espacios en blanco.");
+                e.Handled = true;
+            }
+            else if (e.KeyChar == (char)Keys.Enter)
+            {
+                errorProvider.SetError(txtUsuario, null);
+                // Si se presiona la tecla Enter, se mueve al campo de contraseña
                 txtContrasena.Focus();
+            }
+            else
+            {
+                errorProvider.SetError(txtUsuario, null);
             }
         }
     }
