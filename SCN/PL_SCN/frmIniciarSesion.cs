@@ -19,7 +19,8 @@ namespace PL_SCN
             if (string.IsNullOrEmpty(txtUsuario.Text.Trim()))
             {
                 e.Cancel = true;
-                errorProvider.SetError(txtUsuario, "Por favor digite su nombre de usuario.");
+                errorProvider.SetError(txtUsuario, 
+                    "Por favor digite su nombre de usuario.");
             }
             else
             {
@@ -47,11 +48,6 @@ namespace PL_SCN
             }
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void txtContrasena_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrEmpty(txtContrasena.Text.Trim()))
@@ -76,6 +72,24 @@ namespace PL_SCN
             {
                 e.Cancel = false;
                 errorProvider.SetError(txtContrasena, null);
+            }
+        }
+
+        private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Si se presiona la tecla Enter, se da click a btnEntrar
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btnEntrar_Click(null, null);
+            }
+        }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Si se presiona la tecla Enter, se mueve al campo de contraseña
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                txtContrasena.Focus();
             }
         }
     }
