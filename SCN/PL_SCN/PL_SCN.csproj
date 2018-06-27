@@ -135,6 +135,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Soporte\frm_ordenTrabajo.resx">
       <DependentUpon>frm_ordenTrabajo.cs</DependentUpon>
@@ -161,6 +162,12 @@
       <Project>{cd482b7f-fdc9-4c67-b41a-329ac8c7aac5}</Project>
       <Name>DAL_SCN</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo 2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
