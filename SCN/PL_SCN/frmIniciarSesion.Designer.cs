@@ -94,11 +94,11 @@
             this.gbxCredenciales.Controls.Add(this.lblContrasena);
             this.gbxCredenciales.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.gbxCredenciales.ForeColor = System.Drawing.Color.White;
-            this.gbxCredenciales.Location = new System.Drawing.Point(5, 39);
+            this.gbxCredenciales.Location = new System.Drawing.Point(5, 47);
             this.gbxCredenciales.Margin = new System.Windows.Forms.Padding(4);
             this.gbxCredenciales.Name = "gbxCredenciales";
             this.gbxCredenciales.Padding = new System.Windows.Forms.Padding(4);
-            this.gbxCredenciales.Size = new System.Drawing.Size(489, 174);
+            this.gbxCredenciales.Size = new System.Drawing.Size(489, 166);
             this.gbxCredenciales.TabIndex = 4;
             this.gbxCredenciales.TabStop = false;
             this.gbxCredenciales.Text = "Credenciales";
