@@ -119,6 +119,18 @@
     <Compile Include="frmSCN.Designer.cs">
       <DependentUpon>frmSCN.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventarios\frm_Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\frm_Productos.Designer.cs">
+      <DependentUpon>frm_Productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\frm_Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\frm_Stock.Designer.cs">
+      <DependentUpon>frm_Stock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Soporte\frm_ordenTrabajo.cs">
@@ -163,6 +175,12 @@
     <EmbeddedResource Include="frmSCN.resx">
       <DependentUpon>frmSCN.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\frm_Productos.resx">
+      <DependentUpon>frm_Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\frm_Stock.resx">
+      <DependentUpon>frm_Stock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -205,6 +223,7 @@
   <ItemGroup>
     <None Include="Resources\fondo 2.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

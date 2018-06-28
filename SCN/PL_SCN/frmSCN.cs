@@ -105,5 +105,17 @@ namespace PL_SCN
             PL_SCN.Estadistica.frm_estadistica frmEst = new Estadistica.frm_estadistica();
             frmEst.ShowDialog();
         }
+
+        private void stockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PL_SCN.Inventarios.frm_Stock frmStock = new Inventarios.frm_Stock();
+            frmStock.ShowDialog();
+        }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PL_SCN.Inventarios.frm_Productos frmProduc = new Inventarios.frm_Productos();
+            frmProduc.ShowDialog();
+        }
     }
 }
