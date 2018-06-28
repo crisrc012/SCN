@@ -68,7 +68,7 @@
             this.mnuModulos.Location = new System.Drawing.Point(0, 0);
             this.mnuModulos.Name = "mnuModulos";
             this.mnuModulos.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.mnuModulos.Size = new System.Drawing.Size(1008, 44);
+            this.mnuModulos.Size = new System.Drawing.Size(1004, 44);
             this.mnuModulos.TabIndex = 1;
             this.mnuModulos.Text = "Módulos";
             // 
@@ -182,13 +182,13 @@
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             // 
             // stockToolStripMenuItem
             // 
             this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
-            this.stockToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.stockToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.stockToolStripMenuItem.Text = "Stock";
             // 
             // mniSoporte
@@ -230,7 +230,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1008, 561);
+            this.ClientSize = new System.Drawing.Size(1004, 557);
             this.Controls.Add(this.mnuModulos);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
@@ -238,11 +238,13 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mnuModulos;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1024, 600);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1024, 600);
             this.Name = "frmSCN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SCN - Sistema de Control de Negocio";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSCN_FormClosed);
             this.Load += new System.EventHandler(this.frmSCN_Load);
             this.mnuModulos.ResumeLayout(false);

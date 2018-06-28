@@ -386,7 +386,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mmMenuOrdenTrabajo;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(803, 476);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(803, 476);
             this.Name = "frm_ordenTrabajo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ORDENES DE TRABAJO";
