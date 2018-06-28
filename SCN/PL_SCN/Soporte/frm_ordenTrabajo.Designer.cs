@@ -29,46 +29,49 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ordenTrabajo));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_NumeroOrden = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_NumeroCliente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_NombreCliente = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lbl_fechaActual = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_ContactoCliente = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txt_DireccionCliente = new System.Windows.Forms.RichTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.txt_ProblemaReportado = new System.Windows.Forms.RichTextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbx_CodigoTecnico = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txt_NombreTecnico = new System.Windows.Forms.TextBox();
+            this.cbx_Prioridad = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.mmMenuOrdenTrabajo = new System.Windows.Forms.MenuStrip();
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevoReporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.generarReporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirF5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label5 = new System.Windows.Forms.Label();
-            this.mmMenuOrdenTrabajo.SuspendLayout();
+            this.tls_Menu_OrdenTrabajo = new System.Windows.Forms.ToolStrip();
+            this.btn_GenerarReporte = new System.Windows.Forms.ToolStripButton();
+            this.lbl_GenerarReporte = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_NuevoReporte = new System.Windows.Forms.ToolStripButton();
+            this.lbl_NuevoReporte = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_Salir = new System.Windows.Forms.ToolStripButton();
+            this.lbl_Salir = new System.Windows.Forms.ToolStripLabel();
+            this.tls_Menu_OrdenTrabajo.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txt_NumeroOrden
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(657, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 25);
-            this.textBox1.TabIndex = 0;
+            this.txt_NumeroOrden.Enabled = false;
+            this.txt_NumeroOrden.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txt_NumeroOrden.Location = new System.Drawing.Point(657, 44);
+            this.txt_NumeroOrden.Name = "txt_NumeroOrden";
+            this.txt_NumeroOrden.Size = new System.Drawing.Size(100, 25);
+            this.txt_NumeroOrden.TabIndex = 0;
             // 
             // label1
             // 
@@ -92,13 +95,14 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Número de Cliente:";
             // 
-            // textBox2
+            // txt_NumeroCliente
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.textBox2.Location = new System.Drawing.Point(137, 44);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(130, 25);
-            this.textBox2.TabIndex = 2;
+            this.txt_NumeroCliente.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txt_NumeroCliente.Location = new System.Drawing.Point(137, 44);
+            this.txt_NumeroCliente.Name = "txt_NumeroCliente";
+            this.txt_NumeroCliente.Size = new System.Drawing.Size(130, 25);
+            this.txt_NumeroCliente.TabIndex = 2;
+            this.txt_NumeroCliente.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_NumeroCliente_KeyDown);
             // 
             // label3
             // 
@@ -111,14 +115,14 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Nombre Cliente:";
             // 
-            // textBox3
+            // txt_NombreCliente
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.textBox3.Location = new System.Drawing.Point(137, 98);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(177, 25);
-            this.textBox3.TabIndex = 4;
+            this.txt_NombreCliente.Enabled = false;
+            this.txt_NombreCliente.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txt_NombreCliente.Location = new System.Drawing.Point(137, 98);
+            this.txt_NombreCliente.Name = "txt_NombreCliente";
+            this.txt_NombreCliente.Size = new System.Drawing.Size(177, 25);
+            this.txt_NombreCliente.TabIndex = 4;
             // 
             // label4
             // 
@@ -153,14 +157,14 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Contacto Cliente:";
             // 
-            // textBox4
+            // txt_ContactoCliente
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.textBox4.Location = new System.Drawing.Point(137, 163);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(177, 25);
-            this.textBox4.TabIndex = 9;
+            this.txt_ContactoCliente.Enabled = false;
+            this.txt_ContactoCliente.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txt_ContactoCliente.Location = new System.Drawing.Point(137, 163);
+            this.txt_ContactoCliente.Name = "txt_ContactoCliente";
+            this.txt_ContactoCliente.Size = new System.Drawing.Size(177, 25);
+            this.txt_ContactoCliente.TabIndex = 9;
             // 
             // label7
             // 
@@ -185,16 +189,16 @@
             this.label8.Text = "_________________________________________________________________________________" +
     "_____________________________________________________________________________";
             // 
-            // richTextBox1
+            // txt_DireccionCliente
             // 
-            this.richTextBox1.Enabled = false;
-            this.richTextBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.richTextBox1.Location = new System.Drawing.Point(427, 114);
-            this.richTextBox1.MaxLength = 500;
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(306, 141);
-            this.richTextBox1.TabIndex = 13;
-            this.richTextBox1.Text = "";
+            this.txt_DireccionCliente.Enabled = false;
+            this.txt_DireccionCliente.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txt_DireccionCliente.Location = new System.Drawing.Point(427, 114);
+            this.txt_DireccionCliente.MaxLength = 500;
+            this.txt_DireccionCliente.Name = "txt_DireccionCliente";
+            this.txt_DireccionCliente.Size = new System.Drawing.Size(306, 141);
+            this.txt_DireccionCliente.TabIndex = 13;
+            this.txt_DireccionCliente.Text = "";
             // 
             // label9
             // 
@@ -219,15 +223,16 @@
             this.label10.TabIndex = 15;
             this.label10.Text = "Problema Reportado:";
             // 
-            // richTextBox2
+            // txt_ProblemaReportado
             // 
-            this.richTextBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.richTextBox2.Location = new System.Drawing.Point(155, 295);
-            this.richTextBox2.MaxLength = 200;
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(221, 111);
-            this.richTextBox2.TabIndex = 16;
-            this.richTextBox2.Text = "";
+            this.txt_ProblemaReportado.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txt_ProblemaReportado.Location = new System.Drawing.Point(155, 295);
+            this.txt_ProblemaReportado.MaxLength = 200;
+            this.txt_ProblemaReportado.Name = "txt_ProblemaReportado";
+            this.txt_ProblemaReportado.Size = new System.Drawing.Size(221, 111);
+            this.txt_ProblemaReportado.TabIndex = 16;
+            this.txt_ProblemaReportado.Text = "";
+            this.txt_ProblemaReportado.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_ProblemaReportado_KeyDown);
             // 
             // label11
             // 
@@ -240,14 +245,15 @@
             this.label11.TabIndex = 17;
             this.label11.Text = "Código Técnico:";
             // 
-            // comboBox1
+            // cbx_CodigoTecnico
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(490, 295);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 25);
-            this.comboBox1.TabIndex = 18;
+            this.cbx_CodigoTecnico.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cbx_CodigoTecnico.FormattingEnabled = true;
+            this.cbx_CodigoTecnico.Location = new System.Drawing.Point(490, 295);
+            this.cbx_CodigoTecnico.Name = "cbx_CodigoTecnico";
+            this.cbx_CodigoTecnico.Size = new System.Drawing.Size(121, 25);
+            this.cbx_CodigoTecnico.TabIndex = 18;
+            this.cbx_CodigoTecnico.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbx_CodigoTecnico_KeyDown);
             // 
             // label12
             // 
@@ -260,27 +266,28 @@
             this.label12.TabIndex = 20;
             this.label12.Text = "Nombre:";
             // 
-            // textBox5
+            // txt_NombreTecnico
             // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.textBox5.Location = new System.Drawing.Point(490, 337);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(177, 25);
-            this.textBox5.TabIndex = 19;
+            this.txt_NombreTecnico.Enabled = false;
+            this.txt_NombreTecnico.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txt_NombreTecnico.Location = new System.Drawing.Point(490, 337);
+            this.txt_NombreTecnico.Name = "txt_NombreTecnico";
+            this.txt_NombreTecnico.Size = new System.Drawing.Size(177, 25);
+            this.txt_NombreTecnico.TabIndex = 19;
             // 
-            // comboBox2
+            // cbx_Prioridad
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cbx_Prioridad.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cbx_Prioridad.FormattingEnabled = true;
+            this.cbx_Prioridad.Items.AddRange(new object[] {
             "Alta",
             "Media",
             "Baja"});
-            this.comboBox2.Location = new System.Drawing.Point(490, 381);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 25);
-            this.comboBox2.TabIndex = 22;
+            this.cbx_Prioridad.Location = new System.Drawing.Point(490, 381);
+            this.cbx_Prioridad.Name = "cbx_Prioridad";
+            this.cbx_Prioridad.Size = new System.Drawing.Size(121, 25);
+            this.cbx_Prioridad.TabIndex = 22;
+            this.cbx_Prioridad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbx_Prioridad_KeyDown);
             // 
             // label13
             // 
@@ -292,53 +299,6 @@
             this.label13.Size = new System.Drawing.Size(66, 17);
             this.label13.TabIndex = 21;
             this.label13.Text = "Prioridad:";
-            // 
-            // mmMenuOrdenTrabajo
-            // 
-            this.mmMenuOrdenTrabajo.BackColor = System.Drawing.Color.Transparent;
-            this.mmMenuOrdenTrabajo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.mmMenuOrdenTrabajo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reportesToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.salirF5ToolStripMenuItem});
-            this.mmMenuOrdenTrabajo.Location = new System.Drawing.Point(0, 0);
-            this.mmMenuOrdenTrabajo.Name = "mmMenuOrdenTrabajo";
-            this.mmMenuOrdenTrabajo.Size = new System.Drawing.Size(787, 25);
-            this.mmMenuOrdenTrabajo.TabIndex = 23;
-            this.mmMenuOrdenTrabajo.Text = "menuStrip1";
-            // 
-            // reportesToolStripMenuItem
-            // 
-            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevoReporteToolStripMenuItem,
-            this.generarReporteToolStripMenuItem});
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(74, 21);
-            this.reportesToolStripMenuItem.Text = "Reportes";
-            // 
-            // nuevoReporteToolStripMenuItem
-            // 
-            this.nuevoReporteToolStripMenuItem.Name = "nuevoReporteToolStripMenuItem";
-            this.nuevoReporteToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.nuevoReporteToolStripMenuItem.Text = "Nuevo Reporte - F1";
-            // 
-            // generarReporteToolStripMenuItem
-            // 
-            this.generarReporteToolStripMenuItem.Name = "generarReporteToolStripMenuItem";
-            this.generarReporteToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.generarReporteToolStripMenuItem.Text = "Generar Reporte - F2";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 21);
-            this.toolStripMenuItem1.Text = "|";
-            // 
-            // salirF5ToolStripMenuItem
-            // 
-            this.salirF5ToolStripMenuItem.Name = "salirF5ToolStripMenuItem";
-            this.salirF5ToolStripMenuItem.Size = new System.Drawing.Size(72, 21);
-            this.salirF5ToolStripMenuItem.Text = "Salir - F5";
             // 
             // label5
             // 
@@ -352,6 +312,87 @@
             this.label5.Text = "_________________________________________________________________________________" +
     "_____________________________________________________________________________";
             // 
+            // tls_Menu_OrdenTrabajo
+            // 
+            this.tls_Menu_OrdenTrabajo.BackColor = System.Drawing.Color.Transparent;
+            this.tls_Menu_OrdenTrabajo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.tls_Menu_OrdenTrabajo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btn_GenerarReporte,
+            this.lbl_GenerarReporte,
+            this.toolStripSeparator1,
+            this.btn_NuevoReporte,
+            this.lbl_NuevoReporte,
+            this.toolStripSeparator2,
+            this.btn_Salir,
+            this.lbl_Salir});
+            this.tls_Menu_OrdenTrabajo.Location = new System.Drawing.Point(0, 0);
+            this.tls_Menu_OrdenTrabajo.Name = "tls_Menu_OrdenTrabajo";
+            this.tls_Menu_OrdenTrabajo.Size = new System.Drawing.Size(787, 25);
+            this.tls_Menu_OrdenTrabajo.TabIndex = 25;
+            this.tls_Menu_OrdenTrabajo.Text = "toolStrip1";
+            // 
+            // btn_GenerarReporte
+            // 
+            this.btn_GenerarReporte.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btn_GenerarReporte.Image = ((System.Drawing.Image)(resources.GetObject("btn_GenerarReporte.Image")));
+            this.btn_GenerarReporte.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_GenerarReporte.Name = "btn_GenerarReporte";
+            this.btn_GenerarReporte.Size = new System.Drawing.Size(23, 22);
+            this.btn_GenerarReporte.Text = "btn_GenerarReporte";
+            this.btn_GenerarReporte.ToolTipText = "Generar Reporte";
+            // 
+            // lbl_GenerarReporte
+            // 
+            this.lbl_GenerarReporte.Name = "lbl_GenerarReporte";
+            this.lbl_GenerarReporte.Size = new System.Drawing.Size(150, 22);
+            this.lbl_GenerarReporte.Text = "GENERAR REPORTE - F1";
+            this.lbl_GenerarReporte.ToolTipText = "Generar Reporte";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btn_NuevoReporte
+            // 
+            this.btn_NuevoReporte.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btn_NuevoReporte.Image = ((System.Drawing.Image)(resources.GetObject("btn_NuevoReporte.Image")));
+            this.btn_NuevoReporte.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_NuevoReporte.Name = "btn_NuevoReporte";
+            this.btn_NuevoReporte.Size = new System.Drawing.Size(23, 22);
+            this.btn_NuevoReporte.Text = "btn_NuevoReporte";
+            this.btn_NuevoReporte.ToolTipText = "Nuevo Reporte";
+            // 
+            // lbl_NuevoReporte
+            // 
+            this.lbl_NuevoReporte.Name = "lbl_NuevoReporte";
+            this.lbl_NuevoReporte.Size = new System.Drawing.Size(127, 22);
+            this.lbl_NuevoReporte.Text = "Nuevo Reporte - F8";
+            this.lbl_NuevoReporte.ToolTipText = "Nuevo Reporte";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btn_Salir
+            // 
+            this.btn_Salir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btn_Salir.Image = ((System.Drawing.Image)(resources.GetObject("btn_Salir.Image")));
+            this.btn_Salir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Size = new System.Drawing.Size(23, 22);
+            this.btn_Salir.Text = "btn_Salir";
+            this.btn_Salir.ToolTipText = "Salir";
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
+            // 
+            // lbl_Salir
+            // 
+            this.lbl_Salir.Name = "lbl_Salir";
+            this.lbl_Salir.Size = new System.Drawing.Size(68, 22);
+            this.lbl_Salir.Text = "Salir - ESC";
+            this.lbl_Salir.ToolTipText = "Salir";
+            // 
             // frm_ordenTrabajo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -359,32 +400,31 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(787, 437);
+            this.Controls.Add(this.tls_Menu_OrdenTrabajo);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cbx_Prioridad);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.txt_NombreTecnico);
+            this.Controls.Add(this.cbx_CodigoTecnico);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.txt_ProblemaReportado);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.txt_DireccionCliente);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txt_ContactoCliente);
             this.Controls.Add(this.lbl_fechaActual);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txt_NombreCliente);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txt_NumeroCliente);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.mmMenuOrdenTrabajo);
+            this.Controls.Add(this.txt_NumeroOrden);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.mmMenuOrdenTrabajo;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(803, 476);
             this.MinimizeBox = false;
@@ -393,8 +433,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ORDENES DE TRABAJO";
             this.Load += new System.EventHandler(this.frm_ordenTrabajo_Load);
-            this.mmMenuOrdenTrabajo.ResumeLayout(false);
-            this.mmMenuOrdenTrabajo.PerformLayout();
+            this.tls_Menu_OrdenTrabajo.ResumeLayout(false);
+            this.tls_Menu_OrdenTrabajo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -402,34 +442,37 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_NumeroOrden;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_NumeroCliente;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_NombreCliente;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbl_fechaActual;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_ContactoCliente;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txt_DireccionCliente;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox txt_ProblemaReportado;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbx_CodigoTecnico;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox txt_NombreTecnico;
+        private System.Windows.Forms.ComboBox cbx_Prioridad;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.MenuStrip mmMenuOrdenTrabajo;
-        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nuevoReporteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem generarReporteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salirF5ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ToolStrip tls_Menu_OrdenTrabajo;
+        private System.Windows.Forms.ToolStripButton btn_GenerarReporte;
+        private System.Windows.Forms.ToolStripLabel lbl_GenerarReporte;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton btn_NuevoReporte;
+        private System.Windows.Forms.ToolStripLabel lbl_NuevoReporte;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton btn_Salir;
+        private System.Windows.Forms.ToolStripLabel lbl_Salir;
     }
 }
