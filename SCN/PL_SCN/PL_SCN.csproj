@@ -59,6 +59,12 @@
     <Compile Include="CatyMan\frm_perfiles.Designer.cs">
       <DependentUpon>frm_perfiles.cs</DependentUpon>
     </Compile>
+    <Compile Include="CatyMan\frm_personas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatyMan\frm_personas.Designer.cs">
+      <DependentUpon>frm_personas.cs</DependentUpon>
+    </Compile>
     <Compile Include="CatyMan\frm_suscrip.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,24 @@
     </Compile>
     <Compile Include="CatyMan\frm_usuario.Designer.cs">
       <DependentUpon>frm_usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Persona\frm_Add_Persona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Persona\frm_Add_Persona.Designer.cs">
+      <DependentUpon>frm_Add_Persona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Persona\frm_Del_Persona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Persona\frm_Del_Persona.Designer.cs">
+      <DependentUpon>frm_Del_Persona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Persona\frm_Mod_Persona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Persona\frm_Mod_Persona.Designer.cs">
+      <DependentUpon>frm_Mod_Persona.cs</DependentUpon>
     </Compile>
     <Compile Include="Estadistica\frm_estadistica.cs">
       <SubType>Form</SubType>
@@ -109,11 +133,23 @@
     <EmbeddedResource Include="CatyMan\frm_perfiles.resx">
       <DependentUpon>frm_perfiles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CatyMan\frm_personas.resx">
+      <DependentUpon>frm_personas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CatyMan\frm_suscrip.resx">
       <DependentUpon>frm_suscrip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CatyMan\frm_usuario.resx">
       <DependentUpon>frm_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatyMan\Mantenimientos\Persona\frm_Add_Persona.resx">
+      <DependentUpon>frm_Add_Persona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatyMan\Mantenimientos\Persona\frm_Del_Persona.resx">
+      <DependentUpon>frm_Del_Persona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatyMan\Mantenimientos\Persona\frm_Mod_Persona.resx">
+      <DependentUpon>frm_Mod_Persona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Estadistica\frm_estadistica.resx">
       <DependentUpon>frm_estadistica.cs</DependentUpon>

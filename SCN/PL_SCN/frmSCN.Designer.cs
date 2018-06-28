@@ -39,10 +39,13 @@
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambiosDeCedulaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.parametrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.personaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mniSuscripciones = new System.Windows.Forms.ToolStripMenuItem();
             this.contratosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cobroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pagoComisionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estadisticasVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mniInventarios = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -116,7 +119,9 @@
             this.mniSeguridad.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clientesToolStripMenuItem,
             this.cambiosDeCedulaToolStripMenuItem,
-            this.parametrosToolStripMenuItem});
+            this.parametrosToolStripMenuItem,
+            this.estadosToolStripMenuItem,
+            this.personaToolStripMenuItem});
             this.mniSeguridad.ForeColor = System.Drawing.Color.White;
             this.mniSeguridad.Name = "mniSeguridad";
             this.mniSeguridad.Size = new System.Drawing.Size(113, 40);
@@ -140,12 +145,26 @@
             this.parametrosToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.parametrosToolStripMenuItem.Text = "Parametros";
             // 
+            // estadosToolStripMenuItem
+            // 
+            this.estadosToolStripMenuItem.Name = "estadosToolStripMenuItem";
+            this.estadosToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.estadosToolStripMenuItem.Text = "Estados";
+            // 
+            // personaToolStripMenuItem
+            // 
+            this.personaToolStripMenuItem.Name = "personaToolStripMenuItem";
+            this.personaToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.personaToolStripMenuItem.Text = "Persona";
+            this.personaToolStripMenuItem.Click += new System.EventHandler(this.personaToolStripMenuItem_Click);
+            // 
             // mniSuscripciones
             // 
             this.mniSuscripciones.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.contratosToolStripMenuItem,
             this.cobroToolStripMenuItem,
-            this.pagoComisionesToolStripMenuItem});
+            this.pagoComisionesToolStripMenuItem,
+            this.estadisticasVentasToolStripMenuItem});
             this.mniSuscripciones.ForeColor = System.Drawing.Color.White;
             this.mniSuscripciones.Name = "mniSuscripciones";
             this.mniSuscripciones.Size = new System.Drawing.Size(101, 40);
@@ -154,20 +173,27 @@
             // contratosToolStripMenuItem
             // 
             this.contratosToolStripMenuItem.Name = "contratosToolStripMenuItem";
-            this.contratosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.contratosToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.contratosToolStripMenuItem.Text = "Contratos";
             // 
             // cobroToolStripMenuItem
             // 
             this.cobroToolStripMenuItem.Name = "cobroToolStripMenuItem";
-            this.cobroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cobroToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.cobroToolStripMenuItem.Text = "Cobro";
             // 
             // pagoComisionesToolStripMenuItem
             // 
             this.pagoComisionesToolStripMenuItem.Name = "pagoComisionesToolStripMenuItem";
-            this.pagoComisionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pagoComisionesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.pagoComisionesToolStripMenuItem.Text = "Pago Comisiones";
+            // 
+            // estadisticasVentasToolStripMenuItem
+            // 
+            this.estadisticasVentasToolStripMenuItem.Name = "estadisticasVentasToolStripMenuItem";
+            this.estadisticasVentasToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.estadisticasVentasToolStripMenuItem.Text = "Estadisticas Ventas";
+            this.estadisticasVentasToolStripMenuItem.Click += new System.EventHandler(this.estadisticasVentasToolStripMenuItem_Click);
             // 
             // mniInventarios
             // 
@@ -277,6 +303,9 @@
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stockToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ordenDeTrabajoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estadisticasVentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem personaToolStripMenuItem;
     }
 }
 
