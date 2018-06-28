@@ -193,6 +193,7 @@
             this.estadisticasVentasToolStripMenuItem.Name = "estadisticasVentasToolStripMenuItem";
             this.estadisticasVentasToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.estadisticasVentasToolStripMenuItem.Text = "Estadisticas Ventas";
+            this.estadisticasVentasToolStripMenuItem.Click += new System.EventHandler(this.estadisticasVentasToolStripMenuItem_Click);
             // 
             // mniInventarios
             // 
