@@ -16,5 +16,28 @@ namespace PL_SCN.CatyMan
         {
             InitializeComponent();
         }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            PL_SCN.CatyMan.Mantenimientos.Departamentos.frm_Add_Depa frmAddDep = new Mantenimientos.Departamentos.frm_Add_Depa();
+            frmAddDep.ShowDialog();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            PL_SCN.CatyMan.Mantenimientos.Departamentos.frm_Mod_Depa frmModDep = new Mantenimientos.Departamentos.frm_Mod_Depa();
+            frmModDep.ShowDialog();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            PL_SCN.CatyMan.Mantenimientos.Departamentos.frm_Del_Depa frmDelDep = new Mantenimientos.Departamentos.frm_Del_Depa();
+            frmDelDep.ShowDialog();
+        }
     }
 }

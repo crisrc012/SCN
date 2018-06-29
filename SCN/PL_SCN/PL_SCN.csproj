@@ -77,6 +77,42 @@
     <Compile Include="CatyMan\frm_usuario.Designer.cs">
       <DependentUpon>frm_usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Departamentos\frm_Add_Depa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Departamentos\frm_Add_Depa.Designer.cs">
+      <DependentUpon>frm_Add_Depa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Departamentos\frm_Del_Depa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Departamentos\frm_Del_Depa.Designer.cs">
+      <DependentUpon>frm_Del_Depa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Departamentos\frm_Mod_Depa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Departamentos\frm_Mod_Depa.Designer.cs">
+      <DependentUpon>frm_Mod_Depa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Perfiles\frm_Add_Perfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Perfiles\frm_Add_Perfil.Designer.cs">
+      <DependentUpon>frm_Add_Perfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Perfiles\frm_Del_Perfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Perfiles\frm_Del_Perfil.Designer.cs">
+      <DependentUpon>frm_Del_Perfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Perfiles\frm_Mod_Perfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Perfiles\frm_Mod_Perfil.Designer.cs">
+      <DependentUpon>frm_Mod_Perfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="CatyMan\Mantenimientos\Persona\frm_Add_Persona.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +207,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CatyMan\frm_usuario.resx">
       <DependentUpon>frm_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatyMan\Mantenimientos\Departamentos\frm_Add_Depa.resx">
+      <DependentUpon>frm_Add_Depa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatyMan\Mantenimientos\Departamentos\frm_Del_Depa.resx">
+      <DependentUpon>frm_Del_Depa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatyMan\Mantenimientos\Departamentos\frm_Mod_Depa.resx">
+      <DependentUpon>frm_Mod_Depa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatyMan\Mantenimientos\Perfiles\frm_Add_Perfil.resx">
+      <DependentUpon>frm_Add_Perfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatyMan\Mantenimientos\Perfiles\frm_Del_Perfil.resx">
+      <DependentUpon>frm_Del_Perfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatyMan\Mantenimientos\Perfiles\frm_Mod_Perfil.resx">
+      <DependentUpon>frm_Mod_Perfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CatyMan\Mantenimientos\Persona\frm_Add_Persona.resx">
       <DependentUpon>frm_Add_Persona.cs</DependentUpon>
