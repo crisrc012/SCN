@@ -17,5 +17,28 @@ namespace PL_SCN.CatyMan
             InitializeComponent();
             toolStrip1.AutoSize = false;
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            PL_SCN.CatyMan.Mantenimientos.Usuario.frm_Add_Usuario frmAddUsr = new Mantenimientos.Usuario.frm_Add_Usuario();
+            frmAddUsr.ShowDialog();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            PL_SCN.CatyMan.Mantenimientos.Usuario.frm_Mod_Usr frmModUsr = new Mantenimientos.Usuario.frm_Mod_Usr();
+            frmModUsr.ShowDialog();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            PL_SCN.CatyMan.Mantenimientos.Usuario.frm_Del_Usr frmDelUsr = new Mantenimientos.Usuario.frm_Del_Usr();
+            frmDelUsr.ShowDialog();
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

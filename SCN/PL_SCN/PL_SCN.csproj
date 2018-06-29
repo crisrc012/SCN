@@ -95,6 +95,24 @@
     <Compile Include="CatyMan\Mantenimientos\Persona\frm_Mod_Persona.Designer.cs">
       <DependentUpon>frm_Mod_Persona.cs</DependentUpon>
     </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Usuario\frm_Add_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Usuario\frm_Add_Usuario.Designer.cs">
+      <DependentUpon>frm_Add_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Usuario\frm_Del_Usr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Usuario\frm_Del_Usr.Designer.cs">
+      <DependentUpon>frm_Del_Usr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Usuario\frm_Mod_Usr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Usuario\frm_Mod_Usr.Designer.cs">
+      <DependentUpon>frm_Mod_Usr.cs</DependentUpon>
+    </Compile>
     <Compile Include="Estadistica\frm_estadistica.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +180,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CatyMan\Mantenimientos\Persona\frm_Mod_Persona.resx">
       <DependentUpon>frm_Mod_Persona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatyMan\Mantenimientos\Usuario\frm_Add_Usuario.resx">
+      <DependentUpon>frm_Add_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatyMan\Mantenimientos\Usuario\frm_Del_Usr.resx">
+      <DependentUpon>frm_Del_Usr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatyMan\Mantenimientos\Usuario\frm_Mod_Usr.resx">
+      <DependentUpon>frm_Mod_Usr.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Estadistica\frm_estadistica.resx">
       <DependentUpon>frm_estadistica.cs</DependentUpon>
