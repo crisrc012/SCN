@@ -13,6 +13,7 @@ namespace PL_SCN
             InitializeComponent();
             errorProvider = new ErrorProvider();
         }
+        #region Validaciones
         private void txtUsuario_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrEmpty(txtUsuario.Text.Trim()))
@@ -25,25 +26,6 @@ namespace PL_SCN
             {
                 e.Cancel = false;
                 errorProvider.SetError(txtUsuario, null);
-            }
-        }
-        private void btnEntrar_Click(object sender, EventArgs e)
-        {
-            if (ValidateChildren(ValidationConstraints.Enabled))
-            {
-                if (true)
-                {
-                    // Si autentica
-                    Visible = false;
-                    frmSCNInstancia = new frmSCN();
-                    frmSCNInstancia.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Usuario o contraseña inválido",
-                        "Error de inicio de sesión", MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
-                }
             }
         }
         private void txtContrasena_Validating(object sender, CancelEventArgs e)
@@ -95,7 +77,7 @@ namespace PL_SCN
             if (e.KeyChar == (char)Keys.Space)
             {
                 // Valida que el nombre de usuario no tenga espacios en blanco
-                errorProvider.SetError(txtUsuario, 
+                errorProvider.SetError(txtUsuario,
                     "El nombre de usuario no puede contener espacios en blanco.");
                 e.Handled = true;
             }
@@ -108,6 +90,26 @@ namespace PL_SCN
             else
             {
                 errorProvider.SetError(txtUsuario, null);
+            }
+        }
+        #endregion
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            if (ValidateChildren(ValidationConstraints.Enabled))
+            {
+                if (true)
+                {
+                    // Si autentica
+                    Visible = false;
+                    frmSCNInstancia = new frmSCN();
+                    frmSCNInstancia.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña inválido",
+                        "Error de inicio de sesión", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
             }
         }
     }

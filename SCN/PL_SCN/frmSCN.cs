@@ -11,7 +11,6 @@ namespace PL_SCN
         public frmSCN()
         {
             InitializeComponent();
-            //hola
         }
 
         #region frmAcercaDe
@@ -42,7 +41,27 @@ namespace PL_SCN
             frmAcercaDeInstancia = null;
         }
         #endregion
+        #region Seguridad
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PL_SCN.CatyMan.frm_usuario frmUsr = new CatyMan.frm_usuario();
+            frmUsr.ShowDialog();
+        }
+        private void perfilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PL_SCN.CatyMan.frm_perfiles frmPer = new CatyMan.frm_perfiles();
+            frmPer.ShowDialog();
+        }
+        private void departamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PL_SCN.CatyMan.frm_depa frmDepa = new CatyMan.frm_depa();
+            frmDepa.ShowDialog();
+        }
+        private void contraseñasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
 
+        }
+        #endregion
         private void frmSCN_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
@@ -52,25 +71,6 @@ namespace PL_SCN
         {
             Application.Exit();
         }
-
-        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            PL_SCN.CatyMan.frm_usuario frmUsr = new CatyMan.frm_usuario();
-            frmUsr.ShowDialog();
-        }
-
-        private void perfilToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            PL_SCN.CatyMan.frm_perfiles frmPer = new CatyMan.frm_perfiles();
-            frmPer.ShowDialog();
-        }
-
-        private void departamentoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            PL_SCN.CatyMan.frm_depa frmDepa = new CatyMan.frm_depa();
-            frmDepa.ShowDialog();
-        }
-
         private void suscripcionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PL_SCN.CatyMan.frm_suscrip frmSusc = new CatyMan.frm_suscrip();
