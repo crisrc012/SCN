@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using PL_SCN.CatyMan;
 
 namespace PL_SCN
 {
@@ -7,6 +8,7 @@ namespace PL_SCN
     {
         #region frmObjetos
         frmAcercaDe frmAcercaDeInstancia;
+        frm_usuario frmUsr;
         #endregion
         public frmSCN()
         {
@@ -36,17 +38,40 @@ namespace PL_SCN
             FormClosedEventArgs e)
         {
             // Cuando se cierre el formulario se establece en null
-            // para que pueda volver a ser abierto al preionar el
+            // para que pueda volver a ser abierto al presionar el
             // menuitem
             frmAcercaDeInstancia = null;
         }
         #endregion
         #region Seguridad
+        #region Usuarios
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PL_SCN.CatyMan.frm_usuario frmUsr = new CatyMan.frm_usuario();
-            frmUsr.ShowDialog();
+            // Abre el formulario, si está establecido en null
+            // Esto para evitar que se ejecute más de una instancia
+            if (frmAcercaDeInstancia == null)
+            {
+                frm_usuario frmUsr = new frm_usuario();
+                frmUsr.MdiParent = this;
+                frmUsr.FormClosed +=
+                    new FormClosedEventHandler(frmUsr_FormClosed);
+                frmUsr.Show();
+            }
+            else
+            {
+                // Si ya está abierto el formulario se activa
+                frmUsr.Activate();
+            }
         }
+        private void frmUsr_FormClosed(object sender,
+            FormClosedEventArgs e)
+        {
+            // Cuando se cierre el formulario se establece en null
+            // para que pueda volver a ser abierto al presionar el
+            // menuitem
+            frmUsr = null;
+        }
+        #endregion
         private void perfilToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PL_SCN.CatyMan.frm_perfiles frmPer = new CatyMan.frm_perfiles();
