@@ -90,30 +90,29 @@
             // usuarioToolStripMenuItem
             // 
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.usuarioToolStripMenuItem.Text = "Usuarios";
             this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
             // 
             // perfilToolStripMenuItem
             // 
             this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
-            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.perfilToolStripMenuItem.Text = "Tipos de Usuario";
+            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.perfilToolStripMenuItem.Text = "Perfiles";
             this.perfilToolStripMenuItem.Click += new System.EventHandler(this.perfilToolStripMenuItem_Click);
             // 
             // departamentoToolStripMenuItem
             // 
             this.departamentoToolStripMenuItem.Name = "departamentoToolStripMenuItem";
-            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.departamentoToolStripMenuItem.Text = "Departamentos";
             this.departamentoToolStripMenuItem.Click += new System.EventHandler(this.departamentoToolStripMenuItem_Click);
             // 
             // contraseñasToolStripMenuItem1
             // 
             this.contraseñasToolStripMenuItem1.Name = "contraseñasToolStripMenuItem1";
-            this.contraseñasToolStripMenuItem1.Size = new System.Drawing.Size(177, 22);
+            this.contraseñasToolStripMenuItem1.Size = new System.Drawing.Size(170, 22);
             this.contraseñasToolStripMenuItem1.Text = "Contraseñas";
-            this.contraseñasToolStripMenuItem1.Click += new System.EventHandler(this.contraseñasToolStripMenuItem1_Click);
             // 
             // mniSeguridad
             // 
@@ -272,7 +271,6 @@
             this.Text = "SCN - Sistema de Control de Negocio";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSCN_FormClosed);
-            this.Load += new System.EventHandler(this.frmSCN_Load);
             this.mnuModulos.ResumeLayout(false);
             this.mnuModulos.PerformLayout();
             this.ResumeLayout(false);

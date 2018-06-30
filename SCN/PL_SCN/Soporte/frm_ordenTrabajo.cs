@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PL_SCN.Soporte
@@ -36,14 +29,14 @@ namespace PL_SCN.Soporte
             {
                 if (MessageBox.Show("¿Realmente Desea Salir, no se guardarán los cambios?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    this.Close();
+                    Close();
                 }
             }
             else
             {
                 if (MessageBox.Show("¿Realmente Desea Salir?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    this.Close();
+                    Close();
                 }
             }
         }

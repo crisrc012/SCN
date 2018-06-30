@@ -1,6 +1,6 @@
-﻿namespace PL_SCN
+﻿namespace PL_SCN.CatyMan.Mantenimientos.Inventario
 {
-    partial class frmAcercaDe
+    partial class frm_Man_Stock
     {
         /// <summary>
         /// Required designer variable.
@@ -28,30 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAcercaDe));
+            this.btnAccion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // frmAcercaDe
+            // btnAccion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.btnAccion.Location = new System.Drawing.Point(197, 226);
+            this.btnAccion.Name = "btnAccion";
+            this.btnAccion.Size = new System.Drawing.Size(75, 23);
+            this.btnAccion.TabIndex = 0;
+            this.btnAccion.Text = "Acción";
+            this.btnAccion.UseVisualStyleBackColor = true;
+            this.btnAccion.Click += new System.EventHandler(this.btnAccion_Click);
+            // 
+            // frm_Man_Stock
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(379, 341);
-            this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btnAccion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "frmAcercaDe";
+            this.Name = "frm_Man_Stock";
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Acerca De";
+            this.Load += new System.EventHandler(this.frm_Man_Stock_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnAccion;
     }
 }

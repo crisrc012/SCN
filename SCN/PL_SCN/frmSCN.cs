@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using PL_SCN.CatyMan;
+using PL_SCN.Estadistica;
+using PL_SCN.Soporte;
 
 namespace PL_SCN
 {
@@ -8,7 +10,10 @@ namespace PL_SCN
     {
         #region frmObjetos
         frmAcercaDe frmAcercaDeInstancia;
-        frm_usuario frmUsr;
+        frmCatalogo frmUsr, frmPerfiles, frmDepartamentos, frmPersona, 
+            frmStock, frmProductos;
+        frm_estadistica frmEstadistica;
+        frm_ordenTrabajo frmOrdenTrabajo;
         #endregion
         public frmSCN()
         {
@@ -49,9 +54,9 @@ namespace PL_SCN
         {
             // Abre el formulario, si está establecido en null
             // Esto para evitar que se ejecute más de una instancia
-            if (frmAcercaDeInstancia == null)
+            if (frmUsr == null)
             {
-                frm_usuario frmUsr = new frm_usuario();
+                frmUsr = new frmCatalogo(frmCatalogo.Mantenimiento.Usuarios);
                 frmUsr.MdiParent = this;
                 frmUsr.FormClosed +=
                     new FormClosedEventHandler(frmUsr_FormClosed);
@@ -72,75 +77,209 @@ namespace PL_SCN
             frmUsr = null;
         }
         #endregion
+        #region TipoUsuario
         private void perfilToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PL_SCN.CatyMan.frm_perfiles frmPer = new CatyMan.frm_perfiles();
-            frmPer.ShowDialog();
+            // Abre el formulario, si está establecido en null
+            // Esto para evitar que se ejecute más de una instancia
+            if (frmPerfiles == null)
+            {
+                frmPerfiles = new frmCatalogo(frmCatalogo.Mantenimiento.TipoUsuario);
+                frmPerfiles.MdiParent = this;
+                frmPerfiles.FormClosed +=
+                    new FormClosedEventHandler(frmPerfiles_FormClosed);
+                frmPerfiles.Show();
+            }
+            else
+            {
+                // Si ya está abierto el formulario se activa
+                frmPerfiles.Activate();
+            }
         }
+        private void frmPerfiles_FormClosed(object sender,
+            FormClosedEventArgs e)
+        {
+            // Cuando se cierre el formulario se establece en null
+            // para que pueda volver a ser abierto al presionar el
+            // menuitem
+            frmPerfiles = null;
+        }
+        #endregion
+        #region Departamentos
         private void departamentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PL_SCN.CatyMan.frm_depa frmDepa = new CatyMan.frm_depa();
-            frmDepa.ShowDialog();
+            // Abre el formulario, si está establecido en null
+            // Esto para evitar que se ejecute más de una instancia
+            if (frmDepartamentos == null)
+            {
+                frmDepartamentos = new frmCatalogo(frmCatalogo.Mantenimiento.Departamento);
+                frmDepartamentos.MdiParent = this;
+                frmDepartamentos.FormClosed +=
+                    new FormClosedEventHandler(frmDepartamentos_FormClosed);
+                frmDepartamentos.Show();
+            }
+            else
+            {
+                // Si ya está abierto el formulario se activa
+                frmDepartamentos.Activate();
+            }
         }
-        private void contraseñasToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void frmDepartamentos_FormClosed(object sender,
+            FormClosedEventArgs e)
         {
-
+            // Cuando se cierre el formulario se establece en null
+            // para que pueda volver a ser abierto al presionar el
+            // menuitem
+            frmDepartamentos = null;
         }
+        #endregion
+        #region Persona
+        private void personaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Abre el formulario, si está establecido en null
+            // Esto para evitar que se ejecute más de una instancia
+            if (frmPersona == null)
+            {
+                frmPersona = new frmCatalogo(frmCatalogo.Mantenimiento.Persona);
+                frmPersona.MdiParent = this;
+                frmPersona.FormClosed +=
+                    new FormClosedEventHandler(frmPersona_FormClosed);
+                frmPersona.Show();
+            }
+            else
+            {
+                // Si ya está abierto el formulario se activa
+                frmPersona.Activate();
+            }
+        }
+        private void frmPersona_FormClosed(object sender,
+            FormClosedEventArgs e)
+        {
+            // Cuando se cierre el formulario se establece en null
+            // para que pueda volver a ser abierto al presionar el
+            // menuitem
+            frmPersona = null;
+        }
+        #endregion
         #endregion
         private void frmSCN_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
-
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show(
+                "¿Realmente Desea Salir?", "Advertencia", MessageBoxButtons.YesNo, 
+                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
-        private void suscripcionesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            PL_SCN.CatyMan.frm_suscrip frmSusc = new CatyMan.frm_suscrip();
-            frmSusc.ShowDialog();
-        }
-
-        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            PL_SCN.Estadistica.frm_estadistica frmEst = new Estadistica.frm_estadistica();
-            frmEst.ShowDialog();
-        }
-
-        private void frmSCN_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void ordenDeTrabajoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PL_SCN.Soporte.frm_ordenTrabajo frmOrdenTrabajo = new Soporte.frm_ordenTrabajo();
-            frmOrdenTrabajo.ShowDialog();
+            // Abre el formulario, si está establecido en null
+            // Esto para evitar que se ejecute más de una instancia
+            if (frmOrdenTrabajo == null)
+            {
+                frmOrdenTrabajo = new frm_ordenTrabajo();
+                frmOrdenTrabajo.MdiParent = this;
+                frmOrdenTrabajo.FormClosed +=
+                    new FormClosedEventHandler(frmProductos_FormClosed);
+                frmOrdenTrabajo.Show();
+            }
+            else
+            {
+                // Si ya está abierto el formulario se activa
+                frmOrdenTrabajo.Activate();
+            }
         }
-
-        private void personaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void frmOrdenTrabajo_FormClosed(object sender,
+            FormClosedEventArgs e)
         {
-            PL_SCN.CatyMan.frm_personas frmPer = new CatyMan.frm_personas();
-            frmPer.ShowDialog();
+            // Cuando se cierre el formulario se establece en null
+            // para que pueda volver a ser abierto al presionar el
+            // menuitem
+            frmOrdenTrabajo = null;
         }
-
         private void estadisticasVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PL_SCN.Estadistica.frm_estadistica frmEst = new Estadistica.frm_estadistica();
-            frmEst.ShowDialog();
+            // Abre el formulario, si está establecido en null
+            // Esto para evitar que se ejecute más de una instancia
+            if (frmEstadistica == null)
+            {
+                frmEstadistica = new frm_estadistica();
+                frmEstadistica.MdiParent = this;
+                frmEstadistica.FormClosed +=
+                    new FormClosedEventHandler(frmStock_FormClosed);
+                frmEstadistica.Show();
+            }
+            else
+            {
+                // Si ya está abierto el formulario se activa
+                frmEstadistica.Activate();
+            }
         }
-
+        private void frmEstadistica_FormClosed(object sender,
+            FormClosedEventArgs e)
+        {
+            // Cuando se cierre el formulario se establece en null
+            // para que pueda volver a ser abierto al presionar el
+            // menuitem
+            frmEstadistica = null;
+        }
+        #region Inventarios
         private void stockToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PL_SCN.Inventarios.frm_Stock frmStock = new Inventarios.frm_Stock();
-            frmStock.ShowDialog();
+            // Abre el formulario, si está establecido en null
+            // Esto para evitar que se ejecute más de una instancia
+            if (frmStock == null)
+            {
+                frmStock = new frmCatalogo(frmCatalogo.Mantenimiento.Stock);
+                frmStock.MdiParent = this;
+                frmStock.FormClosed +=
+                    new FormClosedEventHandler(frmStock_FormClosed);
+                frmStock.Show();
+            }
+            else
+            {
+                // Si ya está abierto el formulario se activa
+                frmStock.Activate();
+            }
         }
-
+        private void frmStock_FormClosed(object sender,
+            FormClosedEventArgs e)
+        {
+            // Cuando se cierre el formulario se establece en null
+            // para que pueda volver a ser abierto al presionar el
+            // menuitem
+            frmStock = null;
+        }
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PL_SCN.Inventarios.frm_Productos frmProduc = new Inventarios.frm_Productos();
-            frmProduc.ShowDialog();
+            // Abre el formulario, si está establecido en null
+            // Esto para evitar que se ejecute más de una instancia
+            if (frmProductos == null)
+            {
+                frmProductos = new frmCatalogo(frmCatalogo.Mantenimiento.Productos);
+                frmProductos.MdiParent = this;
+                frmProductos.FormClosed +=
+                    new FormClosedEventHandler(frmProductos_FormClosed);
+                frmProductos.Show();
+            }
+            else
+            {
+                // Si ya está abierto el formulario se activa
+                frmProductos.Activate();
+            }
         }
+        private void frmProductos_FormClosed(object sender,
+            FormClosedEventArgs e)
+        {
+            // Cuando se cierre el formulario se establece en null
+            // para que pueda volver a ser abierto al presionar el
+            // menuitem
+            frmProductos = null;
+        }
+        #endregion
     }
 }
