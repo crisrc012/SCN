@@ -10,8 +10,7 @@ namespace PL_SCN
     {
         #region frmObjetos
         frmAcercaDe frmAcercaDeInstancia;
-        frmCatalogo frmUsr, frmPerfiles, frmDepartamentos, frmPersona, 
-            frmStock, frmProductos;
+        frmCatalogo frmUsr, frmPerfiles, frmDepartamentos, frmPersona, frmStock, frmProductos, frmContratos;
         frm_estadistica frmEstadistica;
         frm_ordenTrabajo frmOrdenTrabajo;
         #endregion
@@ -210,7 +209,7 @@ namespace PL_SCN
                 frmEstadistica = new frm_estadistica();
                 frmEstadistica.MdiParent = this;
                 frmEstadistica.FormClosed +=
-                    new FormClosedEventHandler(frmStock_FormClosed);
+                    new FormClosedEventHandler(frmEstadistica_FormClosed);
                 frmEstadistica.Show();
             }
             else
@@ -219,6 +218,38 @@ namespace PL_SCN
                 frmEstadistica.Activate();
             }
         }
+
+        #region Suscripciones
+        private void contratosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frmContratos == null)
+            {
+                frmContratos = new frmCatalogo(frmCatalogo.Mantenimiento.Contrato);
+                frmContratos.MdiParent = this;
+                frmContratos.FormClosed +=
+                    new FormClosedEventHandler(frmContratos_FormClosed);
+                frmContratos.Show();
+            }
+            else
+            {
+                // Si ya está abierto el formulario se activa
+                frmContratos.Activate();
+            }
+
+        }
+
+        private void frmContratos_FormClosed(object sender,
+          FormClosedEventArgs e)
+        {
+            // Cuando se cierre el formulario se establece en null
+            // para que pueda volver a ser abierto al presionar el
+            // menuitem
+            frmContratos = null;
+        }
+
+
+        #endregion
+
         private void frmEstadistica_FormClosed(object sender,
             FormClosedEventArgs e)
         {

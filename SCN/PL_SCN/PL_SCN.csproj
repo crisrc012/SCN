@@ -53,6 +53,12 @@
     <Compile Include="CatyMan\frmCatalogo.Designer.cs">
       <DependentUpon>frmCatalogo.cs</DependentUpon>
     </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Contrato\frm_Man_Contrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Contrato\frm_Man_Contrato.Designer.cs">
+      <DependentUpon>frm_Man_Contrato.cs</DependentUpon>
+    </Compile>
     <Compile Include="CatyMan\Mantenimientos\Departamentos\frm_Man_Departamentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </Compile>
     <EmbeddedResource Include="CatyMan\frmCatalogo.resx">
       <DependentUpon>frmCatalogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatyMan\Mantenimientos\Contrato\frm_Man_Contrato.resx">
+      <DependentUpon>frm_Man_Contrato.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CatyMan\Mantenimientos\Departamentos\frm_Man_Departamentos.resx">
       <DependentUpon>frm_Man_Departamentos.cs</DependentUpon>
@@ -196,9 +205,7 @@
   <ItemGroup>
     <None Include="Resources\fondo 2.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Contratos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

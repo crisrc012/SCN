@@ -3,6 +3,7 @@ using PL_SCN.CatyMan.Mantenimientos.Perfiles;
 using PL_SCN.CatyMan.Mantenimientos.Departamentos;
 using PL_SCN.CatyMan.Mantenimientos.Persona;
 using PL_SCN.CatyMan.Mantenimientos.Inventario;
+using PL_SCN.CatyMan.Mantenimientos.Contrato;
 using System;
 using System.Windows.Forms;
 
@@ -11,15 +12,19 @@ namespace PL_SCN.CatyMan
     public partial class frmCatalogo : Form
     {
         #region frmObjetos
-        private frm_Man_Usuario frmAddUsr, frmModUsr, frmDelUsr;
-        private frm_Man_Perfiles frmAddTipUsr, frmModTipUsr, frmDelTipUsr;
+        private frm_Man_Usuario       frmAddUsr, frmModUsr, frmDelUsr;
+        private frm_Man_Perfiles      frmAddTipUsr, frmModTipUsr, frmDelTipUsr;
         private frm_Man_Departamentos frmAddDep, frmModDep, frmDelDep;
-        private frm_Man_Persona frmAddPersona, frmModPersona, frmDelPersona;
-        private frm_Man_Stock frmAddStock, frmModStock, frmDelStock;
-        private frm_Man_Productos frmAddProductos, frmModProductos, frmDelProductos;
+        private frm_Man_Persona       frmAddPersona, frmModPersona, frmDelPersona;
+        private frm_Man_Stock         frmAddStock, frmModStock, frmDelStock;
+        private frm_Man_Productos     frmAddProductos, frmModProductos, frmDelProductos;
+        private frm_Man_Contrato      frmAddContratos, frmModContratos, frmDelContratos;
         #endregion
-        public enum Mantenimiento { Usuarios, TipoUsuario, Departamento,
-            Persona, Suscripciones, Productos, Stock }
+
+        public enum Mantenimiento { Usuarios, TipoUsuario,   Departamento,
+                                    Persona,  Suscripciones, Productos,
+                                    Stock,    Contrato }
+
         private Mantenimiento _mMantenimiento;
         public frmCatalogo(Mantenimiento _mMantenimiento)
         {
@@ -52,14 +57,20 @@ namespace PL_SCN.CatyMan
                 case Mantenimiento.Productos:
                     Text = "Mantenimiento de Productos";
                     break;
+                case Mantenimiento.Contrato:
+                    Text = "Mantenimiento de Contratos";
+                    break;
+
                 default:
                     break;
             }
         }
+
         private void mniSalir_Click(object sender, EventArgs e)
         {
             Close();
         }
+
         #region Agregar
         private void mniAgregar_Click(object sender, EventArgs e)
         {
@@ -84,10 +95,14 @@ namespace PL_SCN.CatyMan
                 case Mantenimiento.Productos:
                     frmAddProductos_FormOpen();
                     break;
+                case Mantenimiento.Contrato:
+                    frmAddContratos_FormOpen();
+                    break;
                 default:
                     break;
             }
         }
+
         #region Agregar Usuario
         private void frmAddUsr_FormOpen()
         {
@@ -116,6 +131,7 @@ namespace PL_SCN.CatyMan
             frmAddUsr = null;
         }
         #endregion
+
         #region Agregar TipoUsuario
         private void frmAddTipUsr_FormOpen()
         {
@@ -144,6 +160,7 @@ namespace PL_SCN.CatyMan
             frmAddTipUsr = null;
         }
         #endregion
+
         #region Agregar Departamento
         private void frmAddDep_FormOpen()
         {
@@ -172,6 +189,7 @@ namespace PL_SCN.CatyMan
             frmAddDep = null;
         }
         #endregion
+
         #region Agregar Persona
         private void frmAddPersona_FormOpen()
         {
@@ -200,6 +218,7 @@ namespace PL_SCN.CatyMan
             frmAddPersona = null;
         }
         #endregion
+
         #region Agregar Stock
         private void frmAddStock_FormOpen()
         {
@@ -228,6 +247,7 @@ namespace PL_SCN.CatyMan
             frmAddStock = null;
         }
         #endregion
+
         #region Agregar Productos
         private void frmAddProductos_FormOpen()
         {
@@ -256,7 +276,40 @@ namespace PL_SCN.CatyMan
             frmAddProductos = null;
         }
         #endregion
+
+        #region Agregar Contratos
+        private void frmAddContratos_FormOpen()
+        {
+            // Abre el formulario, si está establecido en null
+            // Esto para evitar que se ejecute más de una instancia
+            if (frmAddContratos == null)
+            {
+                frmAddContratos = new frm_Man_Contrato(frm_Man_Contrato.Accion.Agregar);
+                frmAddContratos.MdiParent = MdiParent;
+                frmAddContratos.FormClosed +=
+                    new FormClosedEventHandler(frmAddContratos_FormClosed);
+                frmAddContratos.Show();
+            }
+            else
+            {
+                // Si ya está abierto el formulario se activa
+                frmAddContratos.Activate();
+            }
+        }
+        private void frmAddContratos_FormClosed(object sender,
+            FormClosedEventArgs e)
+        {
+            // Cuando se cierre el formulario se establece en null
+            // para que pueda volver a ser abierto al presionar el
+            // menuitem
+            frmAddContratos = null;
+        }
+        
         #endregion
+
+
+        #endregion
+
         #region Modificar
         private void mniModificar_Click(object sender, EventArgs e)
         {
@@ -279,6 +332,9 @@ namespace PL_SCN.CatyMan
                     break;
                 case Mantenimiento.Productos:
                     frmModProductos_FormOpen();
+                    break;
+                case Mantenimiento.Contrato:
+                    frmModContratos_FormOpen();
                     break;
                 default:
                     break;
@@ -452,7 +508,38 @@ namespace PL_SCN.CatyMan
             frmModProductos = null;
         }
         #endregion
+
+        #region Modificar Contrato
+        private void frmModContratos_FormOpen()
+        {
+            // Abre el formulario, si está establecido en null
+            // Esto para evitar que se ejecute más de una instancia
+            if (frmModContratos == null)
+            {
+                frmModContratos = new frm_Man_Contrato(frm_Man_Contrato.Accion.Modificar);
+                frmModContratos.MdiParent = MdiParent;
+                frmModContratos.FormClosed +=
+                    new FormClosedEventHandler(frmModContratos_FormClosed);
+                frmModContratos.Show();
+            }
+            else
+            {
+                // Si ya está abierto el formulario se activa
+                frmModContratos.Activate();
+            }
+        }
+        private void frmModContratos_FormClosed(object sender,
+            FormClosedEventArgs e)
+        {
+            // Cuando se cierre el formulario se establece en null
+            // para que pueda volver a ser abierto al presionar el
+            // menuitem
+            frmModContratos = null;
+        }
         #endregion
+
+        #endregion
+
         #region Eliminar
         private void mniEliminar_Click(object sender, EventArgs e)
         {
@@ -475,6 +562,9 @@ namespace PL_SCN.CatyMan
                     break;
                 case Mantenimiento.Productos:
                     frmDelProductos_FormOpen();
+                    break;
+                case Mantenimiento.Contrato:
+                    frmDelContratos_FormOpen();
                     break;
                 default:
                     break;
@@ -646,6 +736,35 @@ namespace PL_SCN.CatyMan
             // para que pueda volver a ser abierto al presionar el
             // menuitem
             frmDelProductos = null;
+        }
+        #endregion
+
+        #region Eliminar Contrato
+        private void frmDelContratos_FormOpen()
+        {
+            // Abre el formulario, si está establecido en null
+            // Esto para evitar que se ejecute más de una instancia
+            if (frmDelContratos == null)
+            {
+                frmDelContratos = new frm_Man_Contrato(frm_Man_Contrato.Accion.Eliminar);
+                frmDelContratos.MdiParent = MdiParent;
+                frmDelContratos.FormClosed +=
+                    new FormClosedEventHandler(frmDelContratos_FormClosed);
+                frmDelContratos.Show();
+            }
+            else
+            {
+                // Si ya está abierto el formulario se activa
+                frmDelContratos.Activate();
+            }
+        }
+        private void frmDelContratos_FormClosed(object sender,
+            FormClosedEventArgs e)
+        {
+            // Cuando se cierre el formulario se establece en null
+            // para que pueda volver a ser abierto al presionar el
+            // menuitem
+            frmDelContratos = null;
         }
         #endregion
         #endregion

@@ -175,6 +175,7 @@
             this.contratosToolStripMenuItem.Name = "contratosToolStripMenuItem";
             this.contratosToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.contratosToolStripMenuItem.Text = "Contratos";
+            this.contratosToolStripMenuItem.Click += new System.EventHandler(this.contratosToolStripMenuItem_Click);
             // 
             // cobroToolStripMenuItem
             // 
