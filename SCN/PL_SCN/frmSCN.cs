@@ -10,7 +10,7 @@ namespace PL_SCN
     {
         #region frmObjetos
         frmAcercaDe frmAcercaDeInstancia;
-        frmCatalogo frmUsr, frmPerfiles, frmDepartamentos, frmPersona, frmStock, frmProductos, frmContratos;
+        frmCatalogo frmUsr, frmPerfiles, frmDepartamentos, frmPersona, frmStock, frmProductos, frmContratos, frmPago_Comisiones;
         frm_estadistica frmEstadistica;
         frm_ordenTrabajo frmOrdenTrabajo;
         #endregion
@@ -47,7 +47,9 @@ namespace PL_SCN
             frmAcercaDeInstancia = null;
         }
         #endregion
+
         #region Seguridad
+
         #region Usuarios
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -76,6 +78,7 @@ namespace PL_SCN
             frmUsr = null;
         }
         #endregion
+
         #region TipoUsuario
         private void perfilToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -104,6 +107,7 @@ namespace PL_SCN
             frmPerfiles = null;
         }
         #endregion
+
         #region Departamentos
         private void departamentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -132,6 +136,7 @@ namespace PL_SCN
             frmDepartamentos = null;
         }
         #endregion
+
         #region Persona
         private void personaToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -160,7 +165,9 @@ namespace PL_SCN
             frmPersona = null;
         }
         #endregion
+
         #endregion
+
         private void frmSCN_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
@@ -200,6 +207,68 @@ namespace PL_SCN
             // menuitem
             frmOrdenTrabajo = null;
         }
+
+
+        #region Suscripciones
+
+        #region Contratos
+        private void contratosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frmContratos == null)
+            {
+                frmContratos = new frmCatalogo(frmCatalogo.Mantenimiento.Contrato);
+                frmContratos.MdiParent = this;
+                frmContratos.FormClosed +=
+                    new FormClosedEventHandler(frmContratos_FormClosed);
+                frmContratos.Show();
+            }
+            else
+            {
+                // Si ya está abierto el formulario se activa
+                frmContratos.Activate();
+            }
+
+        } 
+
+        private void frmContratos_FormClosed(object sender,
+          FormClosedEventArgs e)
+        {
+            // Cuando se cierre el formulario se establece en null
+            // para que pueda volver a ser abierto al presionar el
+            // menuitem
+            frmContratos = null;
+        }
+        #endregion
+
+        #region Pago Comisiones
+        private void pagoComisionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frmPago_Comisiones == null)
+            {
+                frmPago_Comisiones = new frmCatalogo(frmCatalogo.Mantenimiento.Pago_Comisiones);
+                frmPago_Comisiones.MdiParent = this;
+                frmPago_Comisiones.FormClosed +=
+                    new FormClosedEventHandler(frmPago_Comisiones_FormClosed);
+                frmPago_Comisiones.Show();
+            }
+            else
+            {
+                // Si ya está abierto el formulario se activa
+                frmPago_Comisiones.Activate();
+            }
+        }
+
+        private void frmPago_Comisiones_FormClosed(object sender,  FormClosedEventArgs e)
+        {
+            // Cuando se cierre el formulario se establece en null
+            // para que pueda volver a ser abierto al presionar el
+            // menuitem
+            frmPago_Comisiones = null;
+        }
+
+        #endregion
+
+        # region Estadistica
         private void estadisticasVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Abre el formulario, si está establecido en null
@@ -218,46 +287,20 @@ namespace PL_SCN
                 frmEstadistica.Activate();
             }
         }
-
-        #region Suscripciones
-        private void contratosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (frmContratos == null)
-            {
-                frmContratos = new frmCatalogo(frmCatalogo.Mantenimiento.Contrato);
-                frmContratos.MdiParent = this;
-                frmContratos.FormClosed +=
-                    new FormClosedEventHandler(frmContratos_FormClosed);
-                frmContratos.Show();
-            }
-            else
-            {
-                // Si ya está abierto el formulario se activa
-                frmContratos.Activate();
-            }
-
-        }
-
-        private void frmContratos_FormClosed(object sender,
-          FormClosedEventArgs e)
-        {
-            // Cuando se cierre el formulario se establece en null
-            // para que pueda volver a ser abierto al presionar el
-            // menuitem
-            frmContratos = null;
-        }
-
-
-        #endregion
-
         private void frmEstadistica_FormClosed(object sender,
-            FormClosedEventArgs e)
+    FormClosedEventArgs e)
         {
             // Cuando se cierre el formulario se establece en null
             // para que pueda volver a ser abierto al presionar el
             // menuitem
             frmEstadistica = null;
         }
+
+        #endregion
+
+        #endregion
+
+
         #region Inventarios
         private void stockToolStripMenuItem_Click(object sender, EventArgs e)
         {

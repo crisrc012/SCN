@@ -19,11 +19,12 @@ namespace PL_SCN.CatyMan
         private frm_Man_Stock         frmAddStock, frmModStock, frmDelStock;
         private frm_Man_Productos     frmAddProductos, frmModProductos, frmDelProductos;
         private frm_Man_Contrato      frmAddContratos, frmModContratos, frmDelContratos;
+        private frm_Pago_Comisiones   frmAddPagoComisiones;
         #endregion
 
         public enum Mantenimiento { Usuarios, TipoUsuario,   Departamento,
                                     Persona,  Suscripciones, Productos,
-                                    Stock,    Contrato }
+                                    Stock,    Contrato,      Pago_Comisiones }
 
         private Mantenimiento _mMantenimiento;
         public frmCatalogo(Mantenimiento _mMantenimiento)
@@ -60,7 +61,13 @@ namespace PL_SCN.CatyMan
                 case Mantenimiento.Contrato:
                     Text = "Mantenimiento de Contratos";
                     break;
-
+                case Mantenimiento.Pago_Comisiones:
+                    Text = "Pago Comisiones";
+                    mniEliminar.Visible = false;
+                    mniEliminar.Enabled = false;
+                    mniModificar.Visible = false;
+                    mniModificar.Enabled = false;
+                    break;
                 default:
                     break;
             }
@@ -97,6 +104,9 @@ namespace PL_SCN.CatyMan
                     break;
                 case Mantenimiento.Contrato:
                     frmAddContratos_FormOpen();
+                    break;
+                case Mantenimiento.Pago_Comisiones:
+                    frmAddPagoComisiones_FormOpen();
                     break;
                 default:
                     break;
@@ -304,9 +314,37 @@ namespace PL_SCN.CatyMan
             // menuitem
             frmAddContratos = null;
         }
-        
+
         #endregion
 
+        #region Agregar Pagos de Comisiones
+        private void frmAddPagoComisiones_FormOpen()
+        {
+            // Abre el formulario, si está establecido en null
+            // Esto para evitar que se ejecute más de una instancia
+            if (frmAddPagoComisiones == null)
+            {
+                frmAddPagoComisiones = new frm_Pago_Comisiones(frm_Pago_Comisiones.Accion.Agregar);
+                frmAddPagoComisiones.MdiParent = MdiParent;
+                frmAddPagoComisiones.FormClosed +=
+                    new FormClosedEventHandler(frmAddPagoComisiones_FormClosed);
+                frmAddPagoComisiones.Show();
+            }
+            else
+            {
+                // Si ya está abierto el formulario se activa
+                frmAddPagoComisiones.Activate();
+            }
+        }
+        private void frmAddPagoComisiones_FormClosed(object sender,
+            FormClosedEventArgs e)
+        {
+            // Cuando se cierre el formulario se establece en null
+            // para que pueda volver a ser abierto al presionar el
+            // menuitem
+            frmAddPagoComisiones = null;
+        }
+        #endregion
 
         #endregion
 

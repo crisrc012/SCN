@@ -188,6 +188,7 @@
             this.pagoComisionesToolStripMenuItem.Name = "pagoComisionesToolStripMenuItem";
             this.pagoComisionesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.pagoComisionesToolStripMenuItem.Text = "Pago Comisiones";
+            this.pagoComisionesToolStripMenuItem.Click += new System.EventHandler(this.pagoComisionesToolStripMenuItem_Click);
             // 
             // estadisticasVentasToolStripMenuItem
             // 
