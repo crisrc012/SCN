@@ -14,20 +14,6 @@ namespace PL_SCN
             errorProvider = new ErrorProvider();
         }
         #region Validaciones
-        private void txtUsuario_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtUsuario.Text.Trim()))
-            {
-                e.Cancel = true;
-                errorProvider.SetError(txtUsuario, 
-                    "Por favor digite su nombre de usuario.");
-            }
-            else
-            {
-                e.Cancel = false;
-                errorProvider.SetError(txtUsuario, null);
-            }
-        }
         private void txtContrasena_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrEmpty(txtContrasena.Text.Trim()))
@@ -63,13 +49,26 @@ namespace PL_SCN
             }
             else if (e.KeyChar == (char)Keys.Enter)
             {
-                errorProvider.SetError(txtContrasena, null);
                 // Si se presiona la tecla Enter, se da click a btnEntrar
                 btnEntrar_Click(null, null);
             }
             else
             {
                 errorProvider.SetError(txtContrasena, null);
+            }
+        }
+        private void txtUsuario_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtUsuario.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtUsuario,
+                    "Por favor digite su nombre de usuario.");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider.SetError(txtUsuario, null);
             }
         }
         private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
@@ -81,16 +80,46 @@ namespace PL_SCN
                     "El nombre de usuario no puede contener espacios en blanco.");
                 e.Handled = true;
             }
+            else if (e.KeyChar == (char)Keys.Back)
+            {
+                // Permite borrado
+                errorProvider.SetError(txtUsuario, null);
+            }
             else if (e.KeyChar == (char)Keys.Enter)
             {
                 errorProvider.SetError(txtUsuario, null);
                 // Si se presiona la tecla Enter, se mueve al campo de contraseña
                 txtContrasena.Focus();
             }
+            else if ((e.KeyChar <= (char)97 || e.KeyChar >= (char)122) &&
+                (e.KeyChar <= (char)48 || e.KeyChar >= (char)97))
+            {
+                // Valida que se permitan sólo letras minúsculas y números
+                errorProvider.SetError(txtUsuario,
+                    "Por favor digite únicamente letras minúsculas o números.");
+                e.Handled = true;
+            }
             else
             {
                 errorProvider.SetError(txtUsuario, null);
             }
+        }
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            // Valida que el nombre de usuario no pueda ser únicamente números
+            foreach (char c in txtUsuario.Text)
+            {
+                for (int i = 97; i <= 122; i++)
+                {
+                    if (c == (char)i)
+                    {
+                        return;
+                    }
+                }
+            }
+            errorProvider.SetError(txtUsuario,
+                    "El nombre de usuario no puede contener únicamente números.");
+            txtUsuario.Focus();
         }
         #endregion
         private void btnEntrar_Click(object sender, EventArgs e)

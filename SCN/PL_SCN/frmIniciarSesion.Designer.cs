@@ -34,8 +34,8 @@
             this.lblContrasena = new System.Windows.Forms.Label();
             this.gbxCredenciales = new System.Windows.Forms.GroupBox();
             this.pnlLogo = new System.Windows.Forms.Panel();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.gbxCredenciales.SuspendLayout();
@@ -112,17 +112,6 @@
             this.pnlLogo.Size = new System.Drawing.Size(125, 119);
             this.pnlLogo.TabIndex = 4;
             // 
-            // txtContrasena
-            // 
-            this.txtContrasena.Location = new System.Drawing.Point(272, 76);
-            this.txtContrasena.MaxLength = 26;
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(182, 25);
-            this.txtContrasena.TabIndex = 1;
-            this.txtContrasena.UseSystemPasswordChar = true;
-            this.txtContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContrasena_KeyPress);
-            this.txtContrasena.Validating += new System.ComponentModel.CancelEventHandler(this.txtContrasena_Validating);
-            // 
             // txtUsuario
             // 
             this.txtUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
@@ -134,7 +123,19 @@
             this.txtUsuario.Size = new System.Drawing.Size(182, 25);
             this.txtUsuario.TabIndex = 0;
             this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
+            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             this.txtUsuario.Validating += new System.ComponentModel.CancelEventHandler(this.txtUsuario_Validating);
+            // 
+            // txtContrasena
+            // 
+            this.txtContrasena.Location = new System.Drawing.Point(272, 76);
+            this.txtContrasena.MaxLength = 26;
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.Size = new System.Drawing.Size(182, 25);
+            this.txtContrasena.TabIndex = 1;
+            this.txtContrasena.UseSystemPasswordChar = true;
+            this.txtContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContrasena_KeyPress);
+            this.txtContrasena.Validating += new System.ComponentModel.CancelEventHandler(this.txtContrasena_Validating);
             // 
             // pnlTitulo
             // 
