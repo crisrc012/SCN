@@ -258,6 +258,8 @@ namespace PL_SCN
             }
         }
 
+        
+
         private void frmPago_Comisiones_FormClosed(object sender,  FormClosedEventArgs e)
         {
             // Cuando se cierre el formulario se establece en null
@@ -299,7 +301,19 @@ namespace PL_SCN
         #endregion
 
         #endregion
-
+        private void frmSCN_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show(
+                "¿Realmente Desea Salir?", "Advertencia", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
 
         #region Inventarios
         private void stockToolStripMenuItem_Click(object sender, EventArgs e)
