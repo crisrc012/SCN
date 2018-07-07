@@ -73,35 +73,39 @@ namespace PL_SCN
         }
         private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Space)
+            switch (e.KeyChar)
             {
-                // Valida que el nombre de usuario no tenga espacios en blanco
-                errorProvider.SetError(txtUsuario,
+                case (char)Keys.Space:
+                    // Valida que el nombre de usuario no tenga espacios en blanco
+                    errorProvider.SetError(txtUsuario,
                     "El nombre de usuario no puede contener espacios en blanco.");
-                e.Handled = true;
-            }
-            else if (e.KeyChar == (char)Keys.Back)
-            {
-                // Permite borrado
-                errorProvider.SetError(txtUsuario, null);
-            }
-            else if (e.KeyChar == (char)Keys.Enter)
-            {
-                errorProvider.SetError(txtUsuario, null);
-                // Si se presiona la tecla Enter, se mueve al campo de contraseña
-                txtContrasena.Focus();
-            }
-            else if ((e.KeyChar <= (char)97 || e.KeyChar >= (char)122) &&
-                (e.KeyChar <= (char)48 || e.KeyChar >= (char)97))
-            {
-                // Valida que se permitan sólo letras minúsculas y números
-                errorProvider.SetError(txtUsuario,
-                    "Por favor digite únicamente letras minúsculas o números.");
-                e.Handled = true;
-            }
-            else
-            {
-                errorProvider.SetError(txtUsuario, null);
+                    e.Handled = true;
+                    break;
+                case (char)Keys.Back:
+                    // Permite borrado
+                    errorProvider.SetError(txtUsuario, null);
+                    break;
+                case (char)Keys.Enter:
+                    errorProvider.SetError(txtUsuario, null);
+                    // Si se presiona la tecla Enter, se mueve al campo de contraseña
+                    txtContrasena.Focus();
+                    break;
+                default:
+                    if (txtUsuario.Text.Trim().Length > 15)
+                    {
+                        errorProvider.SetError(txtUsuario,
+                            "El nombre de usuario no puede tener más de 15 caracteres.");
+                        e.Handled = true;
+                    }
+                    if ((e.KeyChar < (char)97 || e.KeyChar > (char)122) && 
+                        (e.KeyChar < (char)48 || e.KeyChar > (char)57))
+                    {
+                        // Valida que se permitan sólo letras minúsculas y números
+                        errorProvider.SetError(txtUsuario,
+                            "Por favor digite únicamente letras minúsculas o números.");
+                        e.Handled = true;
+                    }
+                    break;
             }
         }
         private void txtUsuario_Leave(object sender, EventArgs e)
