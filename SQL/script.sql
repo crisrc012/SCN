@@ -232,28 +232,28 @@ GO
 Go
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	CREATE TABLE [dbo].[T_Servisios]
+	CREATE TABLE [dbo].[T_Servicios]
 		(
-			[ID_Servisios] [int] IDENTITY(1,1) NOT NULL,
+			[ID_servicios] [int] IDENTITY(1,1) NOT NULL,
 			[ID_TV] [int] NOT NULL,			
 			[ID_Internet] [int] NOT NULL,
 			[ID_Estado] [char] (1) NOT NULL
-			CONSTRAINT [PK_Servisios] PRIMARY KEY CLUSTERED 
+			CONSTRAINT [PK_servicios] PRIMARY KEY CLUSTERED 
 			(
-				[ID_Servisios] ASC
+				[ID_servicios] ASC
 			)
 		) ON [PRIMARY]
 
 GO
 
-		ALTER TABLE [dbo].[T_Servisios]  WITH NOCHECK ADD  CONSTRAINT FK_Servisios_TV FOREIGN KEY(ID_TV)
+		ALTER TABLE [dbo].[T_servicios]  WITH NOCHECK ADD  CONSTRAINT FK_servicios_TV FOREIGN KEY(ID_TV)
 		REFERENCES [dbo].[T_TV_Tarifa] (ID_TV)
 Go
-		ALTER TABLE [dbo].[T_Servisios]  WITH NOCHECK ADD  CONSTRAINT FK_Servisios_Internet FOREIGN KEY(ID_Internet)
+		ALTER TABLE [dbo].[T_servicios]  WITH NOCHECK ADD  CONSTRAINT FK_servicios_Internet FOREIGN KEY(ID_Internet)
 		REFERENCES [dbo].[T_Internet_Tarifa] (ID_Internet)
 Go
 
-		ALTER TABLE [dbo].[T_Servisios]  WITH NOCHECK ADD  CONSTRAINT FK_Servisios_Estados FOREIGN KEY(ID_Estado)
+		ALTER TABLE [dbo].[T_servicios]  WITH NOCHECK ADD  CONSTRAINT FK_servicios_Estados FOREIGN KEY(ID_Estado)
 		REFERENCES [dbo].[T_Estados] (ID_Estado)
 Go
 
@@ -284,7 +284,7 @@ Go
 		(
 			[ID_Contrato] [int] IDENTITY(1,1) NOT NULL,
 			[ID_PersonaCliente] [int] NOT NULL,
-			[ID_Servisios] [int] NOT NULL,
+			[ID_servicios] [int] NOT NULL,
 			[ID_PersonaEmpleado] [int] NOT NULL,
 			[Fecha_Creacion] [date] NOT NULL,		
 			[Cantidad_TV] [int] NOT NULL,
@@ -301,8 +301,8 @@ GO
 		ALTER TABLE [dbo].[T_Suscripciones]  WITH NOCHECK ADD  CONSTRAINT FK_Suscripciones_PersonaCliente FOREIGN KEY(ID_PersonaCliente)
 		REFERENCES [dbo].[T_Persona] (ID_Persona)
 Go
-		ALTER TABLE [dbo].[T_Suscripciones]  WITH NOCHECK ADD  CONSTRAINT FK_Suscripciones_Servisios FOREIGN KEY(ID_Servisios)
-		REFERENCES [dbo].[T_Servisios] (ID_Servisios)
+		ALTER TABLE [dbo].[T_Suscripciones]  WITH NOCHECK ADD  CONSTRAINT FK_Suscripciones_servicios FOREIGN KEY(ID_servicios)
+		REFERENCES [dbo].[T_servicios] (ID_servicios)
 Go
 		ALTER TABLE [dbo].[T_Suscripciones]  WITH NOCHECK ADD  CONSTRAINT FK_Suscripciones_PersonaEmpleado FOREIGN KEY(ID_PersonaEmpleado)
 		REFERENCES [dbo].[T_Persona] (ID_Persona)
@@ -450,7 +450,7 @@ Go
 			[ID_DetalleCobro] [int] IDENTITY(1,1) NOT NULL,
 			[ID_Factura] [int] NOT NULL,
 			[ID_ArquilerEquipo] [int] NOT NULL,
-			[ID_Servisios] [int] NOT NULL,
+			[ID_servicios] [int] NOT NULL,
 			[Descripcion] [nvarchar](30) NOT NULL,	
 			[Cantidad] [int] NOT NULL,	
 			[Neto] [money] NOT NULL,
@@ -469,8 +469,8 @@ Go
 		ALTER TABLE [dbo].[T_DetalleCobro]  WITH NOCHECK ADD  CONSTRAINT FK_DetalleCobro_ArquilerEquipo FOREIGN KEY(ID_ArquilerEquipo)
 		REFERENCES [dbo].[T_ArquilerEquipo] (ID_ArquilerEquipo)
 Go
-		ALTER TABLE [dbo].[T_DetalleCobro]  WITH NOCHECK ADD  CONSTRAINT FK_DetalleCobro_Servisios FOREIGN KEY(ID_Servisios)
-		REFERENCES [dbo].[T_Servisios] (ID_Servisios)
+		ALTER TABLE [dbo].[T_DetalleCobro]  WITH NOCHECK ADD  CONSTRAINT FK_DetalleCobro_servicios FOREIGN KEY(ID_servicios)
+		REFERENCES [dbo].[T_servicios] (ID_servicios)
 Go
 		ALTER TABLE [dbo].[T_DetalleCobro]  WITH NOCHECK ADD  CONSTRAINT FK_DetalleCobro_Estados FOREIGN KEY(ID_Estado)
 		REFERENCES [dbo].[T_Estados] (ID_Estado)
