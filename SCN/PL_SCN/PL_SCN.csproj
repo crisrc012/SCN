@@ -133,6 +133,12 @@
     <Compile Include="Soporte\frm_ordenTrabajo.Designer.cs">
       <DependentUpon>frm_ordenTrabajo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Soporte\frm_soporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Soporte\frm_soporte.Designer.cs">
+      <DependentUpon>frm_soporte.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CatyMan\frmCatalogo.resx">
       <DependentUpon>frmCatalogo.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +190,9 @@
     </Compile>
     <EmbeddedResource Include="Soporte\frm_ordenTrabajo.resx">
       <DependentUpon>frm_ordenTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Soporte\frm_soporte.resx">
+      <DependentUpon>frm_soporte.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

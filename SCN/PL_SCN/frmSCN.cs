@@ -12,7 +12,7 @@ namespace PL_SCN
         frmAcercaDe frmAcercaDeInstancia;
         frmCatalogo frmUsr, frmPerfiles, frmDepartamentos, frmPersona, frmStock, frmProductos, frmContratos, frmPago_Comisiones;
         frm_estadistica frmEstadistica;
-        frm_ordenTrabajo frmOrdenTrabajo;
+        frm_soporte frmSoporte;
         #endregion
         public frmSCN()
         {
@@ -185,18 +185,18 @@ namespace PL_SCN
         {
             // Abre el formulario, si está establecido en null
             // Esto para evitar que se ejecute más de una instancia
-            if (frmOrdenTrabajo == null)
+            if (frmSoporte == null)
             {
-                frmOrdenTrabajo = new frm_ordenTrabajo();
-                frmOrdenTrabajo.MdiParent = this;
-                frmOrdenTrabajo.FormClosed +=
+                frmSoporte = new frm_soporte();
+                frmSoporte.MdiParent = this;
+                frmSoporte.FormClosed +=
                     new FormClosedEventHandler(frmProductos_FormClosed);
-                frmOrdenTrabajo.Show();
+                frmSoporte.Show();
             }
             else
             {
                 // Si ya está abierto el formulario se activa
-                frmOrdenTrabajo.Activate();
+                frmSoporte.Activate();
             }
         }
         private void frmOrdenTrabajo_FormClosed(object sender,
@@ -205,7 +205,7 @@ namespace PL_SCN
             // Cuando se cierre el formulario se establece en null
             // para que pueda volver a ser abierto al presionar el
             // menuitem
-            frmOrdenTrabajo = null;
+            frmSoporte = null;
         }
 
 
