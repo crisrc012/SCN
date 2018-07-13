@@ -20,11 +20,13 @@ namespace PL_SCN.CatyMan
         private frm_Man_Productos     frmAddProductos, frmModProductos, frmDelProductos;
         private frm_Man_Contrato      frmAddContratos, frmModContratos, frmDelContratos;
         private frm_Pago_Comisiones   frmAddPagoComisiones;
+        private frm_Cobro             frmAddCobro, frmModCobro, frmDelCobro;
         #endregion
 
         public enum Mantenimiento { Usuarios, TipoUsuario,   Departamento,
                                     Persona,  Suscripciones, Productos,
-                                    Stock,    Contrato,      Pago_Comisiones }
+                                    Stock,    Contrato,      Pago_Comisiones,
+                                    Cobro}
 
         private Mantenimiento _mMantenimiento;
         public frmCatalogo(Mantenimiento _mMantenimiento)
@@ -68,6 +70,11 @@ namespace PL_SCN.CatyMan
                     mniModificar.Visible = false;
                     mniModificar.Enabled = false;
                     break;
+                case Mantenimiento.Cobro:
+                    Text = "Mantenimiento de Cobros";
+                    mniEliminar.Visible = false;
+                    mniEliminar.Enabled = false;
+                    break;
                 default:
                     break;
             }
@@ -107,6 +114,9 @@ namespace PL_SCN.CatyMan
                     break;
                 case Mantenimiento.Pago_Comisiones:
                     frmAddPagoComisiones_FormOpen();
+                    break;
+                case Mantenimiento.Cobro:
+                    frmAddCobro_FormOpen();
                     break;
                 default:
                     break;
@@ -346,6 +356,35 @@ namespace PL_SCN.CatyMan
         }
         #endregion
 
+        #region Agregar Cobro
+        private void frmAddCobro_FormOpen()
+        {
+            // Abre el formulario, si está establecido en null
+            // Esto para evitar que se ejecute más de una instancia
+            if (frmAddCobro == null)
+            {
+                frmAddCobro = new frm_Cobro  (frm_Cobro.Accion.Agregar);
+                frmAddCobro.MdiParent = MdiParent;
+                frmAddCobro.FormClosed +=
+                    new FormClosedEventHandler(frmAddCobro_FormClosed);
+                frmAddCobro.Show();
+            }
+            else
+            {
+                // Si ya está abierto el formulario se activa
+                frmAddCobro.Activate();
+            }
+        }
+        private void frmAddCobro_FormClosed(object sender,
+            FormClosedEventArgs e)
+        {
+            // Cuando se cierre el formulario se establece en null
+            // para que pueda volver a ser abierto al presionar el
+            // menuitem
+            frmAddCobro = null;
+        }
+        #endregion
+
         #endregion
 
         #region Modificar
@@ -373,6 +412,10 @@ namespace PL_SCN.CatyMan
                     break;
                 case Mantenimiento.Contrato:
                     frmModContratos_FormOpen();
+                    break;
+
+                case Mantenimiento.Cobro:
+                    frmModCobro_FormOpen();
                     break;
                 default:
                     break;
@@ -576,6 +619,34 @@ namespace PL_SCN.CatyMan
         }
         #endregion
 
+        #region Modificar Cobro
+        private void frmModCobro_FormOpen()
+        {
+            // Abre el formulario, si está establecido en null
+            // Esto para evitar que se ejecute más de una instancia
+            if (frmModContratos == null)
+            {
+                frmModCobro = new frm_Cobro(frm_Cobro.Accion.Modificar);
+                frmModCobro.MdiParent = MdiParent;
+                frmModCobro.FormClosed +=
+                    new FormClosedEventHandler(frmModCobro_FormClosed);
+                frmModCobro.Show();
+            }
+            else
+            {
+                // Si ya está abierto el formulario se activa
+                frmModCobro.Activate();
+            }
+        }
+        private void frmModCobro_FormClosed(object sender,
+            FormClosedEventArgs e)
+        {
+            // Cuando se cierre el formulario se establece en null
+            // para que pueda volver a ser abierto al presionar el
+            // menuitem
+            frmModCobro = null;
+        }
+        #endregion
         #endregion
 
         #region Eliminar

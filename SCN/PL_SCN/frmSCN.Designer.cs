@@ -53,6 +53,7 @@
             this.ordenDeTrabajoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mniAcercaDe = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuModulos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -164,6 +165,7 @@
             this.contratosToolStripMenuItem,
             this.cobroToolStripMenuItem,
             this.pagoComisionesToolStripMenuItem,
+            this.facturacionToolStripMenuItem,
             this.estadisticasVentasToolStripMenuItem});
             this.mniSuscripciones.ForeColor = System.Drawing.Color.White;
             this.mniSuscripciones.Name = "mniSuscripciones";
@@ -182,6 +184,7 @@
             this.cobroToolStripMenuItem.Name = "cobroToolStripMenuItem";
             this.cobroToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.cobroToolStripMenuItem.Text = "Cobro";
+            this.cobroToolStripMenuItem.Click += new System.EventHandler(this.cobroToolStripMenuItem_Click);
             // 
             // pagoComisionesToolStripMenuItem
             // 
@@ -254,6 +257,12 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // facturacionToolStripMenuItem
+            // 
+            this.facturacionToolStripMenuItem.Name = "facturacionToolStripMenuItem";
+            this.facturacionToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.facturacionToolStripMenuItem.Text = "Facturacion";
+            // 
             // frmSCN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -307,6 +316,7 @@
         private System.Windows.Forms.ToolStripMenuItem estadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estadisticasVentasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem facturacionToolStripMenuItem;
     }
 }
 

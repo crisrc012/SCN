@@ -53,6 +53,12 @@
     <Compile Include="CatyMan\frmCatalogo.Designer.cs">
       <DependentUpon>frmCatalogo.cs</DependentUpon>
     </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Contrato\frm_Cobro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatyMan\Mantenimientos\Contrato\frm_Cobro.Designer.cs">
+      <DependentUpon>frm_Cobro.cs</DependentUpon>
+    </Compile>
     <Compile Include="CatyMan\Mantenimientos\Contrato\frm_Man_Contrato.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </Compile>
     <EmbeddedResource Include="CatyMan\frmCatalogo.resx">
       <DependentUpon>frmCatalogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatyMan\Mantenimientos\Contrato\frm_Cobro.resx">
+      <DependentUpon>frm_Cobro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CatyMan\Mantenimientos\Contrato\frm_Man_Contrato.resx">
       <DependentUpon>frm_Man_Contrato.cs</DependentUpon>

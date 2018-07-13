@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Pago_Comisiones));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -38,11 +39,16 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnAccion = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnSalir = new System.Windows.Forms.Button();
+            this.Contratos = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Venta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Comision = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -53,6 +59,12 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Contratos,
+            this.Cedula,
+            this.Servicio,
+            this.Venta,
+            this.Comision});
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.Location = new System.Drawing.Point(13, 92);
             this.dataGridView1.Name = "dataGridView1";
@@ -157,6 +169,16 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(540, 7);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(61, 23);
+            this.btnSalir.TabIndex = 11;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -195,15 +217,37 @@
             this.textBox1.TabIndex = 7;
             this.textBox1.Text = "00.0";
             // 
-            // btnSalir
+            // Contratos
             // 
-            this.btnSalir.Location = new System.Drawing.Point(540, 7);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(61, 23);
-            this.btnSalir.TabIndex = 11;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.NullValue = false;
+            this.Contratos.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Contratos.HeaderText = "Contratos";
+            this.Contratos.Name = "Contratos";
+            // 
+            // Cedula
+            // 
+            this.Cedula.FillWeight = 90F;
+            this.Cedula.HeaderText = "Cedula";
+            this.Cedula.Name = "Cedula";
+            this.Cedula.Width = 90;
+            // 
+            // Servicio
+            // 
+            this.Servicio.FillWeight = 180F;
+            this.Servicio.HeaderText = "Servicio";
+            this.Servicio.Name = "Servicio";
+            this.Servicio.Width = 180;
+            // 
+            // Venta
+            // 
+            this.Venta.HeaderText = "Venta";
+            this.Venta.Name = "Venta";
+            // 
+            // Comision
+            // 
+            this.Comision.HeaderText = "Comision";
+            this.Comision.Name = "Comision";
             // 
             // frm_Pago_Comisiones
             // 
@@ -244,5 +288,10 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Contratos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cedula;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Servicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Venta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Comision;
     }
 }

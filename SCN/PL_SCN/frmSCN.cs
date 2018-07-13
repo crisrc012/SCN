@@ -10,7 +10,7 @@ namespace PL_SCN
     {
         #region frmObjetos
         frmAcercaDe frmAcercaDeInstancia;
-        frmCatalogo frmUsr, frmPerfiles, frmDepartamentos, frmPersona, frmStock, frmProductos, frmContratos, frmPago_Comisiones;
+        frmCatalogo frmUsr, frmPerfiles, frmDepartamentos, frmPersona, frmStock, frmProductos, frmContratos, frmPago_Comisiones, frm_Cobro;
         frm_estadistica frmEstadistica;
         frm_soporte frmSoporte;
         #endregion
@@ -268,9 +268,11 @@ namespace PL_SCN
             frmPago_Comisiones = null;
         }
 
+
+
         #endregion
 
-        # region Estadistica
+        #region Estadistica
         private void estadisticasVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Abre el formulario, si está establecido en null
@@ -300,7 +302,38 @@ namespace PL_SCN
 
         #endregion
 
+        #region Cobro
+        private void cobroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frm_Cobro == null)
+            {
+                frm_Cobro = new frmCatalogo(frmCatalogo.Mantenimiento.Pago_Comisiones);
+                frm_Cobro.MdiParent = this;
+                frm_Cobro.FormClosed +=
+                    new FormClosedEventHandler(frm_Cobro_FormClosed);
+                frm_Cobro.Show();
+            }
+            else
+            {
+                // Si ya está abierto el formulario se activa
+                frm_Cobro.Activate();
+            }
+        }
+
+        private void frm_Cobro_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Cuando se cierre el formulario se establece en null
+            // para que pueda volver a ser abierto al presionar el
+            // menuitem
+            frmPago_Comisiones = null;
+        }
         #endregion
+
+        #endregion
+
+
+
+
         private void frmSCN_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show(
@@ -314,6 +347,9 @@ namespace PL_SCN
                 e.Cancel = true;
             }
         }
+
+
+
 
         #region Inventarios
         private void stockToolStripMenuItem_Click(object sender, EventArgs e)
