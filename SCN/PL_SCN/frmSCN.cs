@@ -261,6 +261,11 @@ namespace PL_SCN
             frmPago_Comisiones = null;
         }
 
+        private void mniSoporte_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
         #endregion

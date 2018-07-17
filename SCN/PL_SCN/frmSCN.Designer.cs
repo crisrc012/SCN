@@ -53,6 +53,7 @@
             this.mniSoporte = new System.Windows.Forms.ToolStripMenuItem();
             this.ordenDeTrabajoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mniAcercaDe = new System.Windows.Forms.ToolStripMenuItem();
+            this.encuestasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuModulos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -231,11 +232,13 @@
             // mniSoporte
             // 
             this.mniSoporte.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ordenDeTrabajoToolStripMenuItem});
+            this.ordenDeTrabajoToolStripMenuItem,
+            this.encuestasToolStripMenuItem});
             this.mniSoporte.ForeColor = System.Drawing.Color.White;
             this.mniSoporte.Name = "mniSoporte";
             this.mniSoporte.Size = new System.Drawing.Size(68, 21);
             this.mniSoporte.Text = "Soporte";
+            this.mniSoporte.Click += new System.EventHandler(this.mniSoporte_Click);
             // 
             // ordenDeTrabajoToolStripMenuItem
             // 
@@ -251,6 +254,12 @@
             this.mniAcercaDe.Size = new System.Drawing.Size(79, 21);
             this.mniAcercaDe.Text = "Acerca de";
             this.mniAcercaDe.Click += new System.EventHandler(this.mniAcercaDe_Click);
+            // 
+            // encuestasToolStripMenuItem
+            // 
+            this.encuestasToolStripMenuItem.Name = "encuestasToolStripMenuItem";
+            this.encuestasToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.encuestasToolStripMenuItem.Text = "Encuestas";
             // 
             // frmSCN
             // 
@@ -304,6 +313,7 @@
         private System.Windows.Forms.ToolStripMenuItem estadisticasVentasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturacionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem encuestasToolStripMenuItem;
     }
 }
 
