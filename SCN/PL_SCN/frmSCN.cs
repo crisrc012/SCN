@@ -172,15 +172,8 @@ namespace PL_SCN
         {
             Application.Exit();
         }
-        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show(
-                "¿Realmente Desea Salir?", "Advertencia", MessageBoxButtons.YesNo, 
-                MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
+
+        #region OrdenTrabajo
         private void ordenDeTrabajoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Abre el formulario, si está establecido en null
@@ -190,7 +183,7 @@ namespace PL_SCN
                 frmSoporte = new frm_soporte();
                 frmSoporte.MdiParent = this;
                 frmSoporte.FormClosed +=
-                    new FormClosedEventHandler(frmProductos_FormClosed);
+                    new FormClosedEventHandler(frmOrdenTrabajo_FormClosed);
                 frmSoporte.Show();
             }
             else
@@ -207,7 +200,7 @@ namespace PL_SCN
             // menuitem
             frmSoporte = null;
         }
-
+        #endregion
 
         #region Suscripciones
 
@@ -330,26 +323,6 @@ namespace PL_SCN
         #endregion
 
         #endregion
-
-
-
-
-        private void frmSCN_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show(
-                "¿Realmente Desea Salir?", "Advertencia", MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-            else
-            {
-                e.Cancel = true;
-            }
-        }
-
-
-
 
         #region Inventarios
         private void stockToolStripMenuItem_Click(object sender, EventArgs e)
