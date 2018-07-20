@@ -30,21 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Cobro));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnAccion = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Contratos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cuotas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Datos = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Desconexion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAccion = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -63,16 +63,6 @@
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(120, 6);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(212, 25);
-            this.label13.TabIndex = 9;
-            this.label13.Text = "Cobros Pendientes";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -84,6 +74,16 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(120, 6);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(212, 25);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "Cobros Pendientes";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -93,6 +93,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(523, 186);
             this.panel1.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Contratos en Cobro";
             // 
             // dataGridView1
             // 
@@ -107,54 +116,9 @@
             this.dataGridView1.Location = new System.Drawing.Point(4, 29);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView1.Size = new System.Drawing.Size(514, 140);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel2.Controls.Add(this.btnAccion);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Location = new System.Drawing.Point(2, 241);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(523, 97);
-            this.panel2.TabIndex = 6;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(4, 24);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(514, 41);
-            this.textBox1.TabIndex = 0;
-            // 
-            // btnAccion
-            // 
-            this.btnAccion.Location = new System.Drawing.Point(411, 66);
-            this.btnAccion.Name = "btnAccion";
-            this.btnAccion.Size = new System.Drawing.Size(104, 26);
-            this.btnAccion.TabIndex = 11;
-            this.btnAccion.Text = "button1";
-            this.btnAccion.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Detalle de Gestion";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Contratos en Cobro";
             // 
             // Contratos
             // 
@@ -191,6 +155,43 @@
             this.Desconexion.HeaderText = "Desconexion";
             this.Desconexion.Name = "Desconexion";
             this.Desconexion.Width = 80;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel2.Controls.Add(this.btnAccion);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Location = new System.Drawing.Point(2, 241);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(523, 97);
+            this.panel2.TabIndex = 6;
+            // 
+            // btnAccion
+            // 
+            this.btnAccion.Location = new System.Drawing.Point(411, 66);
+            this.btnAccion.Name = "btnAccion";
+            this.btnAccion.Size = new System.Drawing.Size(104, 26);
+            this.btnAccion.TabIndex = 11;
+            this.btnAccion.Text = "Gestion";
+            this.btnAccion.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(4, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Detalle de Gestion";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(4, 24);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(514, 41);
+            this.textBox1.TabIndex = 0;
             // 
             // frm_Cobro
             // 

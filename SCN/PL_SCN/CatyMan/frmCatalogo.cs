@@ -421,6 +421,7 @@ namespace PL_SCN.CatyMan
                     break;
             }
         }
+
         #region Modificar Usuario
         private void frmModUsr_FormOpen()
         {
@@ -449,6 +450,7 @@ namespace PL_SCN.CatyMan
             frmModUsr = null;
         }
         #endregion
+
         #region Modificar TipoUsuario
         private void frmModTipUsr_FormOpen()
         {
@@ -477,6 +479,7 @@ namespace PL_SCN.CatyMan
             frmModTipUsr = null;
         }
         #endregion
+
         #region Modificar Departamento
         private void frmModDep_FormOpen()
         {
@@ -505,6 +508,7 @@ namespace PL_SCN.CatyMan
             frmModDep = null;
         }
         #endregion
+
         #region Modificar Persona
         private void frmModPersona_FormOpen()
         {
@@ -533,6 +537,7 @@ namespace PL_SCN.CatyMan
             frmModPersona = null;
         }
         #endregion
+
         #region Modificar Stock
         private void frmModStock_FormOpen()
         {
@@ -561,6 +566,7 @@ namespace PL_SCN.CatyMan
             frmModStock = null;
         }
         #endregion
+
         #region Modificar Productos
         private void frmModProductos_FormOpen()
         {
@@ -647,6 +653,7 @@ namespace PL_SCN.CatyMan
             frmModCobro = null;
         }
         #endregion
+
         #endregion
 
         #region Eliminar

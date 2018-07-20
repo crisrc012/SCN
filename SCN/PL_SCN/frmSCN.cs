@@ -307,7 +307,7 @@ namespace PL_SCN
         {
             if (frm_Cobro == null)
             {
-                frm_Cobro = new frmCatalogo(frmCatalogo.Mantenimiento.Pago_Comisiones);
+                frm_Cobro = new frmCatalogo(frmCatalogo.Mantenimiento.Cobro);
                 frm_Cobro.MdiParent = this;
                 frm_Cobro.FormClosed +=
                     new FormClosedEventHandler(frm_Cobro_FormClosed);
@@ -325,7 +325,7 @@ namespace PL_SCN
             // Cuando se cierre el formulario se establece en null
             // para que pueda volver a ser abierto al presionar el
             // menuitem
-            frmPago_Comisiones = null;
+            frm_Cobro = null;
         }
         #endregion
 

@@ -68,6 +68,7 @@
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.Location = new System.Drawing.Point(13, 92);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(612, 256);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -227,17 +228,15 @@
             // 
             // Cedula
             // 
-            this.Cedula.FillWeight = 90F;
             this.Cedula.HeaderText = "Cedula";
             this.Cedula.Name = "Cedula";
-            this.Cedula.Width = 90;
             // 
             // Servicio
             // 
-            this.Servicio.FillWeight = 180F;
+            this.Servicio.FillWeight = 200F;
             this.Servicio.HeaderText = "Servicio";
             this.Servicio.Name = "Servicio";
-            this.Servicio.Width = 180;
+            this.Servicio.Width = 200;
             // 
             // Venta
             // 
