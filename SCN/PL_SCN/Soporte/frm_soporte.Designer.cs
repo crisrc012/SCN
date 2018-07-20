@@ -31,16 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_soporte));
             this.dgdDatos = new System.Windows.Forms.DataGridView();
             this.mnuSoporte = new System.Windows.Forms.ToolStrip();
-            this.mniAgregar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.mniModificar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.mniEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.mniSalir = new System.Windows.Forms.ToolStripButton();
+            this.mniAgregar = new System.Windows.Forms.ToolStripButton();
+            this.mniModificar = new System.Windows.Forms.ToolStripButton();
+            this.mniEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.mniSalir = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgdDatos)).BeginInit();
             this.mnuSoporte.SuspendLayout();
             this.SuspendLayout();
@@ -74,43 +74,15 @@
             this.mnuSoporte.TabIndex = 2;
             this.mnuSoporte.Text = "Mantenimiento";
             // 
-            // mniAgregar
-            // 
-            this.mniAgregar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mniAgregar.Image = ((System.Drawing.Image)(resources.GetObject("mniAgregar.Image")));
-            this.mniAgregar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.mniAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.mniAgregar.Name = "mniAgregar";
-            this.mniAgregar.Size = new System.Drawing.Size(77, 22);
-            this.mniAgregar.Text = "Agregar";
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // mniModificar
-            // 
-            this.mniModificar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mniModificar.Image = ((System.Drawing.Image)(resources.GetObject("mniModificar.Image")));
-            this.mniModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.mniModificar.Name = "mniModificar";
-            this.mniModificar.Size = new System.Drawing.Size(87, 22);
-            this.mniModificar.Text = "Modificar";
-            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // mniEliminar
-            // 
-            this.mniEliminar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mniEliminar.Image = ((System.Drawing.Image)(resources.GetObject("mniEliminar.Image")));
-            this.mniEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.mniEliminar.Name = "mniEliminar";
-            this.mniEliminar.Size = new System.Drawing.Size(79, 22);
-            this.mniEliminar.Text = "Eliminar";
             // 
             // toolStripSeparator3
             // 
@@ -128,14 +100,33 @@
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
-            // mniSalir
+            // mniAgregar
             // 
-            this.mniSalir.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mniSalir.Image = ((System.Drawing.Image)(resources.GetObject("mniSalir.Image")));
-            this.mniSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.mniSalir.Name = "mniSalir";
-            this.mniSalir.Size = new System.Drawing.Size(55, 22);
-            this.mniSalir.Text = "Salir";
+            this.mniAgregar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mniAgregar.Image = ((System.Drawing.Image)(resources.GetObject("mniAgregar.Image")));
+            this.mniAgregar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.mniAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.mniAgregar.Name = "mniAgregar";
+            this.mniAgregar.Size = new System.Drawing.Size(109, 22);
+            this.mniAgregar.Text = "Nueva Orden";
+            // 
+            // mniModificar
+            // 
+            this.mniModificar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mniModificar.Image = ((System.Drawing.Image)(resources.GetObject("mniModificar.Image")));
+            this.mniModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.mniModificar.Name = "mniModificar";
+            this.mniModificar.Size = new System.Drawing.Size(87, 22);
+            this.mniModificar.Text = "Modificar";
+            // 
+            // mniEliminar
+            // 
+            this.mniEliminar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mniEliminar.Image = ((System.Drawing.Image)(resources.GetObject("mniEliminar.Image")));
+            this.mniEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.mniEliminar.Name = "mniEliminar";
+            this.mniEliminar.Size = new System.Drawing.Size(79, 22);
+            this.mniEliminar.Text = "Eliminar";
             // 
             // toolStripButton4
             // 
@@ -145,6 +136,15 @@
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new System.Drawing.Size(65, 22);
             this.toolStripButton4.Text = "Filtrar";
+            // 
+            // mniSalir
+            // 
+            this.mniSalir.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mniSalir.Image = ((System.Drawing.Image)(resources.GetObject("mniSalir.Image")));
+            this.mniSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.mniSalir.Name = "mniSalir";
+            this.mniSalir.Size = new System.Drawing.Size(55, 22);
+            this.mniSalir.Text = "Salir";
             // 
             // frm_soporte
             // 

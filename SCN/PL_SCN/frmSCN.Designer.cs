@@ -45,6 +45,7 @@
             this.contratosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cobroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pagoComisionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadisticasVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mniInventarios = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,8 +53,7 @@
             this.mniSoporte = new System.Windows.Forms.ToolStripMenuItem();
             this.ordenDeTrabajoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mniAcercaDe = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.facturacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.encuestasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuModulos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,12 +67,11 @@
             this.mniSuscripciones,
             this.mniInventarios,
             this.mniSoporte,
-            this.mniAcercaDe,
-            this.salirToolStripMenuItem});
+            this.mniAcercaDe});
             this.mnuModulos.Location = new System.Drawing.Point(0, 0);
             this.mnuModulos.Name = "mnuModulos";
             this.mnuModulos.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.mnuModulos.Size = new System.Drawing.Size(1008, 44);
+            this.mnuModulos.Size = new System.Drawing.Size(1008, 25);
             this.mnuModulos.TabIndex = 1;
             this.mnuModulos.Text = "Módulos";
             // 
@@ -85,7 +84,7 @@
             this.contraseñasToolStripMenuItem1});
             this.mniCatalogos.ForeColor = System.Drawing.Color.White;
             this.mniCatalogos.Name = "mniCatalogos";
-            this.mniCatalogos.Size = new System.Drawing.Size(81, 40);
+            this.mniCatalogos.Size = new System.Drawing.Size(81, 21);
             this.mniCatalogos.Text = "Seguridad";
             // 
             // usuarioToolStripMenuItem
@@ -125,7 +124,7 @@
             this.personaToolStripMenuItem});
             this.mniSeguridad.ForeColor = System.Drawing.Color.White;
             this.mniSeguridad.Name = "mniSeguridad";
-            this.mniSeguridad.Size = new System.Drawing.Size(113, 40);
+            this.mniSeguridad.Size = new System.Drawing.Size(113, 21);
             this.mniSeguridad.Text = "Mantenimiento";
             // 
             // clientesToolStripMenuItem
@@ -169,7 +168,7 @@
             this.estadisticasVentasToolStripMenuItem});
             this.mniSuscripciones.ForeColor = System.Drawing.Color.White;
             this.mniSuscripciones.Name = "mniSuscripciones";
-            this.mniSuscripciones.Size = new System.Drawing.Size(101, 40);
+            this.mniSuscripciones.Size = new System.Drawing.Size(101, 21);
             this.mniSuscripciones.Text = "Suscripciones";
             // 
             // contratosToolStripMenuItem
@@ -193,6 +192,12 @@
             this.pagoComisionesToolStripMenuItem.Text = "Pago Comisiones";
             this.pagoComisionesToolStripMenuItem.Click += new System.EventHandler(this.pagoComisionesToolStripMenuItem_Click);
             // 
+            // facturacionToolStripMenuItem
+            // 
+            this.facturacionToolStripMenuItem.Name = "facturacionToolStripMenuItem";
+            this.facturacionToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.facturacionToolStripMenuItem.Text = "Facturacion";
+            // 
             // estadisticasVentasToolStripMenuItem
             // 
             this.estadisticasVentasToolStripMenuItem.Name = "estadisticasVentasToolStripMenuItem";
@@ -207,7 +212,7 @@
             this.stockToolStripMenuItem});
             this.mniInventarios.ForeColor = System.Drawing.Color.White;
             this.mniInventarios.Name = "mniInventarios";
-            this.mniInventarios.Size = new System.Drawing.Size(88, 40);
+            this.mniInventarios.Size = new System.Drawing.Size(88, 21);
             this.mniInventarios.Text = "Inventarios";
             // 
             // productosToolStripMenuItem
@@ -227,11 +232,13 @@
             // mniSoporte
             // 
             this.mniSoporte.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ordenDeTrabajoToolStripMenuItem});
+            this.ordenDeTrabajoToolStripMenuItem,
+            this.encuestasToolStripMenuItem});
             this.mniSoporte.ForeColor = System.Drawing.Color.White;
             this.mniSoporte.Name = "mniSoporte";
-            this.mniSoporte.Size = new System.Drawing.Size(68, 40);
+            this.mniSoporte.Size = new System.Drawing.Size(68, 21);
             this.mniSoporte.Text = "Soporte";
+            this.mniSoporte.Click += new System.EventHandler(this.mniSoporte_Click);
             // 
             // ordenDeTrabajoToolStripMenuItem
             // 
@@ -244,24 +251,15 @@
             // 
             this.mniAcercaDe.ForeColor = System.Drawing.Color.White;
             this.mniAcercaDe.Name = "mniAcercaDe";
-            this.mniAcercaDe.Size = new System.Drawing.Size(79, 40);
+            this.mniAcercaDe.Size = new System.Drawing.Size(79, 21);
             this.mniAcercaDe.Text = "Acerca de";
             this.mniAcercaDe.Click += new System.EventHandler(this.mniAcercaDe_Click);
             // 
-            // salirToolStripMenuItem
+            // encuestasToolStripMenuItem
             // 
-            this.salirToolStripMenuItem.AutoSize = false;
-            this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(45, 40);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
-            // facturacionToolStripMenuItem
-            // 
-            this.facturacionToolStripMenuItem.Name = "facturacionToolStripMenuItem";
-            this.facturacionToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.facturacionToolStripMenuItem.Text = "Facturacion";
+            this.encuestasToolStripMenuItem.Name = "encuestasToolStripMenuItem";
+            this.encuestasToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.encuestasToolStripMenuItem.Text = "Encuestas";
             // 
             // frmSCN
             // 
@@ -281,7 +279,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SCN - Sistema de Control de Negocio";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmSCN_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSCN_FormClosed);
             this.mnuModulos.ResumeLayout(false);
             this.mnuModulos.PerformLayout();
@@ -299,7 +296,6 @@
         private System.Windows.Forms.ToolStripMenuItem mniSoporte;
         private System.Windows.Forms.ToolStripMenuItem mniSuscripciones;
         private System.Windows.Forms.ToolStripMenuItem mniAcercaDe;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem perfilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem departamentoToolStripMenuItem;
@@ -317,6 +313,7 @@
         private System.Windows.Forms.ToolStripMenuItem estadisticasVentasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturacionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem encuestasToolStripMenuItem;
     }
 }
 
