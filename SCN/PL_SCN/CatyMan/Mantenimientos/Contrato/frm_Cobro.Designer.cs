@@ -34,7 +34,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvGestion = new System.Windows.Forms.DataGridView();
             this.Contratos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cuotas = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,11 +44,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAccion = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtGestion = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGestion)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,15 +80,15 @@
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(120, 6);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(212, 25);
+            this.label13.Size = new System.Drawing.Size(333, 25);
             this.label13.TabIndex = 9;
-            this.label13.Text = "Cobros Pendientes";
+            this.label13.Text = "Gestion de Cobros Pendientes";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dgvGestion);
             this.panel1.Location = new System.Drawing.Point(2, 49);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(523, 186);
@@ -103,22 +103,22 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Contratos en Cobro";
             // 
-            // dataGridView1
+            // dgvGestion
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Contratos,
             this.Cedula,
             this.Cuotas,
             this.Monto,
             this.Datos,
             this.Desconexion});
-            this.dataGridView1.Location = new System.Drawing.Point(4, 29);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView1.Size = new System.Drawing.Size(514, 140);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvGestion.Location = new System.Drawing.Point(4, 29);
+            this.dgvGestion.Name = "dgvGestion";
+            this.dgvGestion.RowHeadersVisible = false;
+            this.dgvGestion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvGestion.Size = new System.Drawing.Size(514, 140);
+            this.dgvGestion.TabIndex = 0;
             // 
             // Contratos
             // 
@@ -161,7 +161,7 @@
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel2.Controls.Add(this.btnAccion);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtGestion);
             this.panel2.Location = new System.Drawing.Point(2, 241);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(523, 97);
@@ -185,13 +185,13 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Detalle de Gestion";
             // 
-            // textBox1
+            // txtGestion
             // 
-            this.textBox1.Location = new System.Drawing.Point(4, 24);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(514, 41);
-            this.textBox1.TabIndex = 0;
+            this.txtGestion.Location = new System.Drawing.Point(4, 24);
+            this.txtGestion.Multiline = true;
+            this.txtGestion.Name = "txtGestion";
+            this.txtGestion.Size = new System.Drawing.Size(514, 41);
+            this.txtGestion.TabIndex = 0;
             // 
             // frm_Cobro
             // 
@@ -211,7 +211,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGestion)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -225,7 +225,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvGestion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Contratos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cedula;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cuotas;
@@ -235,6 +235,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnAccion;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtGestion;
     }
 }
