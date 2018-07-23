@@ -52,8 +52,9 @@
             this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mniSoporte = new System.Windows.Forms.ToolStripMenuItem();
             this.ordenDeTrabajoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mniAcercaDe = new System.Windows.Forms.ToolStripMenuItem();
             this.encuestasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mniAcercaDe = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambiarMiContrasenaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuModulos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,7 +82,8 @@
             this.usuarioToolStripMenuItem,
             this.perfilToolStripMenuItem,
             this.departamentoToolStripMenuItem,
-            this.contraseñasToolStripMenuItem1});
+            this.contraseñasToolStripMenuItem1,
+            this.cambiarMiContrasenaToolStripMenuItem});
             this.mniCatalogos.ForeColor = System.Drawing.Color.White;
             this.mniCatalogos.Name = "mniCatalogos";
             this.mniCatalogos.Size = new System.Drawing.Size(81, 21);
@@ -90,29 +92,29 @@
             // usuarioToolStripMenuItem
             // 
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.usuarioToolStripMenuItem.Text = "Usuarios";
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
+            this.usuarioToolStripMenuItem.Text = "Registro de Usuarios";
             this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
             // 
             // perfilToolStripMenuItem
             // 
             this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
-            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
             this.perfilToolStripMenuItem.Text = "Perfiles";
             this.perfilToolStripMenuItem.Click += new System.EventHandler(this.perfilToolStripMenuItem_Click);
             // 
             // departamentoToolStripMenuItem
             // 
             this.departamentoToolStripMenuItem.Name = "departamentoToolStripMenuItem";
-            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
             this.departamentoToolStripMenuItem.Text = "Departamentos";
             this.departamentoToolStripMenuItem.Click += new System.EventHandler(this.departamentoToolStripMenuItem_Click);
             // 
             // contraseñasToolStripMenuItem1
             // 
             this.contraseñasToolStripMenuItem1.Name = "contraseñasToolStripMenuItem1";
-            this.contraseñasToolStripMenuItem1.Size = new System.Drawing.Size(170, 22);
-            this.contraseñasToolStripMenuItem1.Text = "Contraseñas";
+            this.contraseñasToolStripMenuItem1.Size = new System.Drawing.Size(306, 22);
+            this.contraseñasToolStripMenuItem1.Text = "Reestablecer Contraseñas de Usuarios";
             // 
             // mniSeguridad
             // 
@@ -247,6 +249,12 @@
             this.ordenDeTrabajoToolStripMenuItem.Text = "Orden de Trabajo";
             this.ordenDeTrabajoToolStripMenuItem.Click += new System.EventHandler(this.ordenDeTrabajoToolStripMenuItem_Click);
             // 
+            // encuestasToolStripMenuItem
+            // 
+            this.encuestasToolStripMenuItem.Name = "encuestasToolStripMenuItem";
+            this.encuestasToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.encuestasToolStripMenuItem.Text = "Encuestas";
+            // 
             // mniAcercaDe
             // 
             this.mniAcercaDe.ForeColor = System.Drawing.Color.White;
@@ -255,11 +263,11 @@
             this.mniAcercaDe.Text = "Acerca de";
             this.mniAcercaDe.Click += new System.EventHandler(this.mniAcercaDe_Click);
             // 
-            // encuestasToolStripMenuItem
+            // cambiarMiContrasenaToolStripMenuItem
             // 
-            this.encuestasToolStripMenuItem.Name = "encuestasToolStripMenuItem";
-            this.encuestasToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.encuestasToolStripMenuItem.Text = "Encuestas";
+            this.cambiarMiContrasenaToolStripMenuItem.Name = "cambiarMiContrasenaToolStripMenuItem";
+            this.cambiarMiContrasenaToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
+            this.cambiarMiContrasenaToolStripMenuItem.Text = "Cambiar mi contraseña";
             // 
             // frmSCN
             // 
@@ -314,6 +322,7 @@
         private System.Windows.Forms.ToolStripMenuItem personaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturacionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem encuestasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cambiarMiContrasenaToolStripMenuItem;
     }
 }
 
