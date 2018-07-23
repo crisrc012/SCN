@@ -66,8 +66,8 @@
             this.mniCatalogos,
             this.mniSeguridad,
             this.mniSuscripciones,
-            this.mniInventarios,
             this.mniSoporte,
+            this.mniInventarios,
             this.mniAcercaDe});
             this.mnuModulos.Location = new System.Drawing.Point(0, 0);
             this.mnuModulos.Name = "mnuModulos";
