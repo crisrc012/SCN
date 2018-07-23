@@ -130,6 +130,15 @@ namespace PL_SCN
         {
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
+                #region Pruebas de codificación de contraseñas
+                byte[] data = System.Text.Encoding.ASCII.GetBytes(txtContrasena.Text);
+                data = new System.Security.Cryptography.SHA256Managed().ComputeHash(data);
+                string hash = System.Text.Encoding.ASCII.GetString(data);
+                MessageBox.Show("La contraseña es: " + txtContrasena.Text +
+                    "\nEl largo de la contraseña es: " + txtContrasena.Text.Length +
+                    "\nLa cadena de contraseña codificada con SHA256 es: " + hash +
+                    "\nEl largo de la contraseña codificada es: " + hash.Length);
+                #endregion
                 if (true)
                 {
                     // Si autentica
