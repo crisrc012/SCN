@@ -30,35 +30,32 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ordenTrabajo));
             this.txt_NumeroOrden = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_NOrden = new System.Windows.Forms.Label();
+            this.lbl_NCliente = new System.Windows.Forms.Label();
             this.txt_NumeroCliente = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_NomCliente = new System.Windows.Forms.Label();
             this.txt_NombreCliente = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_Fecha = new System.Windows.Forms.Label();
             this.lbl_fechaActual = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_CCliente = new System.Windows.Forms.Label();
             this.txt_ContactoCliente = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbl_Dir = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_DireccionCliente = new System.Windows.Forms.RichTextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.Lbl_PReportado = new System.Windows.Forms.Label();
             this.txt_ProblemaReportado = new System.Windows.Forms.RichTextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lbl_CTecnico = new System.Windows.Forms.Label();
             this.cbx_CodigoTecnico = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lbl_NombreTec = new System.Windows.Forms.Label();
             this.txt_NombreTecnico = new System.Windows.Forms.TextBox();
             this.cbx_Prioridad = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lbl_Prioridad = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tls_Menu_OrdenTrabajo = new System.Windows.Forms.ToolStrip();
             this.btn_GenerarReporte = new System.Windows.Forms.ToolStripButton();
             this.lbl_GenerarReporte = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btn_NuevoReporte = new System.Windows.Forms.ToolStripButton();
-            this.lbl_NuevoReporte = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_Salir = new System.Windows.Forms.ToolStripButton();
             this.lbl_Salir = new System.Windows.Forms.ToolStripLabel();
             this.tls_Menu_OrdenTrabajo.SuspendLayout();
@@ -73,27 +70,27 @@
             this.txt_NumeroOrden.Size = new System.Drawing.Size(100, 25);
             this.txt_NumeroOrden.TabIndex = 0;
             // 
-            // label1
+            // lbl_NOrden
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(532, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Número de Orden:";
+            this.lbl_NOrden.AutoSize = true;
+            this.lbl_NOrden.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_NOrden.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lbl_NOrden.Location = new System.Drawing.Point(532, 47);
+            this.lbl_NOrden.Name = "lbl_NOrden";
+            this.lbl_NOrden.Size = new System.Drawing.Size(122, 17);
+            this.lbl_NOrden.TabIndex = 1;
+            this.lbl_NOrden.Text = "Número de Orden:";
             // 
-            // label2
+            // lbl_NCliente
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(12, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Número de Cliente:";
+            this.lbl_NCliente.AutoSize = true;
+            this.lbl_NCliente.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_NCliente.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lbl_NCliente.Location = new System.Drawing.Point(12, 47);
+            this.lbl_NCliente.Name = "lbl_NCliente";
+            this.lbl_NCliente.Size = new System.Drawing.Size(125, 17);
+            this.lbl_NCliente.TabIndex = 3;
+            this.lbl_NCliente.Text = "Número de Cliente:";
             // 
             // txt_NumeroCliente
             // 
@@ -104,16 +101,16 @@
             this.txt_NumeroCliente.TabIndex = 2;
             this.txt_NumeroCliente.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_NumeroCliente_KeyDown);
             // 
-            // label3
+            // lbl_NomCliente
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(12, 98);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 17);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Nombre Cliente:";
+            this.lbl_NomCliente.AutoSize = true;
+            this.lbl_NomCliente.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_NomCliente.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lbl_NomCliente.Location = new System.Drawing.Point(12, 98);
+            this.lbl_NomCliente.Name = "lbl_NomCliente";
+            this.lbl_NomCliente.Size = new System.Drawing.Size(106, 17);
+            this.lbl_NomCliente.TabIndex = 5;
+            this.lbl_NomCliente.Text = "Nombre Cliente:";
             // 
             // txt_NombreCliente
             // 
@@ -124,16 +121,16 @@
             this.txt_NombreCliente.Size = new System.Drawing.Size(177, 25);
             this.txt_NombreCliente.TabIndex = 4;
             // 
-            // label4
+            // lbl_Fecha
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(312, 44);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Fecha:";
+            this.lbl_Fecha.AutoSize = true;
+            this.lbl_Fecha.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Fecha.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lbl_Fecha.Location = new System.Drawing.Point(312, 44);
+            this.lbl_Fecha.Name = "lbl_Fecha";
+            this.lbl_Fecha.Size = new System.Drawing.Size(46, 17);
+            this.lbl_Fecha.TabIndex = 7;
+            this.lbl_Fecha.Text = "Fecha:";
             // 
             // lbl_fechaActual
             // 
@@ -146,16 +143,16 @@
             this.lbl_fechaActual.TabIndex = 8;
             this.lbl_fechaActual.Text = "XXXX/XX/XX";
             // 
-            // label6
+            // lbl_CCliente
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(12, 163);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 17);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Contacto Cliente:";
+            this.lbl_CCliente.AutoSize = true;
+            this.lbl_CCliente.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_CCliente.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lbl_CCliente.Location = new System.Drawing.Point(12, 163);
+            this.lbl_CCliente.Name = "lbl_CCliente";
+            this.lbl_CCliente.Size = new System.Drawing.Size(111, 17);
+            this.lbl_CCliente.TabIndex = 10;
+            this.lbl_CCliente.Text = "Contacto Cliente:";
             // 
             // txt_ContactoCliente
             // 
@@ -166,16 +163,16 @@
             this.txt_ContactoCliente.Size = new System.Drawing.Size(177, 25);
             this.txt_ContactoCliente.TabIndex = 9;
             // 
-            // label7
+            // lbl_Dir
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(358, 98);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 17);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Dirección:";
+            this.lbl_Dir.AutoSize = true;
+            this.lbl_Dir.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Dir.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lbl_Dir.Location = new System.Drawing.Point(358, 98);
+            this.lbl_Dir.Name = "lbl_Dir";
+            this.lbl_Dir.Size = new System.Drawing.Size(66, 17);
+            this.lbl_Dir.TabIndex = 11;
+            this.lbl_Dir.Text = "Dirección:";
             // 
             // label8
             // 
@@ -212,16 +209,16 @@
             this.label9.Text = "_________________________________________________________________________________" +
     "_____________________________________________________________________________";
             // 
-            // label10
+            // Lbl_PReportado
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(12, 295);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(137, 17);
-            this.label10.TabIndex = 15;
-            this.label10.Text = "Problema Reportado:";
+            this.Lbl_PReportado.AutoSize = true;
+            this.Lbl_PReportado.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_PReportado.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Lbl_PReportado.Location = new System.Drawing.Point(12, 295);
+            this.Lbl_PReportado.Name = "Lbl_PReportado";
+            this.Lbl_PReportado.Size = new System.Drawing.Size(137, 17);
+            this.Lbl_PReportado.TabIndex = 15;
+            this.Lbl_PReportado.Text = "Problema Reportado:";
             // 
             // txt_ProblemaReportado
             // 
@@ -234,16 +231,16 @@
             this.txt_ProblemaReportado.Text = "";
             this.txt_ProblemaReportado.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_ProblemaReportado_KeyDown);
             // 
-            // label11
+            // lbl_CTecnico
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(382, 297);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(102, 17);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "Código Técnico:";
+            this.lbl_CTecnico.AutoSize = true;
+            this.lbl_CTecnico.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_CTecnico.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lbl_CTecnico.Location = new System.Drawing.Point(382, 297);
+            this.lbl_CTecnico.Name = "lbl_CTecnico";
+            this.lbl_CTecnico.Size = new System.Drawing.Size(102, 17);
+            this.lbl_CTecnico.TabIndex = 17;
+            this.lbl_CTecnico.Text = "Código Técnico:";
             // 
             // cbx_CodigoTecnico
             // 
@@ -255,16 +252,16 @@
             this.cbx_CodigoTecnico.TabIndex = 18;
             this.cbx_CodigoTecnico.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbx_CodigoTecnico_KeyDown);
             // 
-            // label12
+            // lbl_NombreTec
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(384, 340);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(61, 17);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "Nombre:";
+            this.lbl_NombreTec.AutoSize = true;
+            this.lbl_NombreTec.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_NombreTec.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lbl_NombreTec.Location = new System.Drawing.Point(384, 340);
+            this.lbl_NombreTec.Name = "lbl_NombreTec";
+            this.lbl_NombreTec.Size = new System.Drawing.Size(61, 17);
+            this.lbl_NombreTec.TabIndex = 20;
+            this.lbl_NombreTec.Text = "Nombre:";
             // 
             // txt_NombreTecnico
             // 
@@ -289,16 +286,16 @@
             this.cbx_Prioridad.TabIndex = 22;
             this.cbx_Prioridad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbx_Prioridad_KeyDown);
             // 
-            // label13
+            // lbl_Prioridad
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(382, 383);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(66, 17);
-            this.label13.TabIndex = 21;
-            this.label13.Text = "Prioridad:";
+            this.lbl_Prioridad.AutoSize = true;
+            this.lbl_Prioridad.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Prioridad.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lbl_Prioridad.Location = new System.Drawing.Point(382, 383);
+            this.lbl_Prioridad.Name = "lbl_Prioridad";
+            this.lbl_Prioridad.Size = new System.Drawing.Size(66, 17);
+            this.lbl_Prioridad.TabIndex = 21;
+            this.lbl_Prioridad.Text = "Prioridad:";
             // 
             // label5
             // 
@@ -320,9 +317,6 @@
             this.btn_GenerarReporte,
             this.lbl_GenerarReporte,
             this.toolStripSeparator1,
-            this.btn_NuevoReporte,
-            this.lbl_NuevoReporte,
-            this.toolStripSeparator2,
             this.btn_Salir,
             this.lbl_Salir});
             this.tls_Menu_OrdenTrabajo.Location = new System.Drawing.Point(0, 0);
@@ -353,28 +347,6 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // btn_NuevoReporte
-            // 
-            this.btn_NuevoReporte.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btn_NuevoReporte.Image = ((System.Drawing.Image)(resources.GetObject("btn_NuevoReporte.Image")));
-            this.btn_NuevoReporte.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_NuevoReporte.Name = "btn_NuevoReporte";
-            this.btn_NuevoReporte.Size = new System.Drawing.Size(23, 22);
-            this.btn_NuevoReporte.Text = "btn_NuevoReporte";
-            this.btn_NuevoReporte.ToolTipText = "Nuevo Reporte";
-            // 
-            // lbl_NuevoReporte
-            // 
-            this.lbl_NuevoReporte.Name = "lbl_NuevoReporte";
-            this.lbl_NuevoReporte.Size = new System.Drawing.Size(127, 22);
-            this.lbl_NuevoReporte.Text = "Nuevo Reporte - F8";
-            this.lbl_NuevoReporte.ToolTipText = "Nuevo Reporte";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
             // btn_Salir
             // 
             this.btn_Salir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -403,26 +375,26 @@
             this.Controls.Add(this.tls_Menu_OrdenTrabajo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbx_Prioridad);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.lbl_Prioridad);
+            this.Controls.Add(this.lbl_NombreTec);
             this.Controls.Add(this.txt_NombreTecnico);
             this.Controls.Add(this.cbx_CodigoTecnico);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lbl_CTecnico);
             this.Controls.Add(this.txt_ProblemaReportado);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.Lbl_PReportado);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txt_DireccionCliente);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lbl_Dir);
+            this.Controls.Add(this.lbl_CCliente);
             this.Controls.Add(this.txt_ContactoCliente);
             this.Controls.Add(this.lbl_fechaActual);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbl_Fecha);
+            this.Controls.Add(this.lbl_NomCliente);
             this.Controls.Add(this.txt_NombreCliente);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_NCliente);
             this.Controls.Add(this.txt_NumeroCliente);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_NOrden);
             this.Controls.Add(this.txt_NumeroOrden);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -443,35 +415,32 @@
         #endregion
 
         private System.Windows.Forms.TextBox txt_NumeroOrden;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_NOrden;
+        private System.Windows.Forms.Label lbl_NCliente;
         private System.Windows.Forms.TextBox txt_NumeroCliente;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_NomCliente;
         private System.Windows.Forms.TextBox txt_NombreCliente;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_Fecha;
         private System.Windows.Forms.Label lbl_fechaActual;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbl_CCliente;
         private System.Windows.Forms.TextBox txt_ContactoCliente;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbl_Dir;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RichTextBox txt_DireccionCliente;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label Lbl_PReportado;
         private System.Windows.Forms.RichTextBox txt_ProblemaReportado;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbl_CTecnico;
         private System.Windows.Forms.ComboBox cbx_CodigoTecnico;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lbl_NombreTec;
         private System.Windows.Forms.TextBox txt_NombreTecnico;
         private System.Windows.Forms.ComboBox cbx_Prioridad;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lbl_Prioridad;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ToolStrip tls_Menu_OrdenTrabajo;
         private System.Windows.Forms.ToolStripButton btn_GenerarReporte;
         private System.Windows.Forms.ToolStripLabel lbl_GenerarReporte;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton btn_NuevoReporte;
-        private System.Windows.Forms.ToolStripLabel lbl_NuevoReporte;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton btn_Salir;
         private System.Windows.Forms.ToolStripLabel lbl_Salir;
     }
