@@ -53,11 +53,9 @@
             this.lbl_Prioridad = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tls_Menu_OrdenTrabajo = new System.Windows.Forms.ToolStrip();
-            this.btn_GenerarReporte = new System.Windows.Forms.ToolStripButton();
-            this.lbl_GenerarReporte = new System.Windows.Forms.ToolStripLabel();
+            this.btn_generarReporte = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btn_Salir = new System.Windows.Forms.ToolStripButton();
-            this.lbl_Salir = new System.Windows.Forms.ToolStripLabel();
+            this.mniSalir = new System.Windows.Forms.ToolStripButton();
             this.tls_Menu_OrdenTrabajo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -311,59 +309,41 @@
             // 
             // tls_Menu_OrdenTrabajo
             // 
-            this.tls_Menu_OrdenTrabajo.BackColor = System.Drawing.Color.Transparent;
-            this.tls_Menu_OrdenTrabajo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.tls_Menu_OrdenTrabajo.AutoSize = false;
+            this.tls_Menu_OrdenTrabajo.BackColor = System.Drawing.Color.DimGray;
             this.tls_Menu_OrdenTrabajo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btn_GenerarReporte,
-            this.lbl_GenerarReporte,
+            this.btn_generarReporte,
             this.toolStripSeparator1,
-            this.btn_Salir,
-            this.lbl_Salir});
+            this.mniSalir});
             this.tls_Menu_OrdenTrabajo.Location = new System.Drawing.Point(0, 0);
             this.tls_Menu_OrdenTrabajo.Name = "tls_Menu_OrdenTrabajo";
             this.tls_Menu_OrdenTrabajo.Size = new System.Drawing.Size(787, 25);
             this.tls_Menu_OrdenTrabajo.TabIndex = 25;
-            this.tls_Menu_OrdenTrabajo.Text = "toolStrip1";
+            this.tls_Menu_OrdenTrabajo.Text = "Mantenimiento";
             // 
-            // btn_GenerarReporte
+            // btn_generarReporte
             // 
-            this.btn_GenerarReporte.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btn_GenerarReporte.Image = ((System.Drawing.Image)(resources.GetObject("btn_GenerarReporte.Image")));
-            this.btn_GenerarReporte.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_GenerarReporte.Name = "btn_GenerarReporte";
-            this.btn_GenerarReporte.Size = new System.Drawing.Size(23, 22);
-            this.btn_GenerarReporte.Text = "btn_GenerarReporte";
-            this.btn_GenerarReporte.ToolTipText = "Generar Reporte";
-            // 
-            // lbl_GenerarReporte
-            // 
-            this.lbl_GenerarReporte.Name = "lbl_GenerarReporte";
-            this.lbl_GenerarReporte.Size = new System.Drawing.Size(150, 22);
-            this.lbl_GenerarReporte.Text = "GENERAR REPORTE - F1";
-            this.lbl_GenerarReporte.ToolTipText = "Generar Reporte";
+            this.btn_generarReporte.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_generarReporte.Image = ((System.Drawing.Image)(resources.GetObject("btn_generarReporte.Image")));
+            this.btn_generarReporte.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btn_generarReporte.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_generarReporte.Name = "btn_generarReporte";
+            this.btn_generarReporte.Size = new System.Drawing.Size(162, 22);
+            this.btn_generarReporte.Text = "GENERAR ORDEN - F1";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // btn_Salir
+            // mniSalir
             // 
-            this.btn_Salir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btn_Salir.Image = ((System.Drawing.Image)(resources.GetObject("btn_Salir.Image")));
-            this.btn_Salir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(23, 22);
-            this.btn_Salir.Text = "btn_Salir";
-            this.btn_Salir.ToolTipText = "Salir";
-            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
-            // 
-            // lbl_Salir
-            // 
-            this.lbl_Salir.Name = "lbl_Salir";
-            this.lbl_Salir.Size = new System.Drawing.Size(68, 22);
-            this.lbl_Salir.Text = "Salir - ESC";
-            this.lbl_Salir.ToolTipText = "Salir";
+            this.mniSalir.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mniSalir.Image = ((System.Drawing.Image)(resources.GetObject("mniSalir.Image")));
+            this.mniSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.mniSalir.Name = "mniSalir";
+            this.mniSalir.Size = new System.Drawing.Size(55, 22);
+            this.mniSalir.Text = "Salir";
             // 
             // frm_ordenTrabajo
             // 
@@ -438,10 +418,8 @@
         private System.Windows.Forms.Label lbl_Prioridad;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ToolStrip tls_Menu_OrdenTrabajo;
-        private System.Windows.Forms.ToolStripButton btn_GenerarReporte;
-        private System.Windows.Forms.ToolStripLabel lbl_GenerarReporte;
+        private System.Windows.Forms.ToolStripButton btn_generarReporte;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton btn_Salir;
-        private System.Windows.Forms.ToolStripLabel lbl_Salir;
+        private System.Windows.Forms.ToolStripButton mniSalir;
     }
 }
