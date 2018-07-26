@@ -585,6 +585,27 @@ Go
 		REFERENCES [dbo].[T_Estados] (ID_Estado)
 Go
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+			CREATE TABLE [dbo].[T_Parametros]
+		(
+			[ID_T_Parametros] [int] IDENTITY(1,1) NOT NULL,
+			[ID_Usuario] [int] NOT NULL,
+			[Nombre] [varchar](25) NOT NULL,
+			[Valor] [varchar](25) NOT NULL,
+			[Descripcion] [varchar] (30) NOT NULL,
+			[Fecha_Ingreso] [date] NOT NULL,
+			CONSTRAINT [PK_T_Parametros] PRIMARY KEY CLUSTERED 
+			(
+				[ID_T_Parametros] ASC
+			)
+		) ON [PRIMARY]
+
+GO
+
+		ALTER TABLE [dbo].[T_Parametros]  WITH NOCHECK ADD  CONSTRAINT FK_Parametros_Usuario FOREIGN KEY(ID_Usuario)
+		REFERENCES [dbo].[T_Usuario] (ID_Usuario)
+GO
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
