@@ -13,6 +13,7 @@ namespace PL_SCN
         frmCatalogo frmUsr, frmPerfiles, frmDepartamentos, frmPersona, frmStock, frmProductos, frmContratos, frmPago_Comisiones, frm_Cobro;
         frm_estadistica frmEstadistica;
         frm_soporte frmSoporte;
+        frm_ListarEncuestas frmListarEncuestas;
         #endregion
         public frmSCN()
         {
@@ -173,6 +174,38 @@ namespace PL_SCN
             Application.Exit();
         }
 
+        #region Encuestas
+        private void encuestasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Abre el formulario, si está establecido en null
+            // Esto para evitar que se ejecute más de una instancia
+            if (frmListarEncuestas == null)
+            {
+                frmListarEncuestas = new frm_ListarEncuestas();
+                frmListarEncuestas.MdiParent = this;
+                frmListarEncuestas.FormClosed +=
+                    new FormClosedEventHandler(frmListarEncuestas_FormClosed);
+                frmListarEncuestas.Show();
+            }
+            else
+            {
+                // Si ya está abierto el formulario se activa
+                frmListarEncuestas.Activate();
+            }
+        }
+
+        private void frmListarEncuestas_FormClosed(object sender,
+            FormClosedEventArgs e)
+        {
+            // Cuando se cierre el formulario se establece en null
+            // para que pueda volver a ser abierto al presionar el
+            // menuitem
+            frmListarEncuestas = null;
+        }
+
+
+        #endregion
+
         #region OrdenTrabajo
         private void ordenDeTrabajoToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -265,6 +298,7 @@ namespace PL_SCN
         {
 
         }
+
 
 
 

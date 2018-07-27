@@ -236,6 +236,7 @@
             this.encuestasToolStripMenuItem.Name = "encuestasToolStripMenuItem";
             this.encuestasToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.encuestasToolStripMenuItem.Text = "Encuestas";
+            this.encuestasToolStripMenuItem.Click += new System.EventHandler(this.encuestasToolStripMenuItem_Click);
             // 
             // mniInventarios
             // 
