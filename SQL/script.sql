@@ -406,7 +406,8 @@ Go
 			[ID_InventarioEquipo] [int] IDENTITY(1,1) NOT NULL,
 			[ID_Articulo] [int] NOT NULL,
 			[Cantidad] [int] NOT NULL,	
-			[ID_Estado] [char] (1) NOT NULL
+			[ID_Estado] [char] (1) NOT NULL,
+			[ID_Usuario] [int] NOT NULL
 			CONSTRAINT [PK_InventarioEquipo] PRIMARY KEY CLUSTERED 
 			(
 				[ID_InventarioEquipo] ASC
@@ -420,6 +421,9 @@ GO
 Go
 		ALTER TABLE [dbo].[T_InventarioEquipo]  WITH NOCHECK ADD  CONSTRAINT FK_InventarioEquipo_Estados FOREIGN KEY(ID_Estado)
 		REFERENCES [dbo].[T_Estados] (ID_Estado)
+Go
+                ALTER TABLE [dbo].[T_InventarioEquipo]  WITH NOCHECK ADD  CONSTRAINT FK_InventarioEquipo_Usuario FOREIGN KEY(ID_Usuario)
+		REFERENCES [dbo].[T_Usuario] (ID_Usuario)
 Go
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 			CREATE TABLE [dbo].[T_ArquilerEquipo]
