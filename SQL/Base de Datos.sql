@@ -426,29 +426,29 @@ Go
 		REFERENCES [dbo].[T_Usuario] (ID_Usuario)
 Go
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-			CREATE TABLE [dbo].[T_ArquilerEquipo]
+			CREATE TABLE [dbo].[T_AlquilerEquipo]
 		(
-			[ID_ArquilerEquipo] [int] IDENTITY(1,1) NOT NULL,
+			[ID_AlquilerEquipo] [int] IDENTITY(1,1) NOT NULL,
 			[ID_InventarioEquipo] [int] NOT NULL,
 			[ID_Contrato] [int] NOT NULL,
 			[Monto_Mensual] [money] NOT NULL,
 			[CantidadUnidades] [int] NOT NULL,	
 			[ID_Estado] [char] (1) NOT NULL
-			CONSTRAINT [PK_ArquilerEquipo] PRIMARY KEY CLUSTERED 
+			CONSTRAINT [PK_AlquilerEquipo] PRIMARY KEY CLUSTERED 
 			(
-				[ID_ArquilerEquipo] ASC
+				[ID_AlquilerEquipo] ASC
 			)
 		) ON [PRIMARY]
 
 GO
 
-		ALTER TABLE [dbo].[T_ArquilerEquipo]  WITH NOCHECK ADD  CONSTRAINT FK_ArquilerEquipo_InventarioEquipo FOREIGN KEY(ID_InventarioEquipo)
+		ALTER TABLE [dbo].[T_AlquilerEquipo]  WITH NOCHECK ADD  CONSTRAINT FK_AlquilerEquipo_InventarioEquipo FOREIGN KEY(ID_InventarioEquipo)
 		REFERENCES [dbo].[T_InventarioEquipo] (ID_InventarioEquipo)
 Go
-		ALTER TABLE [dbo].[T_ArquilerEquipo]  WITH NOCHECK ADD  CONSTRAINT FK_ArquilerEquipo_Contrato FOREIGN KEY(ID_Contrato)
+		ALTER TABLE [dbo].[T_AlquilerEquipo]  WITH NOCHECK ADD  CONSTRAINT FK_AlquilerEquipo_Contrato FOREIGN KEY(ID_Contrato)
 		REFERENCES [dbo].[T_Suscripciones] (ID_Contrato)
 Go
-		ALTER TABLE [dbo].[T_ArquilerEquipo]  WITH NOCHECK ADD  CONSTRAINT FK_ArquilerEquipo_Estados FOREIGN KEY(ID_Estado)
+		ALTER TABLE [dbo].[T_AlquilerEquipo]  WITH NOCHECK ADD  CONSTRAINT FK_AlquilerEquipo_Estados FOREIGN KEY(ID_Estado)
 		REFERENCES [dbo].[T_Estados] (ID_Estado)
 Go
 
@@ -457,7 +457,7 @@ Go
 		(
 			[ID_DetalleCobro] [int] IDENTITY(1,1) NOT NULL,
 			[ID_Factura] [int] NOT NULL,
-			[ID_ArquilerEquipo] [int] NOT NULL,
+			[ID_AlquilerEquipo] [int] NOT NULL,
 			[ID_servicios] [int] NOT NULL,
 			[Descripcion] [nvarchar](30) NOT NULL,	
 			[Cantidad] [int] NOT NULL,	
@@ -474,8 +474,8 @@ GO
 		ALTER TABLE [dbo].[T_DetalleCobro]  WITH NOCHECK ADD  CONSTRAINT FK_DetalleCobro_Factura FOREIGN KEY(ID_Factura)
 		REFERENCES [dbo].[T_Cobro] (ID_Factura)
 Go
-		ALTER TABLE [dbo].[T_DetalleCobro]  WITH NOCHECK ADD  CONSTRAINT FK_DetalleCobro_ArquilerEquipo FOREIGN KEY(ID_ArquilerEquipo)
-		REFERENCES [dbo].[T_ArquilerEquipo] (ID_ArquilerEquipo)
+		ALTER TABLE [dbo].[T_DetalleCobro]  WITH NOCHECK ADD  CONSTRAINT FK_DetalleCobro_AlquilerEquipo FOREIGN KEY(ID_AlquilerEquipo)
+		REFERENCES [dbo].[T_AlquilerEquipo] (ID_AlquilerEquipo)
 Go
 		ALTER TABLE [dbo].[T_DetalleCobro]  WITH NOCHECK ADD  CONSTRAINT FK_DetalleCobro_servicios FOREIGN KEY(ID_servicios)
 		REFERENCES [dbo].[T_servicios] (ID_servicios)
