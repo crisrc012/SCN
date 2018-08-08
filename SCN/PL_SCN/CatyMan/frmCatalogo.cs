@@ -6,6 +6,8 @@ using PL_SCN.CatyMan.Mantenimientos.Inventario;
 using PL_SCN.CatyMan.Mantenimientos.Contrato;
 using System;
 using System.Windows.Forms;
+using DAL_SCN.Catalogos_Mantenimientos;
+using BLL_SCN.Catalogos_Mantenimientos;
 
 namespace PL_SCN.CatyMan
 {
@@ -23,19 +25,45 @@ namespace PL_SCN.CatyMan
         private frm_Cobro             frmAddCobro, frmModCobro, frmDelCobro;
         #endregion
 
-        public enum Mantenimiento { Usuarios, TipoUsuario,   Departamento,
-                                    Persona,  Suscripciones, Productos,
-                                    Stock,    Contrato,      Pago_Comisiones,
-                                    Cobro}
+        public enum Mantenimiento
+        {
+            Usuarios, TipoUsuario, Departamento,
+            Persona, Suscripciones, Productos,
+            Stock, Contrato, Pago_Comisiones,
+            Cobro
+        }
+
+        #region Variables para el control de BD
+        private string _sSentencia, _sParam;
+        
+        #endregion
+        
 
         private Mantenimiento _mMantenimiento;
-        public frmCatalogo(Mantenimiento _mMantenimiento)
+        public frmCatalogo(Mantenimiento _mMantenimiento, string _sSentencia, string _sParam)
         {
             InitializeComponent();
             this._mMantenimiento = _mMantenimiento;
+            this._sSentencia = _sSentencia;
+            this._sParam = _sParam;
         }
         private void frm_catalogo_Load(object sender, EventArgs e)
         {
+            Cls_CatyMan_BLL _Obj_CatyMan_BLL = new Cls_CatyMan_BLL();
+            Cls_CatyMan_DAL _Obj_CatyMan_DAL = new Cls_CatyMan_DAL();
+            _Obj_CatyMan_BLL.listar_Cat_Man(ref _Obj_CatyMan_DAL, _sSentencia);
+            if (_Obj_CatyMan_DAL.sMsjError == string.Empty)
+            {
+                dgdDatos.DataSource = null;
+                dgdDatos.DataSource = _Obj_CatyMan_DAL.Obj_DS.Tables[0];
+            }
+            else
+            {
+                dgdDatos.DataSource = null;
+                MessageBox.Show("Se ha producido un error.\n\nError: " +
+                                _Obj_CatyMan_DAL.sMsjError, "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             // Se especifica el tipo de la ventana
             switch (_mMantenimiento)
             {
@@ -83,6 +111,32 @@ namespace PL_SCN.CatyMan
         private void mniSalir_Click(object sender, EventArgs e)
         {
             Close();
+        }
+        private void tstxtFiltrar_Click(object sender, EventArgs e)
+        {
+            Cls_CatyMan_BLL _Obj_CatyMan_BLL = new Cls_CatyMan_BLL();
+            Cls_CatyMan_DAL _Obj_CatyMan_DAL = new Cls_CatyMan_DAL();
+            if (tstxtFiltrar.Text == string.Empty)
+            {
+                _Obj_CatyMan_BLL.listar_Cat_Man(ref _Obj_CatyMan_DAL, _sSentencia);
+            }
+            else
+            {
+                _Obj_CatyMan_BLL.filtrar_Cat_Man(ref _Obj_CatyMan_DAL,
+                    tstxtFiltrar.Text.Trim(), _sSentencia, _sParam);
+            }
+            if (_Obj_CatyMan_DAL.sMsjError == string.Empty)
+            {
+                dgdDatos.DataSource = null;
+                dgdDatos.DataSource = _Obj_CatyMan_DAL.Obj_DS.Tables[0];
+            }
+            else
+            {
+                dgdDatos.DataSource = null;
+                MessageBox.Show("Se ha producido un error en tablas categorias \n\n Error: " +
+                                _Obj_CatyMan_DAL.sMsjError, "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         #region Agregar
@@ -653,7 +707,6 @@ namespace PL_SCN.CatyMan
             frmModCobro = null;
         }
         #endregion
-
         #endregion
 
         #region Eliminar

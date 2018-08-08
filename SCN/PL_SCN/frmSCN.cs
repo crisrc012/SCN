@@ -58,7 +58,7 @@ namespace PL_SCN
             // Esto para evitar que se ejecute más de una instancia
             if (frmUsr == null)
             {
-                frmUsr = new frmCatalogo(frmCatalogo.Mantenimiento.Usuarios);
+                frmUsr = new frmCatalogo(frmCatalogo.Mantenimiento.Usuarios, "T_Usuario","");
                 frmUsr.MdiParent = this;
                 frmUsr.FormClosed +=
                     new FormClosedEventHandler(frmUsr_FormClosed);
@@ -87,7 +87,7 @@ namespace PL_SCN
             // Esto para evitar que se ejecute más de una instancia
             if (frmPerfiles == null)
             {
-                frmPerfiles = new frmCatalogo(frmCatalogo.Mantenimiento.TipoUsuario);
+                frmPerfiles = new frmCatalogo(frmCatalogo.Mantenimiento.TipoUsuario, "T_UsuarioPerfil", "");
                 frmPerfiles.MdiParent = this;
                 frmPerfiles.FormClosed +=
                     new FormClosedEventHandler(frmPerfiles_FormClosed);
@@ -116,7 +116,7 @@ namespace PL_SCN
             // Esto para evitar que se ejecute más de una instancia
             if (frmDepartamentos == null)
             {
-                frmDepartamentos = new frmCatalogo(frmCatalogo.Mantenimiento.Departamento);
+                frmDepartamentos = new frmCatalogo(frmCatalogo.Mantenimiento.Departamento, "T_Departamento", "");
                 frmDepartamentos.MdiParent = this;
                 frmDepartamentos.FormClosed +=
                     new FormClosedEventHandler(frmDepartamentos_FormClosed);
@@ -145,7 +145,7 @@ namespace PL_SCN
             // Esto para evitar que se ejecute más de una instancia
             if (frmPersona == null)
             {
-                frmPersona = new frmCatalogo(frmCatalogo.Mantenimiento.Persona);
+                frmPersona = new frmCatalogo(frmCatalogo.Mantenimiento.Persona, "T_Persona","");
                 frmPersona.MdiParent = this;
                 frmPersona.FormClosed +=
                     new FormClosedEventHandler(frmPersona_FormClosed);
@@ -242,7 +242,7 @@ namespace PL_SCN
         {
             if (frmContratos == null)
             {
-                frmContratos = new frmCatalogo(frmCatalogo.Mantenimiento.Contrato);
+                frmContratos = new frmCatalogo(frmCatalogo.Mantenimiento.Contrato, "", "");
                 frmContratos.MdiParent = this;
                 frmContratos.FormClosed +=
                     new FormClosedEventHandler(frmContratos_FormClosed);
@@ -271,7 +271,7 @@ namespace PL_SCN
         {
             if (frmPago_Comisiones == null)
             {
-                frmPago_Comisiones = new frmCatalogo(frmCatalogo.Mantenimiento.Pago_Comisiones);
+                frmPago_Comisiones = new frmCatalogo(frmCatalogo.Mantenimiento.Pago_Comisiones, "", "");
                 frmPago_Comisiones.MdiParent = this;
                 frmPago_Comisiones.FormClosed +=
                     new FormClosedEventHandler(frmPago_Comisiones_FormClosed);
@@ -283,9 +283,6 @@ namespace PL_SCN
                 frmPago_Comisiones.Activate();
             }
         }
-
-        
-
         private void frmPago_Comisiones_FormClosed(object sender,  FormClosedEventArgs e)
         {
             // Cuando se cierre el formulario se establece en null
@@ -339,7 +336,7 @@ namespace PL_SCN
         {
             if (frm_Cobro == null)
             {
-                frm_Cobro = new frmCatalogo(frmCatalogo.Mantenimiento.Cobro);
+                frm_Cobro = new frmCatalogo(frmCatalogo.Mantenimiento.Cobro, "T_Cobro", "");
                 frm_Cobro.MdiParent = this;
                 frm_Cobro.FormClosed +=
                     new FormClosedEventHandler(frm_Cobro_FormClosed);
@@ -370,7 +367,7 @@ namespace PL_SCN
             // Esto para evitar que se ejecute más de una instancia
             if (frmStock == null)
             {
-                frmStock = new frmCatalogo(frmCatalogo.Mantenimiento.Stock);
+                frmStock = new frmCatalogo(frmCatalogo.Mantenimiento.Stock, "T_InventarioEquipo" ,"");
                 frmStock.MdiParent = this;
                 frmStock.FormClosed +=
                     new FormClosedEventHandler(frmStock_FormClosed);
@@ -396,7 +393,7 @@ namespace PL_SCN
             // Esto para evitar que se ejecute más de una instancia
             if (frmProductos == null)
             {
-                frmProductos = new frmCatalogo(frmCatalogo.Mantenimiento.Productos);
+                frmProductos = new frmCatalogo(frmCatalogo.Mantenimiento.Productos, "T_InventarioEquipo","");
                 frmProductos.MdiParent = this;
                 frmProductos.FormClosed +=
                     new FormClosedEventHandler(frmProductos_FormClosed);

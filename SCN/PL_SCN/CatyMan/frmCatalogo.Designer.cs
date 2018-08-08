@@ -37,7 +37,7 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.mniEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.tstxtFiltrar = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.mniSalir = new System.Windows.Forms.ToolStripButton();
@@ -47,10 +47,18 @@
             // 
             // dgdDatos
             // 
+            this.dgdDatos.AllowUserToAddRows = false;
+            this.dgdDatos.AllowUserToDeleteRows = false;
+            this.dgdDatos.AllowUserToOrderColumns = true;
+            this.dgdDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgdDatos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgdDatos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgdDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgdDatos.Location = new System.Drawing.Point(12, 28);
+            this.dgdDatos.MultiSelect = false;
             this.dgdDatos.Name = "dgdDatos";
+            this.dgdDatos.ReadOnly = true;
+            this.dgdDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgdDatos.Size = new System.Drawing.Size(763, 397);
             this.dgdDatos.TabIndex = 0;
             // 
@@ -64,7 +72,7 @@
             this.toolStripSeparator2,
             this.mniEliminar,
             this.toolStripSeparator3,
-            this.toolStripTextBox1,
+            this.tstxtFiltrar,
             this.toolStripButton4,
             this.toolStripSeparator4,
             this.mniSalir});
@@ -120,11 +128,12 @@
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripTextBox1
+            // tstxtFiltrar
             // 
-            this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
+            this.tstxtFiltrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tstxtFiltrar.Name = "tstxtFiltrar";
+            this.tstxtFiltrar.Size = new System.Drawing.Size(100, 25);
+            this.tstxtFiltrar.Click += new System.EventHandler(this.tstxtFiltrar_Click);
             // 
             // toolStripButton4
             // 
@@ -150,7 +159,7 @@
             this.mniSalir.Text = "Salir";
             this.mniSalir.Click += new System.EventHandler(this.mniSalir_Click);
             // 
-            // frm_catalogo
+            // frmCatalogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -159,7 +168,7 @@
             this.Controls.Add(this.mnuMantenimiento);
             this.Controls.Add(this.dgdDatos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frm_catalogo";
+            this.Name = "frmCatalogo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frm_catalogo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgdDatos)).EndInit();
@@ -179,7 +188,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton mniEliminar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripTextBox tstxtFiltrar;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton mniSalir;

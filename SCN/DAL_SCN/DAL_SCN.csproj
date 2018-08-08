@@ -40,10 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BD\Cls_BD_DAL.cs" />
+    <Compile Include="Catalogos_Mantenimientos\Cls_CatyMan_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Catalogos_Mantenimientos\" />
     <Folder Include="Estadisticas\" />
     <Folder Include="Inventarios\" />
     <Folder Include="Orden_Trabajo\" />
