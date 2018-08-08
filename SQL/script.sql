@@ -141,8 +141,9 @@ Go
 			[ID_Usuario] [int] IDENTITY(1,1) NOT NULL,	
 			[ID_Persona] [int] NOT NULL,		
 			[Usuario] [varchar](15) NOT NULL,
-			[Pass] [varchar](15) NOT NULL,
-			[ID_Estado] [char] (1) NOT NULL
+			[Pass] [varchar](32) NOT NULL,
+			[ID_Estado] [char] (1) NOT NULL,
+			[ID_Perfil] [int] NOT NULL
 			CONSTRAINT [PK_Usuario] PRIMARY KEY CLUSTERED 
 			(
 				[ID_Usuario] ASC
@@ -155,6 +156,9 @@ GO
 		ADD CONSTRAINT UC_Usuario_Usuario UNIQUE ([Usuario])
 GO
 
+         	ALTER TABLE [dbo].[T_Usuario]  WITH NOCHECK ADD  CONSTRAINT FK_Usuario_Perfil FOREIGN KEY(ID_Perfil)
+		REFERENCES [dbo].[T_Perfil] (ID_Perfil)
+Go
 		ALTER TABLE [dbo].[T_Usuario]  WITH NOCHECK ADD  CONSTRAINT FK_Usuario_Persona FOREIGN KEY(ID_Persona)
 		REFERENCES [dbo].[T_Persona] (ID_Persona)
 Go
@@ -402,7 +406,8 @@ Go
 			[ID_InventarioEquipo] [int] IDENTITY(1,1) NOT NULL,
 			[ID_Articulo] [int] NOT NULL,
 			[Cantidad] [int] NOT NULL,	
-			[ID_Estado] [char] (1) NOT NULL
+			[ID_Estado] [char] (1) NOT NULL,
+			[ID_Usuario] [int] NOT NULL
 			CONSTRAINT [PK_InventarioEquipo] PRIMARY KEY CLUSTERED 
 			(
 				[ID_InventarioEquipo] ASC
@@ -416,6 +421,9 @@ GO
 Go
 		ALTER TABLE [dbo].[T_InventarioEquipo]  WITH NOCHECK ADD  CONSTRAINT FK_InventarioEquipo_Estados FOREIGN KEY(ID_Estado)
 		REFERENCES [dbo].[T_Estados] (ID_Estado)
+Go
+                ALTER TABLE [dbo].[T_InventarioEquipo]  WITH NOCHECK ADD  CONSTRAINT FK_InventarioEquipo_Usuario FOREIGN KEY(ID_Usuario)
+		REFERENCES [dbo].[T_Usuario] (ID_Usuario)
 Go
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 			CREATE TABLE [dbo].[T_ArquilerEquipo]
@@ -514,7 +522,7 @@ Go
 GO
 
 		ALTER TABLE [dbo].[T_OrdenTrabajo]  WITH NOCHECK ADD  CONSTRAINT FK_OrdenTrabajo_Tecnico FOREIGN KEY(ID_Tecnico)
-		REFERENCES [dbo].[T_Persona] (ID_Persona)--- Los que son iguales a técnicos
+		REFERENCES [dbo].[T_Persona] (ID_Persona)--- Los que son iguales a tÃ©cnicos
 Go
 		ALTER TABLE [dbo].[T_OrdenTrabajo]  WITH NOCHECK ADD  CONSTRAINT FK_OrdenTrabajo_Estados FOREIGN KEY(ID_Estado)
 		REFERENCES [dbo].[T_Estados] (ID_Estado)
@@ -548,7 +556,7 @@ go
 		REFERENCES [dbo].[T_OrdenTrabajo] (ID_OrdenTrabajo)
 Go
 		ALTER TABLE [dbo].[T_AtencionTecnica]  WITH NOCHECK ADD  CONSTRAINT FK_AtencionTecnica_Asistentete_telefonico FOREIGN KEY(ID_Persona_Asistentete_telefonico)
-		REFERENCES [dbo].[T_Persona] (ID_Persona)--- Los que son iguales a Asistentete_télefonico
+		REFERENCES [dbo].[T_Persona] (ID_Persona)--- Los que son iguales a Asistentete_tÃ©lefonico
 Go
 		ALTER TABLE [dbo].[T_AtencionTecnica]  WITH NOCHECK ADD  CONSTRAINT FK_AtencionTecnica_Estados FOREIGN KEY(ID_Estado)
 		REFERENCES [dbo].[T_Estados] (ID_Estado)
@@ -580,6 +588,27 @@ Go
 		ALTER TABLE [dbo].[T_Desconexion]  WITH NOCHECK ADD  CONSTRAINT FK_Desconexion_Estados FOREIGN KEY(ID_Estado)
 		REFERENCES [dbo].[T_Estados] (ID_Estado)
 Go
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+			CREATE TABLE [dbo].[T_Parametros]
+		(
+			[ID_T_Parametros] [int] IDENTITY(1,1) NOT NULL,
+			[ID_Usuario] [int] NOT NULL,
+			[Nombre] [varchar](25) NOT NULL,
+			[Valor] [varchar](25) NOT NULL,
+			[Descripcion] [varchar] (30) NOT NULL,
+			[Fecha_Ingreso] [date] NOT NULL,
+			CONSTRAINT [PK_T_Parametros] PRIMARY KEY CLUSTERED 
+			(
+				[ID_T_Parametros] ASC
+			)
+		) ON [PRIMARY]
+
+GO
+
+		ALTER TABLE [dbo].[T_Parametros]  WITH NOCHECK ADD  CONSTRAINT FK_Parametros_Usuario FOREIGN KEY(ID_Usuario)
+		REFERENCES [dbo].[T_Usuario] (ID_Usuario)
+GO
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------

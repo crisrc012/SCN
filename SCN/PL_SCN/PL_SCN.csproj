@@ -139,6 +139,12 @@
     <Compile Include="Soporte\frm_Encuesta.Designer.cs">
       <DependentUpon>frm_Encuesta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Soporte\frm_ListarEncuestas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Soporte\frm_ListarEncuestas.Designer.cs">
+      <DependentUpon>frm_ListarEncuestas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Soporte\frm_ordenTrabajo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +218,9 @@
     <EmbeddedResource Include="Soporte\frm_Encuesta.resx">
       <DependentUpon>frm_Encuesta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Soporte\frm_ListarEncuestas.resx">
+      <DependentUpon>frm_ListarEncuestas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Soporte\frm_ordenTrabajo.resx">
       <DependentUpon>frm_ordenTrabajo.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,7 +259,9 @@
   <ItemGroup>
     <None Include="Resources\fondo 2.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Reporte I.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
