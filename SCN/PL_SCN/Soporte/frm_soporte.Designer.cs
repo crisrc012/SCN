@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_soporte));
             this.dgdDatos = new System.Windows.Forms.DataGridView();
             this.mnuSoporte = new System.Windows.Forms.ToolStrip();
+            this.mniAgregar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.txt_Filtrar = new System.Windows.Forms.ToolStripTextBox();
             this.lbl_Filtrar = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.mniAgregar = new System.Windows.Forms.ToolStripButton();
             this.mniSalir = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgdDatos)).BeginInit();
             this.mnuSoporte.SuspendLayout();
@@ -75,6 +75,16 @@
             this.mnuSoporte.TabIndex = 2;
             this.mnuSoporte.Text = "Mantenimiento";
             // 
+            // mniAgregar
+            // 
+            this.mniAgregar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mniAgregar.Image = ((System.Drawing.Image)(resources.GetObject("mniAgregar.Image")));
+            this.mniAgregar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.mniAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.mniAgregar.Name = "mniAgregar";
+            this.mniAgregar.Size = new System.Drawing.Size(109, 22);
+            this.mniAgregar.Text = "Nueva Orden";
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -83,6 +93,7 @@
             // txt_Filtrar
             // 
             this.txt_Filtrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Filtrar.MaxLength = 10;
             this.txt_Filtrar.Name = "txt_Filtrar";
             this.txt_Filtrar.Size = new System.Drawing.Size(100, 25);
             // 
@@ -97,16 +108,6 @@
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
-            // 
-            // mniAgregar
-            // 
-            this.mniAgregar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mniAgregar.Image = ((System.Drawing.Image)(resources.GetObject("mniAgregar.Image")));
-            this.mniAgregar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.mniAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.mniAgregar.Name = "mniAgregar";
-            this.mniAgregar.Size = new System.Drawing.Size(109, 22);
-            this.mniAgregar.Text = "Nueva Orden";
             // 
             // mniSalir
             // 

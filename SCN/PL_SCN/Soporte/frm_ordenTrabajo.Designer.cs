@@ -64,6 +64,7 @@
             this.txt_NumeroOrden.Enabled = false;
             this.txt_NumeroOrden.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_NumeroOrden.Location = new System.Drawing.Point(657, 44);
+            this.txt_NumeroOrden.MaxLength = 25;
             this.txt_NumeroOrden.Name = "txt_NumeroOrden";
             this.txt_NumeroOrden.Size = new System.Drawing.Size(100, 25);
             this.txt_NumeroOrden.TabIndex = 0;
@@ -94,6 +95,7 @@
             // 
             this.txt_NumeroCliente.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_NumeroCliente.Location = new System.Drawing.Point(137, 44);
+            this.txt_NumeroCliente.MaxLength = 15;
             this.txt_NumeroCliente.Name = "txt_NumeroCliente";
             this.txt_NumeroCliente.Size = new System.Drawing.Size(130, 25);
             this.txt_NumeroCliente.TabIndex = 2;
@@ -115,6 +117,7 @@
             this.txt_NombreCliente.Enabled = false;
             this.txt_NombreCliente.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_NombreCliente.Location = new System.Drawing.Point(137, 98);
+            this.txt_NombreCliente.MaxLength = 35;
             this.txt_NombreCliente.Name = "txt_NombreCliente";
             this.txt_NombreCliente.Size = new System.Drawing.Size(177, 25);
             this.txt_NombreCliente.TabIndex = 4;
@@ -157,6 +160,7 @@
             this.txt_ContactoCliente.Enabled = false;
             this.txt_ContactoCliente.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_ContactoCliente.Location = new System.Drawing.Point(137, 163);
+            this.txt_ContactoCliente.MaxLength = 15;
             this.txt_ContactoCliente.Name = "txt_ContactoCliente";
             this.txt_ContactoCliente.Size = new System.Drawing.Size(177, 25);
             this.txt_ContactoCliente.TabIndex = 9;
@@ -266,6 +270,7 @@
             this.txt_NombreTecnico.Enabled = false;
             this.txt_NombreTecnico.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_NombreTecnico.Location = new System.Drawing.Point(490, 337);
+            this.txt_NombreTecnico.MaxLength = 35;
             this.txt_NombreTecnico.Name = "txt_NombreTecnico";
             this.txt_NombreTecnico.Size = new System.Drawing.Size(177, 25);
             this.txt_NombreTecnico.TabIndex = 19;

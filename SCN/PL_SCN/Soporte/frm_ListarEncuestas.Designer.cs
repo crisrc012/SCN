@@ -34,10 +34,10 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.txt_Filtrar = new System.Windows.Forms.ToolStripTextBox();
             this.lbl_Filtrar = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.mniEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.mniSalir = new System.Windows.Forms.ToolStripButton();
-            this.mniEliminar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.dgdDatos)).BeginInit();
             this.mnuListarEncuestas.SuspendLayout();
             this.SuspendLayout();
@@ -85,6 +85,7 @@
             // txt_Filtrar
             // 
             this.txt_Filtrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Filtrar.MaxLength = 15;
             this.txt_Filtrar.Name = "txt_Filtrar";
             this.txt_Filtrar.Size = new System.Drawing.Size(100, 25);
             // 
@@ -94,6 +95,20 @@
             this.lbl_Filtrar.Name = "lbl_Filtrar";
             this.lbl_Filtrar.Size = new System.Drawing.Size(45, 22);
             this.lbl_Filtrar.Text = "Filtrar";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // mniEliminar
+            // 
+            this.mniEliminar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mniEliminar.Image = ((System.Drawing.Image)(resources.GetObject("mniEliminar.Image")));
+            this.mniEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.mniEliminar.Name = "mniEliminar";
+            this.mniEliminar.Size = new System.Drawing.Size(79, 22);
+            this.mniEliminar.Text = "Eliminar";
             // 
             // toolStripSeparator4
             // 
@@ -108,20 +123,6 @@
             this.mniSalir.Name = "mniSalir";
             this.mniSalir.Size = new System.Drawing.Size(55, 22);
             this.mniSalir.Text = "Salir";
-            // 
-            // mniEliminar
-            // 
-            this.mniEliminar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mniEliminar.Image = ((System.Drawing.Image)(resources.GetObject("mniEliminar.Image")));
-            this.mniEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.mniEliminar.Name = "mniEliminar";
-            this.mniEliminar.Size = new System.Drawing.Size(79, 22);
-            this.mniEliminar.Text = "Eliminar";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // frm_ListarEncuestas
             // 

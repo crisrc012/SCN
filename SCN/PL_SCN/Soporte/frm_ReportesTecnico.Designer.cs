@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ReportesTecnico));
             this.mnuVisualizarReportes = new System.Windows.Forms.ToolStrip();
             this.txt_Filtrar = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.dgdDatos = new System.Windows.Forms.DataGridView();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.mniSalir = new System.Windows.Forms.ToolStripButton();
+            this.dgdDatos = new System.Windows.Forms.DataGridView();
             this.mnuVisualizarReportes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgdDatos)).BeginInit();
             this.SuspendLayout();
@@ -56,22 +56,9 @@
             // txt_Filtrar
             // 
             this.txt_Filtrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Filtrar.MaxLength = 15;
             this.txt_Filtrar.Name = "txt_Filtrar";
             this.txt_Filtrar.Size = new System.Drawing.Size(100, 25);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
-            // 
-            // dgdDatos
-            // 
-            this.dgdDatos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.dgdDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgdDatos.Location = new System.Drawing.Point(12, 33);
-            this.dgdDatos.Name = "dgdDatos";
-            this.dgdDatos.Size = new System.Drawing.Size(763, 397);
-            this.dgdDatos.TabIndex = 3;
             // 
             // toolStripButton4
             // 
@@ -82,6 +69,11 @@
             this.toolStripButton4.Size = new System.Drawing.Size(65, 22);
             this.toolStripButton4.Text = "Filtrar";
             // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            // 
             // mniSalir
             // 
             this.mniSalir.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -90,6 +82,15 @@
             this.mniSalir.Name = "mniSalir";
             this.mniSalir.Size = new System.Drawing.Size(55, 22);
             this.mniSalir.Text = "Salir";
+            // 
+            // dgdDatos
+            // 
+            this.dgdDatos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dgdDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgdDatos.Location = new System.Drawing.Point(12, 33);
+            this.dgdDatos.Name = "dgdDatos";
+            this.dgdDatos.Size = new System.Drawing.Size(763, 397);
+            this.dgdDatos.TabIndex = 3;
             // 
             // frm_ReportesTecnico
             // 
