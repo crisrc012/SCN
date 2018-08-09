@@ -56,6 +56,7 @@
             this.dgdDatos.Location = new System.Drawing.Point(12, 30);
             this.dgdDatos.MultiSelect = false;
             this.dgdDatos.Name = "dgdDatos";
+            this.dgdDatos.ReadOnly = true;
             this.dgdDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgdDatos.Size = new System.Drawing.Size(763, 397);
             this.dgdDatos.TabIndex = 2;

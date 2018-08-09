@@ -50,10 +50,13 @@
             this.dgdDatos.AllowUserToAddRows = false;
             this.dgdDatos.AllowUserToDeleteRows = false;
             this.dgdDatos.AllowUserToOrderColumns = true;
+            this.dgdDatos.AllowUserToResizeColumns = false;
+            this.dgdDatos.AllowUserToResizeRows = false;
             this.dgdDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgdDatos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgdDatos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgdDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgdDatos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgdDatos.Location = new System.Drawing.Point(12, 28);
             this.dgdDatos.MultiSelect = false;
             this.dgdDatos.Name = "dgdDatos";
@@ -168,6 +171,9 @@
             this.Controls.Add(this.mnuMantenimiento);
             this.Controls.Add(this.dgdDatos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(803, 476);
+            this.MinimumSize = new System.Drawing.Size(803, 476);
             this.Name = "frmCatalogo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frm_catalogo_Load);
