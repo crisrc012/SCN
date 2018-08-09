@@ -31,15 +31,11 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnAccion = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cmbEstados = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtNombrePerfil = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.groupBox5.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,80 +71,54 @@
             this.btnAccion.UseVisualStyleBackColor = false;
             this.btnAccion.Click += new System.EventHandler(this.btnAccion_Click);
             // 
-            // groupBox5
+            // cmbEstados
             // 
-            this.groupBox5.BackgroundImage = global::PL_SCN.Properties.Resources.fondo_1;
-            this.groupBox5.Controls.Add(this.label18);
-            this.groupBox5.Controls.Add(this.label19);
-            this.groupBox5.Controls.Add(this.label20);
-            this.groupBox5.Controls.Add(this.comboBox4);
-            this.groupBox5.Location = new System.Drawing.Point(28, 111);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(215, 137);
-            this.groupBox5.TabIndex = 33;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Estados";
-            // 
-            // label18
-            // 
-            this.label18.Location = new System.Drawing.Point(96, 53);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(113, 19);
-            this.label18.TabIndex = 7;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(15, 56);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(66, 13);
-            this.label19.TabIndex = 6;
-            this.label19.Text = "Descripcion:";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(15, 25);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(63, 13);
-            this.label20.TabIndex = 5;
-            this.label20.Text = "Id_Estados:";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(113, 21);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(54, 21);
-            this.comboBox4.TabIndex = 4;
+            this.cmbEstados.FormattingEnabled = true;
+            this.cmbEstados.Location = new System.Drawing.Point(99, 44);
+            this.cmbEstados.Name = "cmbEstados";
+            this.cmbEstados.Size = new System.Drawing.Size(108, 21);
+            this.cmbEstados.TabIndex = 4;
             // 
             // groupBox2
             // 
             this.groupBox2.BackgroundImage = global::PL_SCN.Properties.Resources.fondo_1;
-            this.groupBox2.Controls.Add(this.textBox9);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.cmbEstados);
+            this.groupBox2.Controls.Add(this.txtNombrePerfil);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Location = new System.Drawing.Point(28, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(215, 80);
+            this.groupBox2.Size = new System.Drawing.Size(215, 222);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Datos:";
+            this.groupBox2.Text = "Nombre";
             // 
-            // textBox9
+            // txtNombrePerfil
             // 
-            this.textBox9.Location = new System.Drawing.Point(99, 18);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(108, 20);
-            this.textBox9.TabIndex = 5;
+            this.txtNombrePerfil.Location = new System.Drawing.Point(99, 18);
+            this.txtNombrePerfil.Name = "txtNombrePerfil";
+            this.txtNombrePerfil.Size = new System.Drawing.Size(108, 20);
+            this.txtNombrePerfil.TabIndex = 5;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.SystemColors.Window;
             this.label9.Location = new System.Drawing.Point(15, 21);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(63, 13);
+            this.label9.Size = new System.Drawing.Size(47, 13);
             this.label9.TabIndex = 1;
-            this.label9.Text = "Descripcion";
+            this.label9.Text = "Nombre:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Window;
+            this.label1.Location = new System.Drawing.Point(15, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Estado:";
             // 
             // frm_Man_Perfiles
             // 
@@ -159,7 +129,6 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnAccion);
-            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
@@ -168,8 +137,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Agregar Perfil";
             this.Load += new System.EventHandler(this.frm_Add_Perfil_Load);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -181,13 +148,10 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnAccion;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cmbEstados;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtNombrePerfil;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -6,6 +6,7 @@ namespace DAL_SCN.BD
     {
         #region Variables privadas
         private string _sCadena, _sMsjError, _sSentencia, _sNombreTabla;
+        private int _iValorScalar;
         #endregion
         #region Objetos SQL públicos
         public SqlConnection Obj_SQL_CNX;
@@ -64,6 +65,19 @@ namespace DAL_SCN.BD
             set
             {
                 _sNombreTabla = value;
+            }
+        }
+
+        public int iValorScalar
+        {
+            get
+            {
+                return _iValorScalar;
+            }
+
+            set
+            {
+                _iValorScalar = value;
             }
         }
     }

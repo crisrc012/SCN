@@ -10,7 +10,7 @@ namespace PL_SCN
     {
         #region frmObjetos
         frmAcercaDe frmAcercaDeInstancia;
-        frmCatalogo frmUsr, frmPerfiles, frmDepartamentos, frmPersona, frmStock, frmProductos, frmContratos, frmPago_Comisiones, frm_Cobro;
+        frmCatalogo frmUsr, frmPerfiles, frmDepartamentos, frmPersona, frmStock, frmProductos, frmContratos, frmPago_Comisiones, frm_Cobro, frmEstados;
         frm_estadistica frmEstadistica;
         frm_soporte frmSoporte;
         frm_ListarEncuestas frmListarEncuestas;
@@ -87,7 +87,7 @@ namespace PL_SCN
             // Esto para evitar que se ejecute más de una instancia
             if (frmPerfiles == null)
             {
-                frmPerfiles = new frmCatalogo(frmCatalogo.Mantenimiento.TipoUsuario, "T_UsuarioPerfil", "");
+                frmPerfiles = new frmCatalogo(frmCatalogo.Mantenimiento.TipoUsuario, "T_Perfil", "");
                 frmPerfiles.MdiParent = this;
                 frmPerfiles.FormClosed +=
                     new FormClosedEventHandler(frmPerfiles_FormClosed);
@@ -296,6 +296,29 @@ namespace PL_SCN
 
         }
 
+        private void estadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frmEstados == null)
+            {
+                frmEstados = new frmCatalogo(frmCatalogo.Mantenimiento.Estados, "T_Estados", "");
+                frmEstados.MdiParent = this;
+                frmEstados.FormClosed +=
+                    new FormClosedEventHandler(frmEstados_FormClosed);
+                frmEstados.Show();
+            }
+            else
+            {
+                // Si ya está abierto el formulario se activa
+                frmEstados.Activate();
+            }
+        }
+        private void frmEstados_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Cuando se cierre el formulario se establece en null
+            // para que pueda volver a ser abierto al presionar el
+            // menuitem
+            frmEstados = null;
+        }
 
 
 

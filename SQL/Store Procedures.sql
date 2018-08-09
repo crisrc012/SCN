@@ -131,6 +131,8 @@ SELECT [ID_T_Parametros]
       ,[Fecha_Ingreso]
   FROM [dbo].[T_Parametros]
 GO
+
+--------------
 CREATE PROCEDURE SP_LISTAR_T_Perfil
 AS
 SELECT [ID_Perfil]
@@ -138,6 +140,44 @@ SELECT [ID_Perfil]
       ,[ID_Estado]
   FROM [dbo].[T_Perfil]
 GO
+CREATE PROCEDURE SP_INSERTAR_T_Perfil
+(
+	@Descripcion varchar(25),
+	@ID_Estado char(1)
+)
+AS
+INSERT INTO [dbo].[T_Perfil]
+           ([Descripcion]
+           ,[ID_Estado])
+     VALUES
+           (@Descripcion
+           ,@ID_Estado);
+-- Devuelve la última llave generada
+SELECT MAX ([ID_Perfil])
+FROM [dbo].[T_Perfil]
+GO
+CREATE PROCEDURE SP_MODIFICAR_T_Perfil
+(
+	@ID_Perfil int,
+	@Descripcion varchar(25),
+	@ID_Estado char
+)
+AS
+UPDATE [dbo].[T_Perfil]
+   SET [Descripcion] = @Descripcion,
+   [ID_Estado] = @ID_Estado
+ WHERE ID_Perfil = @ID_Perfil
+GO
+CREATE PROCEDURE SP_ELIMINAR_T_Perfil
+(
+	@ID_Perfil int
+)
+AS
+DELETE FROM [dbo].[T_Perfil]
+      WHERE ID_Perfil = @ID_Perfil
+GO
+----------- 
+
 CREATE PROCEDURE SP_LISTAR_T_Persona
 AS
 SELECT [ID_Persona]

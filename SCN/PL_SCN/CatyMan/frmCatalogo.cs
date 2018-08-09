@@ -14,15 +14,15 @@ namespace PL_SCN.CatyMan
     public partial class frmCatalogo : Form
     {
         #region frmObjetos
-        private frm_Man_Usuario       frmAddUsr, frmModUsr, frmDelUsr;
-        private frm_Man_Perfiles      frmAddTipUsr, frmModTipUsr, frmDelTipUsr;
-        private frm_Man_Departamentos frmAddDep, frmModDep, frmDelDep;
-        private frm_Man_Persona       frmAddPersona, frmModPersona, frmDelPersona;
-        private frm_Man_Stock         frmAddStock, frmModStock, frmDelStock;
-        private frm_Man_Productos     frmAddProductos, frmModProductos, frmDelProductos;
-        private frm_Man_Contrato      frmAddContratos, frmModContratos, frmDelContratos;
+        private frm_Man_Usuario       frmAddUsr, frmModUsr;
+        private frm_Man_Perfiles      frmAddTipUsr, frmModTipUsr;
+        private frm_Man_Departamentos frmAddDep, frmModDep;
+        private frm_Man_Persona       frmAddPersona, frmModPersona;
+        private frm_Man_Stock         frmAddStock, frmModStock;
+        private frm_Man_Productos     frmAddProductos, frmModProductos;
+        private frm_Man_Contrato      frmAddContratos, frmModContratos;
         private frm_Pago_Comisiones   frmAddPagoComisiones;
-        private frm_Cobro             frmAddCobro, frmModCobro, frmDelCobro;
+        private frm_Cobro             frmAddCobro, frmModCobro;
         #endregion
 
         public enum Mantenimiento
@@ -30,14 +30,14 @@ namespace PL_SCN.CatyMan
             Usuarios, TipoUsuario, Departamento,
             Persona, Suscripciones, Productos,
             Stock, Contrato, Pago_Comisiones,
-            Cobro
+            Cobro, Estados
         }
 
         #region Variables para el control de BD
         private string _sSentencia, _sParam;
-        
+        private Cls_CatyMan_BLL _Obj_CatyMan_BLL = new Cls_CatyMan_BLL();
+        private Cls_CatyMan_DAL _Obj_CatyMan_DAL;
         #endregion
-        
 
         private Mantenimiento _mMantenimiento;
         public frmCatalogo(Mantenimiento _mMantenimiento, string _sSentencia, string _sParam)
@@ -49,21 +49,6 @@ namespace PL_SCN.CatyMan
         }
         private void frm_catalogo_Load(object sender, EventArgs e)
         {
-            Cls_CatyMan_BLL _Obj_CatyMan_BLL = new Cls_CatyMan_BLL();
-            Cls_CatyMan_DAL _Obj_CatyMan_DAL = new Cls_CatyMan_DAL();
-            _Obj_CatyMan_BLL.listar_Cat_Man(ref _Obj_CatyMan_DAL, _sSentencia);
-            if (_Obj_CatyMan_DAL.sMsjError == string.Empty)
-            {
-                dgdDatos.DataSource = null;
-                dgdDatos.DataSource = _Obj_CatyMan_DAL.Obj_DS.Tables[0];
-            }
-            else
-            {
-                dgdDatos.DataSource = null;
-                MessageBox.Show("Se ha producido un error.\n\nError: " +
-                                _Obj_CatyMan_DAL.sMsjError, "Error",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
             // Se especifica el tipo de la ventana
             switch (_mMantenimiento)
             {
@@ -106,16 +91,12 @@ namespace PL_SCN.CatyMan
                 default:
                     break;
             }
+            cargarDataGrid();
         }
 
-        private void mniSalir_Click(object sender, EventArgs e)
+        private void cargarDataGrid()
         {
-            Close();
-        }
-        private void tstxtFiltrar_Click(object sender, EventArgs e)
-        {
-            Cls_CatyMan_BLL _Obj_CatyMan_BLL = new Cls_CatyMan_BLL();
-            Cls_CatyMan_DAL _Obj_CatyMan_DAL = new Cls_CatyMan_DAL();
+            _Obj_CatyMan_DAL = new Cls_CatyMan_DAL();
             if (tstxtFiltrar.Text == string.Empty)
             {
                 _Obj_CatyMan_BLL.listar_Cat_Man(ref _Obj_CatyMan_DAL, _sSentencia);
@@ -137,6 +118,15 @@ namespace PL_SCN.CatyMan
                                 _Obj_CatyMan_DAL.sMsjError, "Error",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void mniSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        private void tstxtFiltrar_Click(object sender, EventArgs e)
+        {
+            cargarDataGrid();
         }
 
         #region Agregar
@@ -213,7 +203,7 @@ namespace PL_SCN.CatyMan
             // Esto para evitar que se ejecute más de una instancia
             if (frmAddTipUsr == null)
             {
-                frmAddTipUsr = new frm_Man_Perfiles(frm_Man_Perfiles.Accion.Agregar);
+                frmAddTipUsr = new frm_Man_Perfiles(frm_Man_Perfiles.Accion.Agregar, null);
                 frmAddTipUsr.MdiParent = MdiParent;
                 frmAddTipUsr.FormClosed +=
                     new FormClosedEventHandler(frmAddTipUsr_FormClosed);
@@ -232,6 +222,7 @@ namespace PL_SCN.CatyMan
             // para que pueda volver a ser abierto al presionar el
             // menuitem
             frmAddTipUsr = null;
+            cargarDataGrid();
         }
         #endregion
 
@@ -444,35 +435,45 @@ namespace PL_SCN.CatyMan
         #region Modificar
         private void mniModificar_Click(object sender, EventArgs e)
         {
-            switch (_mMantenimiento)
+            if (dgdDatos.SelectedRows.Count == 1)
             {
-                case Mantenimiento.Usuarios:
-                    frmModUsr_FormOpen();
-                    break;
-                case Mantenimiento.TipoUsuario:
-                    frmModTipUsr_FormOpen();
-                    break;
-                case Mantenimiento.Departamento:
-                    frmModDep_FormOpen();
-                    break;
-                case Mantenimiento.Persona:
-                    frmModPersona_FormOpen();
-                    break;
-                case Mantenimiento.Stock:
-                    frmModStock_FormOpen();
-                    break;
-                case Mantenimiento.Productos:
-                    frmModProductos_FormOpen();
-                    break;
-                case Mantenimiento.Contrato:
-                    frmModContratos_FormOpen();
-                    break;
-
-                case Mantenimiento.Cobro:
-                    frmModCobro_FormOpen();
-                    break;
-                default:
-                    break;
+                switch (_mMantenimiento)
+                {
+                    case Mantenimiento.Usuarios:
+                        frmModUsr_FormOpen();
+                        break;
+                    case Mantenimiento.TipoUsuario:
+                        Cls_T_Perfil_DAL Obj_Perfil_DAL = new Cls_T_Perfil_DAL();
+                        Obj_Perfil_DAL.iID_Perfil = Convert.ToInt32(dgdDatos.SelectedRows[0].Cells[0].Value);
+                        Obj_Perfil_DAL.sDescripcion = Convert.ToString(dgdDatos.SelectedRows[0].Cells[1].Value);
+                        Obj_Perfil_DAL.cID_Estado = Convert.ToChar(dgdDatos.SelectedRows[0].Cells[2].Value);
+                        frmModTipUsr_FormOpen(Obj_Perfil_DAL);
+                        break;
+                    case Mantenimiento.Departamento:
+                        frmModDep_FormOpen();
+                        break;
+                    case Mantenimiento.Persona:
+                        frmModPersona_FormOpen();
+                        break;
+                    case Mantenimiento.Stock:
+                        frmModStock_FormOpen();
+                        break;
+                    case Mantenimiento.Productos:
+                        frmModProductos_FormOpen();
+                        break;
+                    case Mantenimiento.Contrato:
+                        frmModContratos_FormOpen();
+                        break;
+                    case Mantenimiento.Cobro:
+                        frmModCobro_FormOpen();
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe de seleccionar una fila.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -506,13 +507,13 @@ namespace PL_SCN.CatyMan
         #endregion
 
         #region Modificar TipoUsuario
-        private void frmModTipUsr_FormOpen()
+        private void frmModTipUsr_FormOpen(Cls_T_Perfil_DAL Obj_Perfil_DAL)
         {
             // Abre el formulario, si está establecido en null
             // Esto para evitar que se ejecute más de una instancia
             if (frmModTipUsr == null)
             {
-                frmModTipUsr = new frm_Man_Perfiles(frm_Man_Perfiles.Accion.Modificar);
+                frmModTipUsr = new frm_Man_Perfiles(frm_Man_Perfiles.Accion.Modificar, Obj_Perfil_DAL);
                 frmModTipUsr.MdiParent = MdiParent;
                 frmModTipUsr.FormClosed +=
                     new FormClosedEventHandler(frmModTipUsr_FormClosed);
@@ -531,6 +532,7 @@ namespace PL_SCN.CatyMan
             // para que pueda volver a ser abierto al presionar el
             // menuitem
             frmModTipUsr = null;
+            cargarDataGrid();
         }
         #endregion
 
@@ -712,230 +714,66 @@ namespace PL_SCN.CatyMan
         #region Eliminar
         private void mniEliminar_Click(object sender, EventArgs e)
         {
-            switch (_mMantenimiento)
+            Cls_CatyMan_BLL Obj_CatyMan_BLL = new Cls_CatyMan_BLL();
+            Cls_CatyMan_DAL Obj_CatyMan_DAL = new Cls_CatyMan_DAL();
+            if (dgdDatos.SelectedRows[0] != null)
             {
-                case Mantenimiento.Usuarios:
-                    frmDelUsr_FormOpen();
-                    break;
-                case Mantenimiento.TipoUsuario:
-                    frmDelTipUsr_FormOpen();
-                    break;
-                case Mantenimiento.Departamento:
-                    frmDelDep_FormOpen();
-                    break;
-                case Mantenimiento.Persona:
-                    frmDelPersona_FormOpen();
-                    break;
-                case Mantenimiento.Stock:
-                    frmDelStock_FormOpen();
-                    break;
-                case Mantenimiento.Productos:
-                    frmDelProductos_FormOpen();
-                    break;
-                case Mantenimiento.Contrato:
-                    frmDelContratos_FormOpen();
-                    break;
-                default:
-                    break;
+                //Obj_CatyMan_BLL.eliminar_Cat_Man(ref Obj_CatyMan_DAL);
+                if (Obj_CatyMan_DAL.sMsjError != string.Empty)
+                {
+                    MessageBox.Show("Se presentó el siguiente error:\n\n" + Obj_CatyMan_DAL.sMsjError,
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    cargarDataGrid();
+                }
             }
-        }
-        #region Eliminar Usuario
-        private void frmDelUsr_FormOpen()
-        {
-            // Abre el formulario, si está establecido en null
-            // Esto para evitar que se ejecute más de una instancia
-            if (frmDelUsr == null)
+            ////
+            if (dgdDatos.SelectedRows.Count == 1)
             {
-                frmDelUsr = new frm_Man_Usuario(frm_Man_Usuario.Accion.Eliminar);
-                frmDelUsr.MdiParent = MdiParent;
-                frmDelUsr.FormClosed +=
-                    new FormClosedEventHandler(frmDelUsr_FormClosed);
-                frmDelUsr.Show();
-            }
-            else
-            {
-                // Si ya está abierto el formulario se activa
-                frmDelUsr.Activate();
-            }
-        }
-        private void frmDelUsr_FormClosed(object sender,
-            FormClosedEventArgs e)
-        {
-            // Cuando se cierre el formulario se establece en null
-            // para que pueda volver a ser abierto al presionar el
-            // menuitem
-            frmDelUsr = null;
-        }
-        #endregion
-        #region Eliminar Tipo de Usuario
-        private void frmDelTipUsr_FormOpen()
-        {
-            // Abre el formulario, si está establecido en null
-            // Esto para evitar que se ejecute más de una instancia
-            if (frmDelTipUsr == null)
-            {
-                frmDelTipUsr = new frm_Man_Perfiles(frm_Man_Perfiles.Accion.Eliminar);
-                frmDelTipUsr.MdiParent = MdiParent;
-                frmDelTipUsr.FormClosed +=
-                    new FormClosedEventHandler(frmDelTipUsr_FormClosed);
-                frmDelTipUsr.Show();
+                switch (_mMantenimiento)
+                {
+                    case Mantenimiento.Usuarios:
+                        frmModUsr_FormOpen();
+                        break;
+                    case Mantenimiento.TipoUsuario:
+                        Cls_T_Perfil_DAL Obj_Perfil_DAL = new Cls_T_Perfil_DAL();
+                        Cls_T_Perfil_BLL Obj_Perfil_BLL = new Cls_T_Perfil_BLL();
+                        Obj_Perfil_DAL.iID_Perfil = Convert.ToInt32(dgdDatos.SelectedRows[0].Cells[0].Value);
+                        Obj_Perfil_BLL.eliminar_UsuarioPerfil(ref Obj_Perfil_DAL);
+                        if (Obj_Perfil_DAL.bEstAx)
+                        {
+                            MessageBox.Show("OK");
+                        }
+                        break;
+                    case Mantenimiento.Departamento:
+                        frmModDep_FormOpen();
+                        break;
+                    case Mantenimiento.Persona:
+                        frmModPersona_FormOpen();
+                        break;
+                    case Mantenimiento.Stock:
+                        frmModStock_FormOpen();
+                        break;
+                    case Mantenimiento.Productos:
+                        frmModProductos_FormOpen();
+                        break;
+                    case Mantenimiento.Contrato:
+                        frmModContratos_FormOpen();
+                        break;
+                    case Mantenimiento.Cobro:
+                        frmModCobro_FormOpen();
+                        break;
+                    default:
+                        break;
+                }
             }
             else
             {
-                // Si ya está abierto el formulario se activa
-                frmDelTipUsr.Activate();
+                MessageBox.Show("Debe de seleccionar una fila.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void frmDelTipUsr_FormClosed(object sender,
-            FormClosedEventArgs e)
-        {
-            // Cuando se cierre el formulario se establece en null
-            // para que pueda volver a ser abierto al presionar el
-            // menuitem
-            frmDelTipUsr = null;
-        }
-        #endregion
-        #region Eliminar Departamento
-        private void frmDelDep_FormOpen()
-        {
-            // Abre el formulario, si está establecido en null
-            // Esto para evitar que se ejecute más de una instancia
-            if (frmDelDep == null)
-            {
-                frmDelDep = new frm_Man_Departamentos(frm_Man_Departamentos.Accion.Eliminar);
-                frmDelDep.MdiParent = MdiParent;
-                frmDelDep.FormClosed +=
-                    new FormClosedEventHandler(frmDelDep_FormClosed);
-                frmDelDep.Show();
-            }
-            else
-            {
-                // Si ya está abierto el formulario se activa
-                frmDelDep.Activate();
-            }
-        }
-        private void frmDelDep_FormClosed(object sender,
-            FormClosedEventArgs e)
-        {
-            // Cuando se cierre el formulario se establece en null
-            // para que pueda volver a ser abierto al presionar el
-            // menuitem
-            frmDelDep = null;
-        }
-        #endregion
-        #region Eliminar Persona
-        private void frmDelPersona_FormOpen()
-        {
-            // Abre el formulario, si está establecido en null
-            // Esto para evitar que se ejecute más de una instancia
-            if (frmDelPersona == null)
-            {
-                frmDelPersona = new frm_Man_Persona(frm_Man_Persona.Accion.Eliminar);
-                frmDelPersona.MdiParent = MdiParent;
-                frmDelPersona.FormClosed +=
-                    new FormClosedEventHandler(frmDelPersona_FormClosed);
-                frmDelPersona.Show();
-            }
-            else
-            {
-                // Si ya está abierto el formulario se activa
-                frmDelPersona.Activate();
-            }
-        }
-        private void frmDelPersona_FormClosed(object sender,
-            FormClosedEventArgs e)
-        {
-            // Cuando se cierre el formulario se establece en null
-            // para que pueda volver a ser abierto al presionar el
-            // menuitem
-            frmDelPersona = null;
-        }
-        #endregion
-        #region Eliminar Stock
-        private void frmDelStock_FormOpen()
-        {
-            // Abre el formulario, si está establecido en null
-            // Esto para evitar que se ejecute más de una instancia
-            if (frmDelStock == null)
-            {
-                frmDelStock = new frm_Man_Stock(frm_Man_Stock.Accion.Eliminar);
-                frmDelStock.MdiParent = MdiParent;
-                frmDelStock.FormClosed +=
-                    new FormClosedEventHandler(frmDelStock_FormClosed);
-                frmDelStock.Show();
-            }
-            else
-            {
-                // Si ya está abierto el formulario se activa
-                frmDelStock.Activate();
-            }
-        }
-        private void frmDelStock_FormClosed(object sender,
-            FormClosedEventArgs e)
-        {
-            // Cuando se cierre el formulario se establece en null
-            // para que pueda volver a ser abierto al presionar el
-            // menuitem
-            frmDelStock = null;
-        }
-        #endregion
-        #region Eliminar Productos
-        private void frmDelProductos_FormOpen()
-        {
-            // Abre el formulario, si está establecido en null
-            // Esto para evitar que se ejecute más de una instancia
-            if (frmDelProductos == null)
-            {
-                frmDelProductos = new frm_Man_Productos(frm_Man_Productos.Accion.Eliminar);
-                frmDelProductos.MdiParent = MdiParent;
-                frmDelProductos.FormClosed +=
-                    new FormClosedEventHandler(frmDelProductos_FormClosed);
-                frmDelProductos.Show();
-            }
-            else
-            {
-                // Si ya está abierto el formulario se activa
-                frmDelProductos.Activate();
-            }
-        }
-        private void frmDelProductos_FormClosed(object sender,
-            FormClosedEventArgs e)
-        {
-            // Cuando se cierre el formulario se establece en null
-            // para que pueda volver a ser abierto al presionar el
-            // menuitem
-            frmDelProductos = null;
-        }
-        #endregion
-
-        #region Eliminar Contrato
-        private void frmDelContratos_FormOpen()
-        {
-            // Abre el formulario, si está establecido en null
-            // Esto para evitar que se ejecute más de una instancia
-            if (frmDelContratos == null)
-            {
-                frmDelContratos = new frm_Man_Contrato(frm_Man_Contrato.Accion.Eliminar);
-                frmDelContratos.MdiParent = MdiParent;
-                frmDelContratos.FormClosed +=
-                    new FormClosedEventHandler(frmDelContratos_FormClosed);
-                frmDelContratos.Show();
-            }
-            else
-            {
-                // Si ya está abierto el formulario se activa
-                frmDelContratos.Activate();
-            }
-        }
-        private void frmDelContratos_FormClosed(object sender,
-            FormClosedEventArgs e)
-        {
-            // Cuando se cierre el formulario se establece en null
-            // para que pueda volver a ser abierto al presionar el
-            // menuitem
-            frmDelContratos = null;
-        }
-        #endregion
         #endregion
     }
 }
