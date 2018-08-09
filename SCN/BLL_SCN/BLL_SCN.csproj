@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="BD\Cls_BD_BLL.cs" />
     <Compile Include="Catalogos_Mantenimientos\Cls_CatyMan_BLL.cs" />
+    <Compile Include="Catalogos_Mantenimientos\Cls_T_Perfil_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

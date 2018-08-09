@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="BD\Cls_BD_DAL.cs" />
     <Compile Include="Catalogos_Mantenimientos\Cls_CatyMan_DAL.cs" />
+    <Compile Include="Catalogos_Mantenimientos\Cls_T_Perfil_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
